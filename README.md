@@ -1,6 +1,6 @@
 # DethKrawl
 
-**A cursed dungeon-crawling OSR Game Boy Color game.**  
+**A cursed dungeon-crawling OSR Game Boy game.**  
 Inspired by *Mörk Borg*, *Deathbringer*, and the raw, pixel-scarred glory of retro handheld RPGs.
 
 > Explore crypts, cast twisted magic, battle nightmares, and loot the rotting remains of civilization. You are no hero — just another corpse that hasn't fallen yet.
@@ -9,9 +9,9 @@ Inspired by *Mörk Borg*, *Deathbringer*, and the raw, pixel-scarred glory of re
 
 ## Platform
 
-- Built in **GB Studio** (Game Boy Color)
+- Built in **GB Studio** (Game Boy)
 - Playable via ROM or browser (HTML5 export)
-- No classes — your weapons, armor, and stats define your fate
+- No classes — your weapons, armor, and stats define your fate.
 
 ---
 
@@ -115,7 +115,7 @@ All rolls use **d20 + relevant stat**.
 ## Built With
 
 - [GB Studio](https://www.gbstudio.dev)
-- Game Boy Color resolution and palette
+- Game Boy resolution and palette
 - Markdown and OSR design principles
 
 ---
