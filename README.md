@@ -106,7 +106,18 @@ Only PCs have Deathbringer Dice. NPCs and monsters do NOT have them.
 
 ---
 
+## Magic
 
+### Magic Memorization
+Roll PRE +d4 every morning to determine how many spells you cast that day.  The same spell may be cast several times per day.
+
+### Spellcasting 
+- To cast a spell, roll d20 + PRE DR12.
+
+On a **success**, you automatically accomplish the spell's effect and you subtract one use of your daily total.
+On a **failure**, you become dizzy for d6 rounds. If you cast another spell when you are dizzy, the spell automatically fails in the worst way you can imagine.
+
+--- 
 
 ## Starting Loot Tables
 
