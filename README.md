@@ -9,7 +9,7 @@ Inspired by *Mörk Borg*, *Deathbringer*, and the raw, pixel-scarred glory of re
 
 ## Platform
 
-- Built in **GB Studio** (Game Boy)
+- Built in **GB Studio** (Game Boy)// TTRPG
 - Playable via ROM or browser (HTML5 export)
 - No classes — your weapons, armor, and stats define your fate.
 
