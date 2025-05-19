@@ -32,10 +32,18 @@ Inspired by *Mörk Borg*, *Deathbringer*, and the raw, pixel-scarred glory of re
 ### Stat Allocation – 8 Points Total
 Distribute 8 points across the following:
 
-- **STR (Strength)** – Crush, lift, strike, grapple
-- **AGI (Agility)** – Dodge, balance, swim, flee
-- **PRE (Presence)** – Perceive, aim, charm, wield spells
-- **TOU (Toughness)** – Resist poison, heal, survive falls
+- **STR (Strength)** – *Crush, lift, strike, grapple*
+- **AGI (Agility)** – *Dodge, balance, swim, flee*
+- **PRE (Presence)** – *Perceive, aim, charm, wield spells*
+- **TOU (Toughness)** – *Resist poison, heal, survive falls*
+
+### Determine Stats
+Roll 3d6 to generate STAT between 0 and +3. Do this 4 times. Assign a numberto each STAT. Do not record the 
+3d6 total. Only record the bonus.
+
+|Roll 3d6|3-5|6-10|11-14|15-17|18|
+|---|---|---|---|---|---|
+||-1|0|+1|+2|+3|
 
 ---
 
