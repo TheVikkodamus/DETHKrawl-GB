@@ -62,6 +62,13 @@ Begin with 2d6+TOU Health Points - no re-rolls! When player reach zero HP, Playe
 
 ## Core Systems
 
+### Tests
+
+Roll d20 + STAT equal or greater than the DR to succeed.
+
+Enemies: don't add stat and just roll a flat d20 against DR. 
+
+
 ### Difficulty Rating (DR)
 
 **DR** determines how challenging a test or attack is.  
