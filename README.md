@@ -27,10 +27,9 @@ Inspired by *Mörk Borg*, *Deathbringer*, and the raw, pixel-scarred glory of re
 ## Character Creation
 
 ### Name Selector / Generator
-- Players can input a name or generate a random cursed one
+- Players can input a name or generate a random cursed one:
 
-### Stat Allocation – 8 Points Total
-Distribute 8 points across the following:
+### Learn your Stats
 
 - **STR (Strength)** – *Crush, lift, strike, grapple*
 - **AGI (Agility)** – *Dodge, balance, swim, flee*
@@ -44,6 +43,9 @@ Roll 3d6 to generate STAT between 0 and +3. Do this 4 times. Assign a numberto e
 |Roll 3d6|3-5|6-10|11-14|15-17|18|
 |---|---|---|---|---|---|
 ||-1|0|+1|+2|+3|
+
+### Determine Health Points
+Begin with 2d6+TOU Health Points - no re-rolls! When player reach zero HP, Player character is DEAD.
 
 ---
 
