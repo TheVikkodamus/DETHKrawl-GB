@@ -50,6 +50,14 @@ All rolls use **d20 + relevant stat**.
 
 ---
 
+### DethKrawler's Die
+Each character has DethKrawler's die that is equal to the PC level. DethKrawler's Die can be spent to bend fate, 
+allowing a character to re-roll any die roll. 
+- You may spend 1 luck to re-roll any die (Attack, Defense, and Save)
+- You must take the new result, even if it's worse. Lady luck can be fickle at times.
+- Luck is restored when you rest at a civilized location for days. 
+
+
 ## Starting Loot Tables
 
 ### D4 – Bag
