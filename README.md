@@ -52,11 +52,19 @@ All rolls use **d20 + relevant stat**.
 
 ### DethKrawler's Die
 Each character has DethKrawler's die that is equal to the PC level. DethKrawler's Die can be spent to bend fate, 
-allowing a character to re-roll any die roll. 
-- You may spend 1 luck to re-roll any die (Attack, Defense, and Save)
-- You must take the new result, even if it's worse. Lady luck can be fickle at times.
-- Luck is restored when you rest at a civilized location for days. 
+allowing a character to use a pool of six-sided dice that respresents character's skill & luck.
+Player may spend DethKrawler Die to: 
+- Add to a TEST roll.
+- Add a d6 to successful damge roll.
+- Block d6 incoming damage.
 
+Players may use multiple Deathbringer Dice on the same roll.
+Players may not use Deathbringer Dice to alter a roll of natural 1.
+Players may give one (1) DD to another player at any time.
+
+Only PCs have Deathbringer Dice. NPCs and monsters do NOT have them.
+
+---
 
 ## Starting Loot Tables
 
