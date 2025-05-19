@@ -58,8 +58,6 @@ Begin with 2d6+TOU Health Points - no re-rolls! When player reach zero HP, Playe
 - 100 coins take up one slot.
 - Once all slot are filled, characters move at half speed.
 
-  
-
 ---
 
 ## Core Systems
@@ -71,9 +69,20 @@ Most tests require a roll that meets or exceeds **12**.
 Modifiers such as **DR +2** increase the target number to **14**, and so on.  
 All rolls use **d20 + relevant stat**.
 
+|Difficulty Rating||
+|:---:|:---|
+|6|Simple, but failure will be interesting|
+|8|Routine, but failurewill cause drama|
+|10|A skilled action, but usually possible|
+|12|A skilled action in a stressful moment|
+|14|Difficult, but not impossible|
+|16|A mighty feat|
+|18|Should not be possible|
+
 ---
 
 ### DethKrawler's Die
+
 Each character has DethKrawler's die that is equal to the PC level. DethKrawler's Die can be spent to bend fate, 
 allowing a character to use a pool of six-sided dice that respresents character's skill & luck.
 Player may spend DethKrawler Die to: 
@@ -88,6 +97,8 @@ Players may give one (1) DD to another player at any time.
 Only PCs have Deathbringer Dice. NPCs and monsters do NOT have them.
 
 ---
+
+
 
 ## Starting Loot Tables
 
