@@ -162,6 +162,11 @@ Only PCs have Deathbringer Dice. NPCs and monsters do NOT have them.
 | 3    | Medium Armor    | Reduces damage by D4 (Tier 2); DR +2 on AGI tests and DEF after the attack phase |
 | 4    | Heavy Armor     | Reduces damage by D6 (Tier 3); DR +4 on AGI tests, DEF is DR +2        |
 
+#### Black Powder Weapons V Armor
+
+These weapons are deadly and dangerous, it will ignore all amor. 
+A black powder weapon takes one round to reload after it is fired,
+and you cannot reload when in melee range of a foe.
 
 ---
 
