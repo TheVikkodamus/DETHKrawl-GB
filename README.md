@@ -41,7 +41,7 @@ Roll 3d6 to generate STAT between 0 and +3. Do this 4 times. Assign a numberto e
 3d6 total. Only record the bonus.
 
 |Roll 3d6|3-5|6-10|11-14|15-17|18|
-|---|---|---|---|---|---|
+|---|:---:|:---:|:---:|:---:|:---:|
 ||-1|0|+1|+2|+3|
 
 ### Determine Health Points
