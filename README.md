@@ -87,6 +87,12 @@ All rolls use **d20 + relevant stat**.
 |16|A mighty feat|
 |18|Should not be possible|
 
+Melee Weapons: Roll D20+STR DR12
+
+Ranged Weapons: Roll D20+PRE DR12
+
+Spell Casting: Roll D20+PRE DR12 
+
 ---
 
 ### DethKrawler's Die
@@ -181,6 +187,11 @@ A black powder weapon takes one round to reload after it is fired,
 and you cannot reload when in melee range of a foe.
 
 ---
+
+### Potions
+
+
+
 
 ## Planned Features
 
