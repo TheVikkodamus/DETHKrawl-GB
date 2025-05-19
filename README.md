@@ -87,11 +87,11 @@ All rolls use **d20 + relevant stat**.
 |16|A mighty feat|
 |18|Should not be possible|
 
-Melee Weapons: Roll D20+STR DR12
+**Melee** Weapons: Roll D20+STR DR12
 
-Ranged Weapons: Roll D20+PRE DR12
+**Ranged** Weapons: Roll D20+PRE DR12
 
-Spell Casting: Roll D20+PRE DR12 
+**Spell Casting**: Roll D20+PRE DR12 
 
 ---
 
