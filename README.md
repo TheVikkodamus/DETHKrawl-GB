@@ -47,6 +47,11 @@ Roll 3d6 to generate STAT between 0 and +3. Do this 4 times. Assign a numberto e
 ### Determine Health Points
 Begin with 2d6+TOU Health Points - no re-rolls! When player reach zero HP, Player character is DEAD.
 
+### Encumberance
+- PCs have item slots = to TOU + 10.
+- 100 coins take up one slot.
+- Once all slot are filled, characters move at half speed.
+
 ---
 
 ## Core Systems
