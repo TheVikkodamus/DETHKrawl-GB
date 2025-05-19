@@ -64,7 +64,7 @@ Begin with 2d6+TOU Health Points - no re-rolls! When player reach zero HP, Playe
 
 ### Tests
 
-Roll d20 + **STAT** *(STR, AGI, PRE, and TOU)* equal or greater than the DR to succeed.
+Roll d20 + **STAT** *(STR, AGI, PRE, and TOU)* **equal or greater than** the DR to succeed.
 
 Enemies: don't add stat and just roll a flat d20 against DR. 
 
