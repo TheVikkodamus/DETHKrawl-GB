@@ -133,19 +133,23 @@ Only PCs have Deathbringer Dice. NPCs and monsters do NOT have them.
 
 ---
 
-### D8 – Weapons
+### D12 – Weapons
 
 | Roll | Weapon         | Damage                        |
 |:----:|----------------|-------------------------------|
-| —    | Unarmed        | D2                            |
-| 1    | Staff          | D4                            |
-| 2    | Shortsword     | D4                            |
-| 3    | Knife          | D4                            |
-| 4    | Crossbow       | D6, PRE +5 bolts              |
-| 5    | Warhammer      | D6                            |
-| 6    | Sword          | D6                            |
-| 7    | Bow            | D6, PRE +10 arrows            |
-| 8    | Flail          | D8                            |
+| —    | Unarmed        | D2 dmg                        |
+| 1    | Staff          | D4 dmg                        |
+| 2    | Shortsword     | D4 dmg                        |
+| 3    | Knife          | D4 dmg                        |
+| 4    | Crossbow       | D6 dmg, PRE +5 bolts          |
+| 5    | Warhammer      | D6 dmg                        |
+| 6    | Sword          | D6 dmg                        |
+| 7    | Bow            | D6 dmg, PRE +10 arrows        |
+| 8    | Flail          | D8 dmg                        |
+| 9    | Pistol         | D6+2 dmg, PRE +10 Bullets     |
+| 10   | Musket         | D10+2 dmg, PRE +10 Bullets    |
+| 11   | Blunderbuss    | 3d6 dmg, PRE +10 Bullets      |
+| 12   | Bombs          | 4d6 dmg, PRE +5 bombs         |
 
 ---
 
@@ -157,6 +161,7 @@ Only PCs have Deathbringer Dice. NPCs and monsters do NOT have them.
 | 2    | Light Armor     | Reduces damage by D2 (Tier 1)                                          |
 | 3    | Medium Armor    | Reduces damage by D4 (Tier 2); DR +2 on AGI tests and DEF after the attack phase |
 | 4    | Heavy Armor     | Reduces damage by D6 (Tier 3); DR +4 on AGI tests, DEF is DR +2        |
+
 
 ---
 
