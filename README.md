@@ -36,6 +36,8 @@ Inspired by *Mörk Borg*, *Deathbringer*, and the raw, pixel-scarred glory of re
 - **PRE (Presence)** – *Perceive, aim, charm, wield spells*
 - **TOU (Toughness)** – *Resist poison, heal, survive falls*
 
+---
+
 ### Determine Stats
 Roll 3d6 to generate STAT between 0 and +3. Do this 4 times. Assign a numberto each STAT. Do not record the 
 3d6 total. Only record the bonus.
@@ -44,8 +46,12 @@ Roll 3d6 to generate STAT between 0 and +3. Do this 4 times. Assign a numberto e
 |---|:---:|:---:|:---:|:---:|:---:|
 ||-1|0|+1|+2|+3|
 
+---
+
 ### Determine Health Points
-Begin with 2d6+TOU Health Points - no re-rolls! When player reach zero HP, Player character is DEAD.
+Begin with 2d6+TOU Health Points - no re-rolls! When player reach zero HP, Player character is **DEAD**.
+
+---
 
 ### Encumberance
 - PCs have item slots = to TOU + 10.
