@@ -65,7 +65,7 @@ The **Game Master** may assign Disadvantage when the fiction works against the p
 ### Health
 
 Start with **2d6 + TOU** HP.  
-When it hits 0 — **you die.** No save. Another fool will join the adventure.
+When it hits 0 — **you die.** No save. Another fool will take your place.
 
 ---
 
