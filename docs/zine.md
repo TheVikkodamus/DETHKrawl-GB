@@ -169,7 +169,7 @@ You may spend one to:
 The GM and one of the players, representing the entire party, rolls a d6. The side with the highest roll wins initiative and acts first. In the event of a tie, both sides go at the same time. Yes, it is possible for both sides to kill each other at the exact same time.
 
 > Optional Rule:
-> 
+
 > The GM may opt to call for an initiative roll every round or may keep the order determined at the start of combat. It’s up to them.
 
 #### Fighting Swarms
