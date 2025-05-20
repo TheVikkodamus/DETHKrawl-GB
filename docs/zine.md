@@ -17,9 +17,9 @@ There are no classes. Your **gear**, **stats**, and **luck** define your legend 
 
 ### Stats
 
-Roll `4d6` and drop the lowest for each stat. Don’t record the total — just use the table to get a bonus.
+Roll `3d6` for each stat. Don’t record the total — just use the table to get a bonus.
 
-| `4d6DL` Roll | Stat Bonus |
+| `3d6` Roll | Stat Bonus |
 |:---:|:---:|
 | 3–5      | -1         |
 | 6–10     | 0          |
