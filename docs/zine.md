@@ -80,7 +80,7 @@ When it hits 0 — **you die.** No save. Another fool will take your place.
 
 ---
 
-### d6 – Gear
+### `d6` – Gear
 
 | Roll | Gear                              |
 |:----:|-----------------------------------|
@@ -93,27 +93,27 @@ When it hits 0 — **you die.** No save. Another fool will take your place.
 
 ---
 
-### d12 – Weapons
+### `d12` – Weapons
 
 | Roll | Weapon         | Damage                        |
 |:----:|----------------|-------------------------------|
-| —    | Unarmed        | D2 dmg                        |
-| 1    | Staff          | D4 dmg                        |
-| 2    | Shortsword     | D4 dmg                        |
-| 3    | Knife          | D4 dmg                        |
-| 4    | Crossbow       | D6 dmg, PRE +5 bolts          |
-| 5    | Warhammer      | D6 dmg                        |
-| 6    | Sword          | D6 dmg                        |
-| 7    | Bow            | D6 dmg, PRE +10 arrows        |
-| 8    | Flail          | D8 dmg                        |
-| 9    | Pistol         | D6+2 dmg, PRE +10 Bullets     |
-| 10   | Musket         | D10+2 dmg, PRE +10 Bullets    |
-| 11   | Blunderbuss    | 3d6 dmg, PRE +10 Bullets      |
-| 12   | Bombs          | 4d6 dmg, PRE +5 bombs         |
+| —    | Unarmed        | `d2` dmg                        |
+| 1    | Staff          | `d4` dmg                        |
+| 2    | Shortsword     | `d4` dmg                        |
+| 3    | Knife          | `d4` dmg                        |
+| 4    | Crossbow       | `d6` dmg, PRE +5 bolts          |
+| 5    | Warhammer      | `d6` dmg                        |
+| 6    | Sword          | `d6` dmg                        |
+| 7    | Bow            | `d6` dmg, PRE +10 arrows        |
+| 8    | Flail          | `d8` dmg                        |
+| 9    | Pistol         | `d6`+2 dmg, PRE +10 Bullets     |
+| 10   | Musket         | `d10`+2 dmg, PRE +10 Bullets    |
+| 11   | Blunderbuss    | `3d6` dmg, PRE +10 Bullets      |
+| 12   | Bombs          | `4d6` dmg, PRE +5 bombs         |
 
 ---
 
-### d4 – Armor
+### `d4` – Armor
 
 | Roll | Armor Type     | Effect                                                                 |
 |:----:|----------------|------------------------------------------------------------------------|
