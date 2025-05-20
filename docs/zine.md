@@ -17,9 +17,9 @@ There are no classes. Your **gear**, **stats**, and **luck** define your legend 
 
 ### Stats
 
-Roll **3d6** for each stat. Don’t record the total — just use the table to get a bonus.
+Roll "3d6" for each stat. Don’t record the total — just use the table to get a bonus.
 
-| 3d6 Roll | Stat Bonus |
+| "3d6" Roll | Stat Bonus |
 |----------|------------|
 | 3–5      | -1         |
 | 6–10     | 0          |
@@ -149,7 +149,7 @@ You may spend one to:
 
 - Add to a **Test** roll  
 - Add to a **Damage** roll  
-- **Block d6** incoming damage
+- **Block "d6"** incoming damage
 
 > - Spend **multiple dice** if you want.  
 > - **Cannot** be used on a **natural 1** — failure is absolute.  
@@ -172,8 +172,7 @@ The GM and one of the players, representing the entire party, rolls a d6. The si
 > The GM may opt to call for an initiative roll every round or may keep the order determined at the start of combat. It’s up to them.
 
 ### Individual Initiative
-Player roll a d6 and adds their AGI to determine the combat order Vs Enemie (straight d6) highest result goes first.  
-
+Each player rolls 1d6 + AGI. Enemies roll 1d6. Highest goes first
  
 
 ---
