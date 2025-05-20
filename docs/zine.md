@@ -141,7 +141,7 @@ When it hits 0 — **you die.** No save. Another fool will take your place.
 ### Tests
 
 **Roll `d20` + STAT ≥ DR**  
-- Default DR is **12**  
+- Default DR (difficulty rating) is **12**  
 - Enemies roll flat **`d20`**, no stat
 
 ### Difficulty Ratings
@@ -185,7 +185,7 @@ You may spend one to:
 1. Combat Rounds
 2. Initiative
 3. Movement (Near, Range, Far)
-4. Rolling to-hit vs DR
+4. Rolling to-hit vs DR (Difficulty Rating)
 5. Rolling damage or damage reduction
 
 #### Initiative: Who Goes First? (Group)
@@ -210,8 +210,7 @@ Each player rolls `1d6` + AGI. Enemies roll `1d6`. Highest goes first
 
 ### Cover
 
-PCs and Enemies may take or use cover, the quality of cover raises the
-DR to hit. 
+PCs and Enemies may take or use cover, the quality of cover raises the DR (difficulty rating) to hit. 
 
 > Limited cover DR13
 > 
@@ -219,7 +218,7 @@ DR to hit.
 > 
 > Full cover DR16
 
-#### DR to dodge
+#### DR (difficulty rating) to dodge
 
 > Limited Cover – DR 11
 > 
