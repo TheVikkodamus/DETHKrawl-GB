@@ -118,9 +118,9 @@ When it hits 0 — **you die.** No save. Another fool will take your place.
 | Roll | Armor Type     | Effect                                                                 |
 |:----:|----------------|------------------------------------------------------------------------|
 | 1    | No Armor        | None                                                                  |
-| 2    | Light Armor     | Reduces damage by D2 (Tier 1)                                          |
-| 3    | Medium Armor    | Reduces damage by D4 (Tier 2); DR +2 on AGI tests and DEF after the attack phase |
-| 4    | Heavy Armor     | Reduces damage by D6 (Tier 3); DR +4 on AGI tests, DEF is DR +2        |
+| 2    | Light Armor     | Reduces damage by `d2` (Tier 1)                                          |
+| 3    | Medium Armor    | Reduces damage by `d4` (Tier 2); DR +2 on AGI tests and DEF after the attack phase |
+| 4    | Heavy Armor     | Reduces damage by `d6` (Tier 3); DR +4 on AGI tests, DEF is DR +2        |
 
 #### Black Powder Weapons V Armor
 
