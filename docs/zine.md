@@ -19,13 +19,13 @@ There are no classes. Your **gear**, **stats**, and **luck** define your legend 
 
 Roll `3d6` for each stat. Don’t record the total — just use the table to get a bonus.
 
-| `3d6` Roll | STAT Bonus |
-|:---:|:---:|
-| 3–5      | -1         |
-| 6–10     | 0          |
-| 11–14    | +1         |
-| 15–17    | +2         |
-| 18       | +3         |
+| `3d6` Roll | STAT Bonus | `d6` chances|
+|:---:|:---:|:---:|
+| 3–5      | -1 | 1-in-6|
+| 6–10     | 0  | 2-in-6|
+| 11–14    | +1 | 3-in-6|
+| 15–17    | +2 | 4-in-6|
+| 18       | +3 | 5-in-6|
 
 Assign to:
 
