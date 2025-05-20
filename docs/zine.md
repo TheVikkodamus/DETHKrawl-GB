@@ -133,7 +133,7 @@ _Unarmed_: d2
 | 16 | Heroic      |
 | 18 | Impossible? |
 
-### Combat
+### Combat DR
 
 - **Melee**: d20 + STR vs DR12  
 - **Ranged**: d20 + PRE vs DR12  
@@ -156,3 +156,4 @@ You may spend one to:
 > - You may **gift 1 die** to another player at any time.
 
 ---
+
