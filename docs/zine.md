@@ -171,4 +171,6 @@ The GM and one of the players, representing the entire party, rolls a d6. The si
 > Optional Rule:
 > The GM may opt to call for an initiative roll every round or may keep the order determined at the start of combat. It’s up to them.
 
+#### Fighting Swarms
+
 
