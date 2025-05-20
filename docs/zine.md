@@ -21,11 +21,11 @@ Roll `3d6` for each stat. Don’t record the total — just use the table to get
 
 | `3d6` Roll | STAT Bonus | `d6` chances [GM roll behind screen]| Spell per Day|
 |:---:|:---:|:---:|:---:|
-| 3–5  | -1 | 1-in-6| +d2 per day|
-| 6–10 | 0  | 2-in-6| +d2 per day|
-| 11–14  | +1 | 3-in-6| +d3 per day|
-| 15–17  | +2 | 4-in-6| +d4 per day|
-| 18     | +3 | 5-in-6| +d6 per day|
+| 3–5  | -1 | 1-in-6| |
+| 6–10 | 0  | 2-in-6| +`d2` per day|
+| 11–14  | +1 | 3-in-6| +`d3` per day|
+| 15–17  | +2 | 4-in-6| +`d4` per day|
+| 18     | +3 | 5-in-6| +`d6` per day|
 
 Assign to:
 
@@ -57,7 +57,7 @@ You suffer Disadvantage when:
 
 The **Game Master** may assign Disadvantage when the fiction works against the player.
 
-> When rolling with Disadvantage, roll **d20 + STAT -2** vs DR.
+> When rolling with Disadvantage, roll **`d20` + STAT -2** vs DR.
 
 ---
 
@@ -68,45 +68,67 @@ When it hits 0 — **you die.** No save. Another fool will take your place.
 
 ---
 
-### Inventory
+## Starting Loot Tables
 
-You have **slots equal to TOU + 10**.  
-- 100 coins = 1 slot  
-- Overburdened? You crawl at half speed.
+### `d4` – Bag
+
+| Roll | Result                        |
+|:----:|-------------------------------|
+| 1–2  | Nothing                       |
+| 3    | Backpack (holds 7 items)      |
+| 4    | Sack (holds 10 items)         |
 
 ---
 
-### Starting Gear
+### d6 – Gear
 
-**Currency (`d6` gold)** 
+| Roll | Gear                              |
+|:----:|-----------------------------------|
+| 1    | Rope (30 feet)                    |
+| 2    | PRE + 4 Torches                   |
+| 3    | Random Unclean Scroll             |
+| 4    | Medicine Chest (PRE +4 uses)      |
+| 5    | Metal File and Lockpicks          |
+| 6    | Bottle of Red Poison (d4 doses)   |
 
-**Bag (`d4`)**  
-- 1–2: Nothing  
-- 3: Backpack (7 slots)  
-- 4: Sack (10 slots)
+---
 
-**Gear (`d6`)**  
-- 1: 30' Rope  
-- 2: PRE + 4 Torches  
-- 3: Random Unclean Scroll  
-- 4: Medicine Chest (PRE + 4 uses)  
-- 5: Lockpicks  
-- 6: Red Poison (d4 doses)
+### d12 – Weapons
 
-**Weapon (`d12`)**
+| Roll | Weapon         | Damage                        |
+|:----:|----------------|-------------------------------|
+| —    | Unarmed        | D2 dmg                        |
+| 1    | Staff          | D4 dmg                        |
+| 2    | Shortsword     | D4 dmg                        |
+| 3    | Knife          | D4 dmg                        |
+| 4    | Crossbow       | D6 dmg, PRE +5 bolts          |
+| 5    | Warhammer      | D6 dmg                        |
+| 6    | Sword          | D6 dmg                        |
+| 7    | Bow            | D6 dmg, PRE +10 arrows        |
+| 8    | Flail          | D8 dmg                        |
+| 9    | Pistol         | D6+2 dmg, PRE +10 Bullets     |
+| 10   | Musket         | D10+2 dmg, PRE +10 Bullets    |
+| 11   | Blunderbuss    | 3d6 dmg, PRE +10 Bullets      |
+| 12   | Bombs          | 4d6 dmg, PRE +5 bombs         |
 
-_Unarmed_: `d2`  
-- 1–3: `d4` weapons (Staff, Shortsword, Knife)  
-- 4–7: `d6` weapons (Crossbow, Warhammer, Sword, Bow)  
-- 8: Flail (`d8`)  
-- 9–11: Guns (`d6`+2, d10+2, 3d6)  
-- 12: Bombs (`4d6`)
-  
-**Armor (d4)**  
-- 1: None  
-- 2: Light (`-d2`)  
-- 3: Medium (`-d4`, +2 DR to AGI tests)  
-- 4: Heavy (`-d6`, +4 DR to AGI, +2 DR DEF)
+---
+
+### d4 – Armor
+
+| Roll | Armor Type     | Effect                                                                 |
+|:----:|----------------|------------------------------------------------------------------------|
+| 1    | No Armor        | None                                                                  |
+| 2    | Light Armor     | Reduces damage by D2 (Tier 1)                                          |
+| 3    | Medium Armor    | Reduces damage by D4 (Tier 2); DR +2 on AGI tests and DEF after the attack phase |
+| 4    | Heavy Armor     | Reduces damage by D6 (Tier 3); DR +4 on AGI tests, DEF is DR +2        |
+
+#### Black Powder Weapons V Armor
+
+> These weapons are deadly and dangerous, it will ignore all amor. 
+> A black powder weapon takes one round to reload after it is fired,
+> and you cannot reload when in melee range of a foe.
+
+---
 
 > **Black Powder Weapons** ignore all armor.  
 > Reloading takes a round.  
