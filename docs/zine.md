@@ -126,7 +126,7 @@ _Unarmed_: `d2`
 ### Difficulty Ratings
 
 | DR | Challenge   |
-|----|-------------|
+|:---:|:---:|
 | 6  | Trivial     |
 | 8  | Routine     |
 | 10 | Skilled     |
