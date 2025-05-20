@@ -133,7 +133,7 @@ _Unarmed_: d2
 | 16 | Heroic      |
 | 18 | Impossible? |
 
-### Combat DR
+### Combat
 
 - **Melee**: d20 + STR vs DR12  
 - **Ranged**: d20 + PRE vs DR12  
@@ -156,4 +156,14 @@ You may spend one to:
 > - You may **gift 1 die** to another player at any time.
 
 ---
+
+### Violence
+
+1. Combat Rounds
+2. Initiative
+3. Movement (Near, Range, Far)
+4. Rolling to-hit vs DR
+5. Rolling damage or damage reduction
+
+#### Initiative: Who Goes First?
 
