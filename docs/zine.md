@@ -17,9 +17,9 @@ There are no classes. Your **gear**, **stats**, and **luck** define your legend 
 
 ### Stats
 
-Roll "3d6" for each stat. Don’t record the total — just use the table to get a bonus.
+Roll `3d6` for each stat. Don’t record the total — just use the table to get a bonus.
 
-| "3d6" Roll | Stat Bonus |
+| `3d6` Roll | Stat Bonus |
 |----------|------------|
 | 3–5      | -1         |
 | 6–10     | 0          |
@@ -64,7 +64,7 @@ The **Game Master** may assign Disadvantage when the fiction works against the p
 
 ### Health
 
-Start with **2d6 + TOU** HP.  
+Start with `2d6` + **TOU** HP.  
 When it hits 0 — **you die.** No save. Another fool will take your place.
 
 ---
@@ -79,12 +79,12 @@ You have **slots equal to TOU + 10**.
 
 ### Starting Gear
 
-**Bag (d4)**  
+**Bag (`d4`)**  
 - 1–2: Nothing  
 - 3: Backpack (7 slots)  
 - 4: Sack (10 slots)
 
-**Gear (d6)**  
+**Gear (`d6`)**  
 - 1: 30' Rope  
 - 2: PRE + 4 Torches  
 - 3: Random Unclean Scroll  
@@ -92,20 +92,20 @@ You have **slots equal to TOU + 10**.
 - 5: Lockpicks  
 - 6: Red Poison (d4 doses)
 
-**Weapon (d12)**
+**Weapon (`d12`)**
 
-_Unarmed_: d2  
-- 1–3: d4 weapons (Staff, Shortsword, Knife)  
-- 4–7: d6 weapons (Crossbow, Warhammer, Sword, Bow)  
-- 8: Flail (d8)  
-- 9–11: Guns (d6+2, d10+2, 3d6)  
-- 12: Bombs (4d6)
+_Unarmed_: `d2`  
+- 1–3: `d4` weapons (Staff, Shortsword, Knife)  
+- 4–7: `d6` weapons (Crossbow, Warhammer, Sword, Bow)  
+- 8: Flail (`d8`)  
+- 9–11: Guns (`d6`+2, d10+2, 3d6)  
+- 12: Bombs (`4d6`)
   
 **Armor (d4)**  
 - 1: None  
-- 2: Light (d2 soak)  
-- 3: Medium (d4 soak, +2 DR to AGI tests)  
-- 4: Heavy (d6 soak, +4 DR to AGI, +2 DR DEF)
+- 2: Light (`-d2`)  
+- 3: Medium (`-d4`, +2 DR to AGI tests)  
+- 4: Heavy (`-d6`, +4 DR to AGI, +2 DR DEF)
 
 > **Black Powder Weapons** ignore all armor.  
 > Reloading takes a round.  
@@ -117,9 +117,9 @@ _Unarmed_: d2
 
 ### Tests
 
-**Roll d20 + STAT ≥ DR**  
+**Roll `d20` + STAT ≥ DR**  
 - Default DR is **12**  
-- Enemies roll flat **d20**, no stat
+- Enemies roll flat **`d20`**, no stat
 
 ### Difficulty Ratings
 
@@ -135,15 +135,15 @@ _Unarmed_: d2
 
 ### Combat Difficulty Rating
 
-- **Melee**: d20 + STR vs DR12  
-- **Ranged**: d20 + PRE vs DR12  
-- **Spells**: d20 + PRE vs DR12
+- **Melee**: `d20` + STR vs DR12  
+- **Ranged**: `d20` + PRE vs DR12  
+- **Spells**: `d20` + PRE vs DR12
 
 ---
 
 ## DethKrawler’s Die
 
-You begin with **1 DethKrawler Die per level**. These are **d6s** that bend fate.
+You begin with **1 DethKrawler Die per level**. These are **`d6s`** that bend fate.
 
 You may spend one to:
 
@@ -152,7 +152,7 @@ You may spend one to:
 - **Block "d6"** incoming damage
 
 > - Spend **multiple dice** if you want.  
-> - **Cannot** be used on a **natural 1** — failure is absolute.  
+> - **Cannot** be used on a **natural 1** — **failure is absolute**.  
 > - You may **gift 1 die** to another player at any time.
 
 ---
@@ -194,8 +194,8 @@ Each player rolls 1d6 + AGI. Enemies roll 1d6. Highest goes first
 - The **GM controls a Bandit Leader** with **7 HP** and **3 Bandits**, each with **5 HP** under normal conditions.
 
 - If the **Bandits and Leader all target a single PC** as a **swarm**:
-  - The **Bandit Leader** keeps **7 HP**
-  - Each **Bandit** now has only **2 HP** instead of 5
+  - The **Bandit Leader** keeps **7 HP**.
+  - Each **Bandit** now has only **2 HP** instead of 5.
 
 > Swarming makes enemies more dangerous — but also more fragile. Easy to kill, hard to ignore.
 
