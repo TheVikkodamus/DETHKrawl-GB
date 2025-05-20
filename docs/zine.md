@@ -200,11 +200,11 @@ Each player rolls `1d6` + AGI. Enemies roll `1d6`. Highest goes first
 #### Crit (Natural 20)
 
 - **Attack**: X2 damage and armor reduced 1 tier.
-- **Defense**: PC gets a free attack.
+- **defence**: PC gets a free attack.
 
 ### Fumble (Natural 1)
 - **Attack**: Weapon Breaks.
-- **Defense**: PC takes double damage, armor is reduced one tier. 
+- **defence**: PC takes double damage, armor is reduced one tier. 
 
 ---
 
@@ -228,7 +228,25 @@ DR to hit.
 > Full Cover – DR 7
  
 ### DEATH
-- 
+
+When a player character's Hit Points has been reduced to negative HP. Roll `d20` + TOU DR12.
+
+- On a success = Broken
+- On a fail, you are DEAD. 
+
+GM or Broken player character can roll at the broken table (`d6`).
+
+#### Broken
+
+### Broken `d6` Table
+
+| `d6` Roll | Result                                                                 |
+|---------|------------------------------------------------------------------------|
+| 1–2     | Fall unconscious for **d4** rounds, awaken with **`d4`** HP.             |
+| 3–4     | Roll on the **Wounds Table**, then become active with **`d4`** HP.       |
+| 5–6     | **Bleeding out**: death in **`d4`** hours unless treated.                |
+
+All tests are DR16 until you are treated.
 
 ### Recovery
 - 
@@ -237,10 +255,10 @@ DR to hit.
 
 #### Fighting Swarms
 
-- When a PC is surrounded by **three or more attackers**, they roll **one DEFENSE** test.
+- When a PC is surrounded by **three or more attackers**, they roll **one defence** test.
 - Increase the **DR by +1** for each attacker beyond the first.  
   > *Example: Three attackers = DR12 + 2 = DR14*
-- On a failed **DEFENSE**, the PC takes normal damage **plus +1 damage** for each additional attacker beyond the first.
+- On a failed **defence**, the PC takes normal damage **plus +1 damage** for each additional attacker beyond the first.
 
 ---
 
@@ -254,7 +272,7 @@ DR to hit.
 
 > Swarming makes enemies more dangerous — but also more fragile. Easy to kill, hard to ignore.
 
-- Whenever a **Bandit (minion)** is killed in combat, the **DEFENSE DR drops by 1** (to a minimum of DR12).
-- Once only the **Leader remains**, the **DEFENSE DR resets to 12**.
+- Whenever a **Bandit (minion)** is killed in combat, the **defence DR drops by 1** (to a minimum of DR12).
+- Once only the **Leader remains**, the **defence DR resets to 12**.
 
 
