@@ -151,7 +151,7 @@ You may spend one to:
 
 - Add to a **Test** roll  
 - Add to a **Damage** roll  
-- **Block "d6"** incoming damage
+- **Block `d6`** incoming damage
 
 > - Spend **multiple dice** if you want.  
 > - **Cannot** be used on a **natural 1** — **failure is absolute**.  
