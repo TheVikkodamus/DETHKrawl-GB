@@ -20,7 +20,7 @@ There are no classes. Your **gear**, **stats**, and **luck** define your legend 
 Roll `3d6` for each stat. Don’t record the total — just use the table to get a bonus.
 
 | `3d6` Roll | Stat Bonus |
-|----------|------------|
+|:---:|:---:|
 | 3–5      | -1         |
 | 6–10     | 0          |
 | 11–14    | +1         |
@@ -78,6 +78,8 @@ You have **slots equal to TOU + 10**.
 ---
 
 ### Starting Gear
+
+**Currency (`d6` gold)** 
 
 **Bag (`d4`)**  
 - 1–2: Nothing  
