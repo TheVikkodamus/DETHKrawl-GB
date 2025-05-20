@@ -59,7 +59,6 @@ The **Game Master** may assign Disadvantage when the fiction works against the p
 
 > When rolling with Disadvantage, roll **d20 + STAT -2** vs DR.
 
-
 ---
 
 ### Health
@@ -181,9 +180,17 @@ Each player rolls 1d6 + AGI. Enemies roll 1d6. Highest goes first
 - **Attack**: X2 damage and armor reduced 1 tier.
 - **Defense**: PC gets a free attack.
 
-  
+### Fumble (Natural 1)
+- **Attack**: Weapon Breaks.
+- **Defense**: PC takes double damage, armor is reduced one tier. 
+
 ---
 
+### Recovery
+- 
+
+### DEATH
+- 
 
 > **Optional**
 
