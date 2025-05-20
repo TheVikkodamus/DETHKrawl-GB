@@ -2,7 +2,7 @@
 *A Cursed Dungeon-Crawling TTRPG*  
 Inspired by **Mörk Borg**, **Deathbringer**, and the rotting glory of retro TTRPGs.
 
-> **You are no hero — just another corpse that hasn’t fallen yet.**
+> **You are no hero — just another corpse that hasn’t hit the ground. When you fall, someone will step over you to take your place.**
 
 ---
 
