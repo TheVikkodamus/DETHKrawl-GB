@@ -39,7 +39,7 @@ Assign to:
 ### Health
 
 Start with **2d6 + TOU** HP.  
-When it hits 0 — **you die.** No save.
+When it hits 0 — **you die.** No save. Another fool will join the adventure.
 
 ---
 
