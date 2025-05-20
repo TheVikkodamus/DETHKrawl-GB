@@ -213,14 +213,18 @@ Each player rolls `1d6` + AGI. Enemies roll `1d6`. Highest goes first
 PCs and Enemies may take or use cover, the quality of cover raises the
 DR to hit. 
 
-> Limited cover DR13 
+> Limited cover DR13
+> 
 > Partial cover DR15
+> 
 > Full cover DR16
 
 #### DR to dodge
 
 > Limited Cover – DR 11
+> 
 > Partial Cover – DR 9
+> 
 > Full Cover – DR 7
  
 ### DEATH
