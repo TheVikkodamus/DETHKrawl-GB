@@ -171,6 +171,28 @@ The GM and one of the players, representing the entire party, rolls a d6. The si
 > **Optional Rule**:
 > The GM may opt to call for an initiative roll every round or may keep the order determined at the start of combat. It’s up to them.
 
+> **Optional**
+
 #### Fighting Swarms
+
+- When a PC is surrounded by **three or more attackers**, they roll **one DEFENSE** test.
+- Increase the **DR by +1** for each attacker beyond the first.  
+  > *Example: Three attackers = DR12 + 2 = DR14*
+- On a failed **DEFENSE**, the PC takes normal damage **plus +1 damage** for each additional attacker beyond the first.
+
+---
+
+#### Bandit Leader & Swarm Mechanics
+
+- The **GM controls a Bandit Leader** with **7 HP** and **3 Bandits**, each with **5 HP** under normal conditions.
+
+- If the **Bandits and Leader all target a single PC** as a **swarm**:
+  - The **Bandit Leader** keeps **7 HP**
+  - Each **Bandit** now has only **2 HP** instead of 5
+
+> Swarming makes enemies more dangerous — but also more fragile. Easy to kill, hard to ignore.
+
+- Whenever a **Bandit (minion)** is killed in combat, the **DEFENSE DR drops by 1** (to a minimum of DR12).
+- Once only the **Leader remains**, the **DEFENSE DR resets to 12**.
 
 
