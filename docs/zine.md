@@ -178,12 +178,10 @@ Each player rolls 1d6 + AGI. Enemies roll 1d6. Highest goes first
 
 #### Crit (Natural 20)
 
-**Attack**: X2 damage and armor reduced 1 tier.
+- **Attack**: X2 damage and armor reduced 1 tier.
+- **Defense**: PC gets a free attack.
 
-**Defense**: PC gets a free attack.
-
-
-
+  
 ---
 
 
