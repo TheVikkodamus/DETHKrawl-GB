@@ -186,10 +186,10 @@ Each player rolls 1d6 + AGI. Enemies roll 1d6. Highest goes first
 
 ---
 
-### Recovery
+### DEATH
 - 
 
-### DEATH
+### Recovery
 - 
 
 > **Optional**
