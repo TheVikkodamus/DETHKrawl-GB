@@ -47,7 +47,6 @@ The **Game Master** may also award Advantage when the fiction favors the player.
 
 > When rolling with Advantage, roll **d20 + STAT +2** vs DR.
 
----
 
 **Disadvantage**  
 You suffer Disadvantage when:
