@@ -29,10 +29,10 @@ Roll **3d6** for each stat. Don’t record the total — just use the table to g
 
 Assign to:
 
-- **STR** – Smash, lift, hack  
-- **AGI** – Dodge, sneak, escape  
-- **PRE** – Spot, aim, cast  
-- **TOU** – Resist, heal, survive
+- **STR** – *Smash, lift, hack*  
+- **AGI** – *Dodge, sneak, escape*  
+- **PRE** – *Spot, aim, cast*  
+- **TOU** – *Resist, heal, survive*
 
 ---
 
@@ -128,3 +128,5 @@ You may spend one to:
 > - Spend **multiple dice** if you want.  
 > - **Cannot** be used on a **natural 1** — failure is absolute.  
 > - You may **gift 1 die** to another player at any time.
+
+---
