@@ -119,8 +119,8 @@ When it hits 0 — **you die.** No save. Another fool will take your place.
 |:----:|----------------|------------------------------------------------------------------------|
 | 1    | No Armor        | None                                                                  |
 | 2    | Light Armor     | Reduces damage by `d2` (Tier 1)                                          |
-| 3    | Medium Armor    | Reduces damage by `d4` (Tier 2); DR +2 on AGI tests and DEF after the attack phase |
-| 4    | Heavy Armor     | Reduces damage by `d6` (Tier 3); DR +4 on AGI tests, DEF is DR +2        |
+| 3    | Medium Armor    | Reduces damage by `d4` (Tier 2); **DR +2 on AGI tests and DEF**          |
+| 4    | Heavy Armor     | Reduces damage by `d6` (Tier 3); **DR +4 on AGI tests, DEF is DR +2**    |
 
 #### Black Powder Weapons V Armor
 
@@ -208,6 +208,21 @@ Each player rolls `1d6` + AGI. Enemies roll `1d6`. Highest goes first
 
 ---
 
+### Cover
+
+PCs and Enemies may take or use cover, the quality of cover raises the
+DR to hit. 
+
+> Limited cover DR13 
+> Partial cover DR15
+> Full cover DR16
+
+#### DR to dodge
+
+> Limited Cover – DR 11
+> Partial Cover – DR 9
+> Full Cover – DR 7
+ 
 ### DEATH
 - 
 
