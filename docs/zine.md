@@ -1,4 +1,4 @@
-# DethKrawl
+# DethKrawl - TTRPG
 *A Cursed Dungeon-Crawling TTRPG*  
 Inspired by **Mörk Borg**, **Deathbringer**, and the rotting glory of retro RPGs.
 
