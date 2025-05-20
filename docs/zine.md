@@ -133,7 +133,7 @@ _Unarmed_: d2
 | 16 | Heroic      |
 | 18 | Impossible? |
 
-### Combat
+### Combat Difficulty Rating
 
 - **Melee**: d20 + STR vs DR12  
 - **Ranged**: d20 + PRE vs DR12  
