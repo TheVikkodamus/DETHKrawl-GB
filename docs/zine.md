@@ -34,6 +34,33 @@ Assign to:
 - **PRE** – *Spot, aim, cast*  
 - **TOU** – *Resist, heal, survive*
 
+### Advantage vs Disadvantage
+
+**Advantage**  
+You gain Advantage when:
+
+- You attack by surprise or from behind  
+- You fire a ranged weapon from an elevated position  
+- You use the right tools for the job  
+
+The **Game Master** may also award Advantage when the fiction favors the player.
+
+> When rolling with Advantage, roll **d20 + STAT +2** vs DR.
+
+---
+
+**Disadvantage**  
+You suffer Disadvantage when:
+
+- Your target has cover  
+- The terrain is slippery or unstable  
+- You lack the right tools for the task  
+
+The **Game Master** may assign Disadvantage when the fiction works against the player.
+
+> When rolling with Disadvantage, roll **d20 + STAT -2** vs DR.
+
+
 ---
 
 ### Health
