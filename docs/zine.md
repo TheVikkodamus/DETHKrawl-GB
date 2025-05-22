@@ -121,7 +121,7 @@ Roll `d12` to determine a cosmetic scar or injury your character bears:
 
 ## Starting Loot Tables
 
-### `d4` – Bag
+### `d4` – Bag (Roll Once)
 
 | Roll | Result                        |
 |:----:|-------------------------------|
@@ -131,7 +131,7 @@ Roll `d12` to determine a cosmetic scar or injury your character bears:
 
 ---
 
-### `d6` – Gear
+### `d6` – Gear (Roll 3 times, if repeat you get more of item)
 
 | Roll | Gear                              |
 |:----:|-----------------------------------|
@@ -144,34 +144,34 @@ Roll `d12` to determine a cosmetic scar or injury your character bears:
 
 ---
 
-### `d12` – Weapons
+### `d12` – Weapons Table (Roll twice, unless you get a bulky weapon)
 
-| Roll | Weapon         | Damage                        |
-|:----:|----------------|-------------------------------|
-| —    | Unarmed        | `d2` dmg                        |
-| 1    | Staff          | `d4` dmg                        |
-| 2    | Shortsword     | `d4` dmg                        |
-| 3    | Knife          | `d4` dmg                        |
-| 4    | Crossbow       | `d6` dmg, PRE +5 bolts          |
-| 5    | Warhammer      | `d6` dmg                        |
-| 6    | Sword          | `d6` dmg                        |
-| 7    | Bow            | `d6` dmg, PRE +10 arrows        |
-| 8    | Flail          | `d8` dmg                        |
-| 9    | Pistol         | `d6`+2 dmg, PRE +10 Bullets     |
-| 10   | Musket         | `d10`+2 dmg, PRE +10 Bullets    |
-| 11   | Blunderbuss    | `3d6` dmg, PRE +10 Bullets      |
-| 12   | Bombs          | `4d6` dmg, PRE +5 bombs         |
+| Roll | Weapon       | Damage              | Tags                          |
+|:----:|--------------|---------------------|-------------------------------|
+| —    | Unarmed      | `d2` dmg            | *Finesse*                       |
+| 1    | Staff        | `d4` dmg            | Two-Handed, Reach             |
+| 2    | Shortsword   | `d4` dmg            | Finesse                       |
+| 3    | Knife        | `d4` dmg            | Finesse, Concealable          |
+| 4    | Crossbow     | `d6` dmg            | Ranged, +5 Bolts, Reload      |
+| 5    | Warhammer    | `d6` dmg            | Heavy, Loud                   |
+| 6    | Sword        | `d6` dmg            | Versatile                     |
+| 7    | Bow          | `d6` dmg            | Ranged, +10 Arrows, Silent    |
+| 8    | Flail        | `d8` dmg            | Two-Handed, Brutal            |
+| 9    | Pistol       | `d6`+2 dmg          | Ranged, +10 Bullets, Loud     |
+| 10   | Musket       | `d10`+2 dmg         | Ranged, +10 Bullets, Bulky, Loud |
+| 11   | Blunderbuss  | `3d6` dmg           | Ranged, +10 Bullets, Spread, Loud |
+| 12   | Bombs        | `4d6` dmg           | Thrown, +5 Bombs, Explosive, Loud |
 
 ---
 
-### `d4` – Armor
+### `d4` – Armor Table (Roll Once)
 
-| Roll | Armor Type     | Effect                                                                 |
-|:----:|----------------|------------------------------------------------------------------------|
-| 1    | No Armor        | None                                                                  |
-| 2    | Light Armor     | Reduces damage by `d2` (Tier 1)                                          |
-| 3    | Medium Armor    | Reduces damage by `d4` (Tier 2); **DR +2 on AGI tests and DEF**          |
-| 4    | Heavy Armor     | Reduces damage by `d6` (Tier 3); **DR +4 on AGI tests, DEF is DR +2**    |
+| Roll | Armor Type    | Effect                                                                   | Tags                        |
+|:----:|---------------|---------------------------------------------------------------------------|-----------------------------|
+| 1    | No Armor      | None                                                                     | None                        |
+| 2    | Light Armor   | Reduces damage by `d2` (Tier 1)                                          | Quiet, Flexible             |
+| 3    | Medium Armor  | Reduces damage by `d4` (Tier 2); **DR +2** on AGI tests and DEF          | Bulky, Clanky               |
+| 4    | Heavy Armor   | Reduces damage by `d6` (Tier 3); **DR +4 AGI**, **DR +2 DEF**            | Bulky, Loud, Disadvantageous |
 
 #### Black Powder Weapons V Armor
 
