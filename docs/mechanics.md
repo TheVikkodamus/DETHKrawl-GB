@@ -77,9 +77,20 @@ The **Game Master** may assign a Disadvantage when the fiction works against the
 ### Health
 
 Start with `2d6` + **TOU** HP.  
-When it hits 0 — **you are unconscious.** for **TOU** rounds. If no player character stabilizes the unconscious player character. The player will have to roll as they have negative HP.  If they die. Another fool will take their place.
 
----
+When it hits 0 — **you are unconscious.** for **TOU** rounds. If no **player character** stabilizes the unconscious player character. The player will have to roll as they have negative HP.  If they die. Another fool will take their place.
+
+#### Broken
+
+### Broken `d6` Table
+
+| `d6` Roll | Result                                                                 |
+|---------|------------------------------------------------------------------------|
+| 1–2     | Fall unconscious for **d4** rounds, awaken with **`d4`** HP.             |
+| 3–4     | Roll on the **Wounds Table**, then become active with **`d4`** HP.       |
+| 5–6     | **Bleeding out**: death in **`d4`** hours unless treated.                |
+
+All tests are DR16 until you are treated.
 
 ---
 
