@@ -1,229 +1,121 @@
-# DethKrawl – Core Mechanics
+# DethKrawl – Mechanics Summary
 
-This document outlines the core gameplay mechanics of DethKrawl, including character stats, difficulty rating (DR), combat flow, and item interaction.
+## Core Resolution
 
----
+- Roll `d20 + STAT` vs DR (Difficulty Rating)
+- If the result is equal to or higher than DR → success
+- Default DR is **12**, but it can shift based on the situation
 
-## Character Stats
+## Stats
 
-Roll `3d6` for each stat. Don’t record the total — just use the table to get a bonus.
+Each character has four stats:
 
-| `3d6` Roll | STAT Bonus | `d6` chances [GM roll behind screen]| Spell per Day|
-|:---:|:---:|:---:|:---:|
-| 3–5  | -1 | 1-in-6| |
-| 6–10 | 0  | 2-in-6| +`d2` per day|
-| 11–14  | +1 | 3-in-6| +`d3` per day|
-| 15–17  | +2 | 4-in-6| +`d4` per day|
-| 18     | +3 | 5-in-6| +`d6` per day|
+- **STR** – Strength: melee, brute force, lifting
+- **AGI** – Agility: dodging, stealth, defense
+- **PRE** – Presence: awareness, ranged attacks, magic
+- **TOU** – Toughness: survival, resistance, HP bonus
 
-Assign to:
+Stats are determined by rolling `3d6`. Don’t keep the total—convert to bonus:
 
-- **STR** – *Smash, lift, hack*  
-- **AGI** – *Dodge, sneak, escape*  
-- **PRE** – *Spot, aim, cast*  
-- **TOU** – *Resist, heal, survive*
----
+| Roll | Bonus |
+|------|-------|
+| 3–5  | -1    |
+| 6–10 | 0     |
+| 11–14| +1    |
+| 15–17| +2    |
+| 18   | +3    |
 
-**Roll `d20` + STAT ≥ DR**  
-- Default DR (difficulty rating) is **12**  
-- Enemies roll flat **`d20`**, no stat
+## Advantage & Disadvantage
 
-### Difficulty Ratings
+- **Advantage**: Roll `d20 + STAT +2`
+- **Disadvantage**: Roll `d20 + STAT -2`
 
-| DR | Challenge   |
-|:---:|:---:|
-| 6  | Trivial     |
-| 8  | Routine     |
-| 10 | Skilled     |
-| 12 | Pressured   |
-| 14 | Tough       |
-| 16 | Heroic      |
-| 18 | Impossible? |
+The GM applies these based on narrative positioning, tools, or environment.
 
-### Combat Difficulty Rating
+## Health & Damage
 
-- **Melee**: `d20` + STR vs DR12  
-- **Ranged**: `d20` + PRE vs DR12  
-- **Spells**: `d20` + PRE vs DR12
+- Starting HP = `2d6 + TOU`
+- At 0 HP, fall unconscious for `TOU` rounds
+- If not stabilized in time, make a **TOU test (DR14)**:
+  - Success = gain a **Wound**, return with `d4` HP
+  - Failure = death
 
----
+## Death & Broken
 
-### Advantage vs Disadvantage
+If HP drops below zero again, roll `d20 + TOU` vs DR12:
 
-**Advantage**  
-You gain an Advantage when:
+- Success = **Broken** (roll on the Broken Table)
+- Failure = **Dead**
 
-- You attack by surprise or from behind  
-- You fire a ranged weapon from an elevated position  
-- You use the right tools for the job  
+When **Broken**, roll a `d6` to determine outcome (e.g., unconscious, wounded, or bleeding out). All rolls become DR16 until treated.
 
-The **Game Master** may also award Advantage when the fiction favors the player.
+## Defense Rolls
 
-> When rolling with Advantage, roll **d20 + STAT +2** vs DR.
+When attacked, roll `d20 + AGI + Armor Bonus`:
 
-
-**Disadvantage**  
-You suffer a Disadvantage when:
-
-- The terrain is slippery or unstable  
-- You lack the right tools for the task  
-
-The **Game Master** may assign a Disadvantage when the fiction works against the player.
-
-> When rolling with Disadvantage, roll **`d20` + STAT -2** vs DR.
-
----
-
-### Health
-
-Start with `2d6` + **TOU** HP.  
-
-When it hits 0 — **you are unconscious.** for **TOU** rounds. If no **player character** stabilizes the unconscious player character. The player will have to roll as they have negative HP.  If they die. Another fool will take their place.
-
----
-
-### Encumbrance
-
-Player characters can carry a number of items equal to **8 + STR**.  
-Each item, weapon, or piece of gear typically takes up **1 slot** (bulky items may take more, at the GM's discretion).
-
-If a character exceeds their carrying capacity:
-
-- They can **only move up to Close range**.
-- All **AGI-based tests** and **Defense rolls** are made at **DR +2** due to the extra burden.
-
-> Travel light, or get dragged down into the dark.
-
----
-
-#### Broken
-
-### Broken `d6` Table
-
-| `d6` Roll | Result                                                                 |
-|---------|------------------------------------------------------------------------|
-| 1–2     | Fall unconscious for **d4** rounds, awaken with **`d4`** HP.             |
-| 3–4     | Roll on the **Wounds Table**, then become active with **`d4`** HP.       |
-| 5–6     | **Bleeding out**: death in **`d4`** hours unless treated.                |
-
-All tests are DR16 until you are treated.
-
-
-### Wounds Table (d12)
-
-Roll `d12` to determine a cosmetic scar or injury your character bears:
-
-| d12 | Scar Description                                                  |
-|-----|-------------------------------------------------------------------|
-| 1   | A jagged scar crosses your cheek                                  |
-| 2   | One ear is partially torn off                                     |
-| 3   | A deep burn marks your forearm                                    |
-| 4   | Your nose is crooked from an old break                            |
-| 5   | Several knuckles are fused and swollen                            |
-| 6   | A scar circles your neck — rope, wire, or worse.                  |
-| 7   | A bite mark near your shoulder                                    |
-| 8   | Your lips are cracked and split                                   |
-| 9   | A single eye is permanently bloodshot                             |
-| 10  | A long scratch runs down your back                                |
-| 11  | The flesh on one hand looks melted                                |
-| 12  | A crude stitch scar on your chest                                 |
-
----
-
-## DethKrawler’s Die
-
-You begin with **1 DethKrawler Die per level**. These are **`d6s`** that bend fate.
-
-You may spend one to:
-
-- Add to a **Test** roll  
-- Add to a **Damage** roll  
-- **Block `d6`** incoming damage
-
-> - Spend **multiple dice** if you want.  
-> - **Cannot** be used on a **natural 1** — **failure is absolute**.  
-> - You may **gift 1 die** to another player at any time.
-
----
+- On failure = attack hits
+- If you have Damage Reduction, roll and subtract that value from damage taken
 
 ## Combat
 
-1. Combat Rounds
-2. Initiative
-3. Movement (Near, Range, Far)
-4. Rolling to-hit vs DR (Difficulty Rating)
-5. Rolling damage or damage reduction
+- **Melee Attack**: `d20 + STR` vs DR
+- **Ranged Attack**: `d20 + PRE` vs DR
+- **Spellcasting**: `d20 + PRE` vs DR
 
-### Attack Phase
+Critical (natural 20):
+- x2 damage, downgrade enemy armor
 
-- The **player declares** their target and describes the type of attack:
-  - **Melee Attack**: Uses `STR`, unless the weapon is tagged with *Finesse* — then `AGI` may be used.
-  - **Missile Attack**: Uses `PRE`.
-- The player rolls `d20 + relevant STAT`.
-  - If the result **meets or exceeds the Difficulty Rating (DR)**, the attack hits.
+Fumble (natural 1):
+- Weapon breaks (attack)
+- Double damage taken & armor reduced (defense)
+
+## Encumbrance
+
+- Carrying limit = `8 + STR` slots
+- Bulky items = 2 slots
+- Over capacity? Move limited to Close range and all AGI/DEF rolls are made at **DR +2**
+
+## DethKrawler’s Die
+
+You start with **1 DethKrawler Die per level** (`d6`s). You may spend one to:
+
+- Add to a Test or Damage roll
+- Block `d6` incoming damage
+
+Cannot be used on a **natural 1**.  
+You may gift one die to another player.
+
+## Movement & Ranges
+
+- Ranges are abstract: **Close**, **Near**, **Far**
+- You may move one range band per turn unless hindered
+
+## Recovery
+
+**Short Rest**: Eat and drink → regain `d4` HP  
+**Long Rest**: Eat, drink, and rest undisturbed → regain `d6` HP
+
+No food or water = no HP recovery  
+After 2 days without sustenance = lose `d4` HP per day
+
+## Initiative
+
+**Group**: GM and a player both roll `d6`; higher roll acts first  
+**Individual**: Each player rolls `1d6 + AGI`, enemies roll `1d6`
+
+## Cover
+
+| Cover Type       | DR (No Armor) | DR (With Armor) |
+|------------------|---------------|-----------------|
+| No Cover         | 12            | 14              |
+| Half Cover       | 10            | 12              |
+| Three-Quarters   | 8             | 10              |
+| Full Cover       | Cannot be targeted (unless flanked or hit by area effects)
+
+## Kin (Optional Rule)
+
+Characters are usually **Human**. Rare Kins such as **Firstborn** or **Infernal** exist and grant minor abilities. Referee may restrict their use.
 
 ---
 
-### Defence Phase
-
-- The **GM declares** which enemy is attacking and what kind of attack it is.
-- The **player rolls** `d20 + AGI + Armor Bonus` (if any) to defend.
-  - If the roll **fails**, the attack hits.
-  - If the character has **Damage Reduction**, they may roll it now:
-    - Subtract the **Damage Reduction roll** from the incoming damage.
-    - Record the remaining damage on the character sheet.
-
-
-#### Black Powder Weapons V Armor
-
-> These weapons are deadly and dangerous, it will ignore all amor. 
-> A black powder weapon takes one round to reload after it is fired,
-> and you cannot reload when in melee range of a foe.
-
---- 
-
-### Crit (Natural 20)
-
-- **Attack**: X2 damage and armor reduced 1 tier.
-- **defence**: PC gets a free attack.
-
-### Fumble (Natural 1)
-- **Attack**: Weapon Breaks.
-- **defence**: PC takes double damage, armor is reduced one tier. 
-
----
-
-### Cover
-
-PCs and Enemies may take or use cover; the quality of cover raises the DR (difficulty rating) to hit. 
-
-A player character is using cover, their difficulty rating will go down: 
-
-- No Cover: DR12 | DR14 (*medium/heavy armor*)
-- Half-Cover: DR10 | DR12 (*medium/heavy armor*)
-- Three-Quarters: DR8 | DR10 (*medium/heavy armor*)
-- Full Cover: The PC can't be targeted. Unless they are **flanked** or affected by an **area effect attack**.
-
---- 
-
- 
-### DEATH
-
-When a player character's Hit Points have been reduced to negative HP. Roll `d20` + TOU DR16.
-
-- On a success = **BROKEN**.
-- On a fail, you are **DEAD**. 
-
-GM or a Broken player character can roll at the broken table (`d6`).
-
-### Broken
-
-#### Broken `d6` Table
-
-| `d6` Roll | Result                                                                 |
-|---------|------------------------------------------------------------------------|
-| 1–2     | Fall unconscious for **d4** rounds, awaken with **`d4`** HP.             |
-| 3–4     | Roll on the **Wounds Table**, then become active with **`d4`** HP.       |
-| 5–6     | **Bleeding out**: death in **`d4`** hours unless treated.                |
-
-All tests are DR16 until you are treated.
+This is the backbone of DethKrawl. The rest is rot, ruin, and whatever you bring to the table.
