@@ -45,6 +45,19 @@ Assign bonuses to:
 
 > The GM rolls the `d6` behind the screen and only informs the player if something is noticed or resisted — or if it’s too late.
 
+### Spell Per Day
+
+The number of spells a player character can cast each day depends on their **PRE (Presence)** stat.
+
+> **PRE -1?** You can still cast a spell once per day — but it **brings something unwanted** through. The GM decides what that is. Blood runs cold. Reality groans.
+
+**Important Notes:**
+- This limit applies to **spells you know or have found** (scrolls, rituals, whispered madness).
+- You may not regain spell uses until after a **Long Rest**.
+- Once spent, a spell slot is gone until the next day.
+
+> Magic is not free. It costs memory, flesh, or worse. You weren’t meant to know this — but here you are.
+
 ---
 
 ### Active vs Passive
