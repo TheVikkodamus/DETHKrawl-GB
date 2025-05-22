@@ -203,14 +203,15 @@ Roll `d12` to determine a cosmetic scar or injury:
 
 ---
 
-### `d4` – Armor Table
+### `d6` – Armor Table
 
 | Roll | Armor Type   | Effect                                                               | Tags                            |
 |:----:|--------------|----------------------------------------------------------------------|---------------------------------|
-| 1    | No Armor     | None                                                                 | None                            |
-| 2    | Light Armor  | Reduces damage by `d2` (Tier 1)                                      | Quiet, Flexible                 |
-| 3    | Medium Armor | Reduces damage by `d4` (Tier 2); **DR +1** to AGI tests and DEF      | Bulky, Clanky                   |
-| 4    | Heavy Armor  | Reduces damage by `d6` (Tier 3); **DR +2** to AGI test and DEF       | Bulky, Loud, Disadvantageous    |
+| 1-2   | No Armor     | None                                                                 | None                            |
+| 3   | Light Armor  | Reduces damage by `d2` (Tier 1)                                      | Quiet, Flexible                 |
+| 4    | Medium Armor | Reduces damage by `d4` (Tier 2); **DR +2** to AGI tests and DEF      | Bulky, Clanky                   |
+| 5    | Heavy Armor  | Reduces damage by `d6` (Tier 3); **DR +4** to AGI test, DEF roll are DR +2 | Bulky, Loud, Disadvantageous |
+| 6    | Shield       | -1 dmg, *You can choose to ignore all damage from one attack but shield breaks.*| |
 
 #### Black Powder vs Armor
 
