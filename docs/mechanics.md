@@ -209,7 +209,7 @@ A player character is using cover, their difficulty rating will go down:
  
 ### DEATH
 
-When a player character's Hit Points have been reduced to negative HP. Roll `d20` + TOU DR12.
+When a player character's Hit Points have been reduced to negative HP. Roll `d20` + TOU DR16.
 
 - On a success = **BROKEN**.
 - On a fail, you are **DEAD**. 
