@@ -47,7 +47,6 @@ The **Game Master** may also award Advantage when the fiction favors the player.
 
 > When rolling with Advantage, roll **d20 + STAT +2** vs DR.
 
-
 **Disadvantage**  
 You suffer a Disadvantage when:
 
@@ -62,8 +61,16 @@ The **Game Master** may assign a Disadvantage when the fiction works against the
 
 ### Health
 
-Start with `2d6` + **TOU** HP.  
-When it hits 0 — **you are unconscious.** for **TOU** rounds. If no player character stabilizes the unconscious player character. The player will have to roll as they have negative HP.  If they die. Another fool will take their place.
+Start with `2d6 + TOU` HP.  
+
+When your HP hits **0**, **you fall unconscious** for `TOU` rounds.  
+
+If no player character stabilizes you during that time, you must make a **TOU test (DR14)** to cling to life.  
+
+- On a **success**, you gain a **Wound** and return with `d4` HP.  
+- On a **failure**, you die.  
+
+Another fool will take your place.
 
 ---
 
@@ -75,7 +82,7 @@ Each item, weapon, or piece of gear typically takes up **1 slot** (bulky items t
 If a character exceeds their **carrying capacity**:
 
 - They can **only move up to Close range**.
-- All **AGI-based tests** and **Defense rolls** are made at **DR +2** due to the extra burden.
+- All **AGI-based tests** and **Defence rolls** are made at **DR +2** due to the extra burden.
 
 > Travel light, or get dragged down into the dark.
 
