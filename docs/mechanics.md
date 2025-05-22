@@ -94,6 +94,51 @@ All tests are DR16 until you are treated.
 
 ---
 
+### Wounds Table (d66)
+
+Roll `d66` (roll two `d6` dice, one for tens, one for ones) and consult the table:
+
+| d66 | Scar Description                                      |
+|-----|--------------------------------------------------------|
+| 11  | A jagged scar runs from your cheek to your jaw.       |
+| 12  | Burned fingertips — blistered, blackened, or melted.  |
+| 13  | Deep bite marks on your forearm — still slightly swollen. |
+| 14  | A missing eyebrow, never grew back right.             |
+| 15  | A cracked tooth or two — smile with caution.          |
+| 16  | Scar across the throat — close call.                  |
+| 21  | Split nose — crooked and lumpy.                       |
+| 22  | Ear partially torn off — frayed like paper.           |
+| 23  | Knife gash down the thigh — stitched with wire.       |
+| 24  | Missing pinky finger — bitten, not cut.               |
+| 25  | Eyelid twitches from an old head wound.               |
+| 26  | Puncture wound on the ribs — never quite healed right.|
+| 31  | Torn lip — leaves a permanent snarl.                  |
+| 32  | Blistered neck from acid splash.                      |
+| 33  | Hook scar in the shoulder — jagged and round.         |
+| 34  | Long scratch across the back — claw or blade?         |
+| 35  | Scalp wound — part of your hair no longer grows.      |
+| 36  | Scarred knuckles from too many close fights.          |
+| 41  | Ribcage burns — marked like coals.                    |
+| 42  | Circular scar on the palm — ritual or accident?       |
+| 43  | Torn calf muscle — limps slightly in the rain.        |
+| 44  | Branding mark — faded but visible.                    |
+| 45  | Cratered scar on the hip — bone shows when bent.      |
+| 46  | Eye socket bruised forever — eye still intact.        |
+| 51  | Crosshatch scars over your back — like a whip's kiss. |
+| 52  | Burned scalp under your helmet.                       |
+| 53  | Cheekbone dented — it clicks when you chew.           |
+| 54  | Scar across the collarbone — almost bled out.         |
+| 55  | Crooked jaw — reset by a friend, not a healer.        |
+| 56  | Bruised temples — damage from unseen force.           |
+| 61  | Finger permanently bent — bad heal from a break.      |
+| 62  | Gash across the chest — just missed the heart.        |
+| 63  | Ear pierced through by a blade — hole still open.     |
+| 64  | Scar shaped like a rune — but you don’t know why.     |
+| 65  | Torn lip and cheek — shows your teeth when you grin. |
+| 66  | One eye clouded and gray — vision mostly intact.      |
+
+---
+
 ## DethKrawler’s Die
 
 You begin with **1 DethKrawler Die per level**. These are **`d6s`** that bend fate.
