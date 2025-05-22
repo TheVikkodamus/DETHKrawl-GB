@@ -336,6 +336,17 @@ Use cover to reduce hit chance:
 
 ---
 
+### Recovery
+
+**Short Rest**  
+- Consume a ration & water → regain `d4` HP.
+
+**Long Rest**  
+- Uninterrupted rest + ration & water → regain `d6` HP.  
+Without food or water: no HP regained.   After 2 days without sustenance: lose `d4` HP per day from starvation.
+
+---
+
 ### Death & Dying
 
 If HP drops below zero, roll `d20 + TOU` vs DR12:
@@ -345,14 +356,3 @@ If HP drops below zero, roll `d20 + TOU` vs DR12:
 
 ---
 
-### Recovery
-
-**Short Rest**  
-Consume a ration & water → regain `d4` HP.
-
-**Long Rest**  
-Uninterrupted rest + ration & water → regain `d6` HP.  
-Without food or water: no HP regained.  
-After 2 days without sustenance: lose `d4` HP per day from starvation.
-
----
