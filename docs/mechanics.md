@@ -216,9 +216,9 @@ When a player character's Hit Points have been reduced to negative HP. Roll `d20
 
 GM or a Broken player character can roll at the broken table (`d6`).
 
-#### Broken
+### Broken
 
-### Broken `d6` Table
+#### Broken `d6` Table
 
 | `d6` Roll | Result                                                                 |
 |---------|------------------------------------------------------------------------|
