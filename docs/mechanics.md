@@ -80,6 +80,22 @@ Start with `2d6` + **TOU** HP.
 
 When it hits 0 — **you are unconscious.** for **TOU** rounds. If no **player character** stabilizes the unconscious player character. The player will have to roll as they have negative HP.  If they die. Another fool will take their place.
 
+---
+
+### Encumbrance
+
+Player characters can carry a number of items equal to **8 + STR**.  
+Each item, weapon, or piece of gear typically takes up **1 slot** (bulky items may take more, at the GM's discretion).
+
+If a character exceeds their carrying capacity:
+
+- They can **only move up to Close range**.
+- All **AGI-based tests** and **Defense rolls** are made at **DR +2** due to the extra burden.
+
+> Travel light, or get dragged down into the dark.
+
+---
+
 #### Broken
 
 ### Broken `d6` Table
@@ -92,50 +108,25 @@ When it hits 0 — **you are unconscious.** for **TOU** rounds. If no **player c
 
 All tests are DR16 until you are treated.
 
----
 
-### Wounds Table (d66)
+### Wounds Table (d12)
 
-Roll `d66` (roll two `d6` dice, one for tens, one for ones) and consult the table:
+Roll `d12` to determine a cosmetic scar or injury your character bears:
 
-| d66 | Scar Description                                      |
-|-----|--------------------------------------------------------|
-| 11  | A jagged scar runs from your cheek to your jaw.       |
-| 12  | Burned fingertips — blistered, blackened, or melted.  |
-| 13  | Deep bite marks on your forearm — still slightly swollen. |
-| 14  | A missing eyebrow, never grew back right.             |
-| 15  | A cracked tooth or two — smile with caution.          |
-| 16  | Scar across the throat — close call.                  |
-| 21  | Split nose — crooked and lumpy.                       |
-| 22  | Ear partially torn off — frayed like paper.           |
-| 23  | Knife gash down the thigh — stitched with wire.       |
-| 24  | Missing pinky finger — bitten, not cut.               |
-| 25  | Eyelid twitches from an old head wound.               |
-| 26  | Puncture wound on the ribs — never quite healed right.|
-| 31  | Torn lip — leaves a permanent snarl.                  |
-| 32  | Blistered neck from acid splash.                      |
-| 33  | Hook scar in the shoulder — jagged and round.         |
-| 34  | Long scratch across the back — claw or blade?         |
-| 35  | Scalp wound — part of your hair no longer grows.      |
-| 36  | Scarred knuckles from too many close fights.          |
-| 41  | Ribcage burns — marked like coals.                    |
-| 42  | Circular scar on the palm — ritual or accident?       |
-| 43  | Torn calf muscle — limps slightly in the rain.        |
-| 44  | Branding mark — faded but visible.                    |
-| 45  | Cratered scar on the hip — bone shows when bent.      |
-| 46  | Eye socket bruised forever — eye still intact.        |
-| 51  | Crosshatch scars over your back — like a whip's kiss. |
-| 52  | Burned scalp under your helmet.                       |
-| 53  | Cheekbone dented — it clicks when you chew.           |
-| 54  | Scar across the collarbone — almost bled out.         |
-| 55  | Crooked jaw — reset by a friend, not a healer.        |
-| 56  | Bruised temples — damage from unseen force.           |
-| 61  | Finger permanently bent — bad heal from a break.      |
-| 62  | Gash across the chest — just missed the heart.        |
-| 63  | Ear pierced through by a blade — hole still open.     |
-| 64  | Scar shaped like a rune — but you don’t know why.     |
-| 65  | Torn lip and cheek — shows your teeth when you grin. |
-| 66  | One eye clouded and gray — vision mostly intact.      |
+| d12 | Scar Description                                                  |
+|-----|-------------------------------------------------------------------|
+| 1   | A jagged scar crosses your cheek                                  |
+| 2   | One ear is partially torn off                                     |
+| 3   | A deep burn marks your forearm                                    |
+| 4   | Your nose is crooked from an old break                            |
+| 5   | Several knuckles are fused and swollen                            |
+| 6   | A scar circles your neck — rope, wire, or worse.                  |
+| 7   | A bite mark near your shoulder                                    |
+| 8   | Your lips are cracked and split                                   |
+| 9   | A single eye is permanently bloodshot                             |
+| 10  | A long scratch runs down your back                                |
+| 11  | The flesh on one hand looks melted                                |
+| 12  | A crude stitch scar on your chest                                 |
 
 ---
 
@@ -153,6 +144,7 @@ You may spend one to:
 > - **Cannot** be used on a **natural 1** — **failure is absolute**.  
 > - You may **gift 1 die** to another player at any time.
 
+---
 
 ## Combat
 
@@ -181,7 +173,6 @@ You may spend one to:
     - Subtract the **Damage Reduction roll** from the incoming damage.
     - Record the remaining damage on the character sheet.
 
----
 
 #### Black Powder Weapons V Armor
 
@@ -191,7 +182,7 @@ You may spend one to:
 
 --- 
 
-#### Crit (Natural 20)
+### Crit (Natural 20)
 
 - **Attack**: X2 damage and armor reduced 1 tier.
 - **defence**: PC gets a free attack.
@@ -211,7 +202,10 @@ A player character is using cover, their difficulty rating will go down:
 - No Cover: DR12 | DR14 (*medium/heavy armor*)
 - Half-Cover: DR10 | DR12 (*medium/heavy armor*)
 - Three-Quarters: DR8 | DR10 (*medium/heavy armor*)
-- Full Cover: The PC can't be targeted. Unless they are **flanked** or affected by an **area effect attack**. 
+- Full Cover: The PC can't be targeted. Unless they are **flanked** or affected by an **area effect attack**.
+
+--- 
+
  
 ### DEATH
 
