@@ -34,6 +34,15 @@ Assign bonuses to:
 - **PRE** – *Spot, aim, cast*  
 - **TOU** – *Resist, heal, survive*
 
+---
+### Active vs Passive
+
+- If a **player chooses to do something**, they roll a standard test:  
+  `d20 + STAT` vs DR (usually DR12)
+- If a **player is unaware** or not actively trying, the GM uses the passive `d6` chance.
+
+> Use passive rolls to keep tension and surprise alive. If players always roll, they always suspect something is up.
+
 > Sometimes, the GM will roll in secret to determine if a player **notices** or **reacts** to something without declaring an action — like spotting a trap, hearing footsteps, sensing danger, or intuiting a lie.
 > Use the player's stat to determine their **passive success chance** on a `d6`.
 
@@ -44,6 +53,8 @@ Assign bonuses to:
 - **STR**: Bracing against sudden collapse or holding a door shut
 
 > The GM rolls the `d6` behind the screen and only informs the player if something is noticed or resisted — or if it’s too late.
+
+---
 
 ### Spell Per Day
 
@@ -57,17 +68,6 @@ The number of spells a player character can cast each day depends on their **PRE
 - Once spent, a spell slot is gone until the next day.
 
 > Magic is not free. It costs memory, flesh, or worse. You weren’t meant to know this — but here you are.
-
----
-
-### Active vs Passive
-
-- If a **player chooses to do something**, they roll a standard test:  
-  `d20 + STAT` vs DR (usually DR12)
-- If a **player is unaware** or not actively trying, the GM uses the passive `d6` chance.
-
-> Use passive rolls to keep tension and surprise alive. If players always roll, they always suspect something is up.
-
 
 ---
 
