@@ -209,7 +209,7 @@ Roll `d12` to determine a cosmetic scar or injury:
 |:----:|--------------|----------------------------------------------------------------------|---------------------------------|
 | 1    | No Armor     | None                                                                 | None                            |
 | 2    | Light Armor  | Reduces damage by `d2` (Tier 1)                                      | Quiet, Flexible                 |
-| 3    | Medium Armor | Reduces damage by `d4` (Tier 2); **DR +2** to AGI tests and DEF      | Bulky, Clanky                   |
+| 3    | Medium Armor | Reduces damage by `d4` (Tier 2); **DR +1** to AGI tests and DEF      | Bulky, Clanky                   |
 | 4    | Heavy Armor  | Reduces damage by `d6` (Tier 3); **DR +4 AGI**, **DR +2 DEF**        | Bulky, Loud, Disadvantageous    |
 
 #### Black Powder vs Armor
