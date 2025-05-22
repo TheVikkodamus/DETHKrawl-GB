@@ -68,6 +68,39 @@ When it hits 0 — **you are unconscious.** for **TOU** rounds. If no player cha
 
 ---
 
+#### Broken
+
+### Broken `d6` Table
+
+| `d6` Roll | Result                                                                 |
+|---------|------------------------------------------------------------------------|
+| 1–2     | Fall unconscious for **d4** rounds, awaken with **`d4`** HP.             |
+| 3–4     | Roll on the **Wounds Table**, then become active with **`d4`** HP.       |
+| 5–6     | **Bleeding out**: death in **`d4`** hours unless treated.                |
+
+All tests are DR16 until you are treated.
+
+### Wounds Table (d12)
+
+Roll `d12` to determine a cosmetic scar or injury your character bears:
+
+| d12 | Scar Description                                                  |
+|-----|-------------------------------------------------------------------|
+| 1   | A jagged scar crosses your cheek                                  |
+| 2   | One ear is partially torn off                                     |
+| 3   | A deep burn marks your forearm                                    |
+| 4   | Your nose is crooked from an old break                            |
+| 5   | Several knuckles are fused and swollen                            |
+| 6   | A scar circles your neck — rope, wire, or worse.                  |
+| 7   | A bite mark near your shoulder                                    |
+| 8   | Your lips are cracked and split                                   |
+| 9   | A single eye is permanently bloodshot                             |
+| 10  | A long scratch runs down your back                                |
+| 11  | The flesh on one hand looks melted                                |
+| 12  | A crude stitch scar on your chest                                 |
+
+---
+
 ## Starting Loot Tables
 
 ### `d4` – Bag
@@ -127,12 +160,6 @@ When it hits 0 — **you are unconscious.** for **TOU** rounds. If no player cha
 > These weapons are deadly and dangerous, it will ignore all amor. 
 > A black powder weapon takes one round to reload after it is fired,
 > and you cannot reload when in melee range of a foe.
-
----
-
-> **Black Powder Weapons** ignore all armor.  
-> Reloading takes a round.  
-> You **cannot reload** in melee.
 
 ---
 
@@ -197,7 +224,30 @@ The GM and one of the players, representing the entire party, rolls a `d6`. The 
 #### Individual Initiative
 Each player rolls `1d6` + AGI. Enemies roll `1d6`. The highest goes first
 
-#### Crit (Natural 20)
+---
+
+### Attack Phase
+
+- The **player declares** their target and describes the type of attack:
+  - **Melee Attack**: Uses `STR`, unless the weapon is tagged with *Finesse* — then `AGI` may be used.
+  - **Missile Attack**: Uses `PRE`.
+- The player rolls `d20 + relevant STAT`.
+  - If the result **meets or exceeds the Difficulty Rating (DR)**, the attack hits.
+
+---
+
+### Defence Phase
+
+- The **GM declares** which enemy is attacking and what kind of attack it is.
+- The **player rolls** `d20 + AGI + Armor Bonus` (if any) to defend.
+  - If the roll **fails**, the attack hits.
+  - If the character has **Damage Reduction**, they may roll it now:
+    - Subtract the **Damage Reduction roll** from the incoming damage.
+    - Record the remaining damage on the character sheet.
+
+---
+
+### Crit (Natural 20)
 
 - **Attack**: X2 damage and armor reduced 1 tier.
 - **defence**: PC gets a free attack.
