@@ -1,6 +1,6 @@
-# DethKrawl – Mechanics Summary
-
-## Core Resolution
+# DethKrawl 
+## Mechanics Document
+### Core Resolution
 
 - Roll `d20 + STAT` vs DR (Difficulty Rating)
 - If the result is equal to or higher than DR → success
