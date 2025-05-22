@@ -187,18 +187,18 @@ Roll `d12` to determine a cosmetic scar or injury:
 
 | Roll | Weapon       | Damage         | Tags                                      |
 |:----:|--------------|----------------|-------------------------------------------|
-| —    | Unarmed      | `d2` dmg       | *Finesse*                                  |
+| —    | Unarmed      | `d2` dmg       | *Finesse*                                 |
 | 1    | Staff        | `d4` dmg       | Two-Handed, Reach                         |
 | 2    | Shortsword   | `d4` dmg       | Finesse                                   |
 | 3    | Knife        | `d4` dmg       | Finesse, Concealable                      |
-| 4    | Crossbow     | `d6` dmg       | Ranged, +5 Bolts, Reload                  |
-| 5    | Warhammer    | `d6` dmg       | Heavy, Loud                               |
+| 4    | Crossbow     | `d6` dmg       | Bulky, Ranged, PRE +5 Bolts, Reload       |
+| 5    | Warhammer    | `d6` dmg       | Bulky, Heavy                              |
 | 6    | Sword        | `d6` dmg       | Versatile                                 |
-| 7    | Bow          | `d6` dmg       | Ranged, +10 Arrows, Silent                |
+| 7    | Bow          | `d6` dmg       | Bulky,  Ranged, PRE +10 Arrows, Silent    |
 | 8    | Flail        | `d8` dmg       | Two-Handed, Brutal                        |
-| 9    | Pistol       | `d6`+2 dmg     | Ranged, +10 Bullets, Loud                 |
-| 10   | Musket       | `d10`+2 dmg    | Ranged, +10 Bullets, Bulky, Loud          |
-| 11   | Blunderbuss  | `3d6` dmg      | Ranged, +10 Bullets, Spread, Loud         |
+| 9    | Pistol       | `d6`+2 dmg     | Ranged, PRE +10 Bullets, Loud             |
+| 10   | Musket       | `d10`+2 dmg    | Ranged, PRE +10 Bullets, Bulky, Loud      |
+| 11   | Blunderbuss  | `3d6` dmg      | Ranged, PRE +10 Bullets, Spread, Loud     |
 | 12   | Bombs        | `4d6` dmg      | Thrown, +5 Bombs, Explosive, Loud         |
 
 ---
