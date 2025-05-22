@@ -37,7 +37,7 @@ Assign to:
 ### Advantage vs Disadvantage
 
 **Advantage**  
-You gain Advantage when:
+You gain an Advantage when:
 
 - You attack by surprise or from behind  
 - You fire a ranged weapon from an elevated position  
@@ -49,13 +49,13 @@ The **Game Master** may also award Advantage when the fiction favors the player.
 
 
 **Disadvantage**  
-You suffer Disadvantage when:
+You suffer a Disadvantage when:
 
 - Your target has cover  
 - The terrain is slippery or unstable  
 - You lack the right tools for the task  
 
-The **Game Master** may assign Disadvantage when the fiction works against the player.
+The **Game Master** may assign a Disadvantage when the fiction works against the player.
 
 > When rolling with Disadvantage, roll **`d20` + STAT -2** vs DR.
 
@@ -189,13 +189,13 @@ You may spend one to:
 5. Rolling damage or damage reduction
 
 #### Initiative: Who Goes First? (Group)
-The GM and one of the players, representing the entire party, rolls a `d6`. The side with the highest roll wins initiative and acts first. In the event of a tie, both sides go at the same time. Yes, it is possible for both sides to kill each other at the exact same time.
+The GM and one of the players, representing the entire party, rolls a `d6`. The side with the highest roll wins initiative and acts first. In the event of a tie, both sides go simultaneously. Yes, both sides can kill each other at the same time.
 
 > **Optional Rule**:
-> The GM may opt to call for an initiative roll every round or may keep the order determined at the start of combat. It’s up to them.
+> The GM may call for an initiative roll every round or keep the order determined at the start of combat. It’s up to them.
 
 #### Individual Initiative
-Each player rolls `1d6` + AGI. Enemies roll `1d6`. Highest goes first
+Each player rolls `1d6` + AGI. Enemies roll `1d6`. The highest goes first
 
 #### Crit (Natural 20)
 
@@ -210,30 +210,23 @@ Each player rolls `1d6` + AGI. Enemies roll `1d6`. Highest goes first
 
 ### Cover
 
-PCs and Enemies may take or use cover, the quality of cover raises the DR (difficulty rating) to hit. 
+PCs and Enemies may take or use cover; the quality of cover raises the DR (difficulty rating) to hit. 
 
-> Limited cover DR13
-> 
-> Partial cover DR15
-> 
-> Full cover DR16
+A player character is using cover, their difficulty rating will go down: 
 
-#### DR (difficulty rating) to dodge
-
-> Limited Cover – DR 11
-> 
-> Partial Cover – DR 9
-> 
-> Full Cover – DR 7
+- No Cover: DR12 | DR14 (*medium/heavy armor*)|
+- Half-Cover: DR10 | DR12 (*medium/heavy armor*)|
+- Three-Quarters: DR8 | DR10 (*medium/heavy armor*)
+- Full Cover: The PC can't be targeted. Unless they are **flanked** or affected by an **area effect attack**. 
  
 ### DEATH
 
-When a player character's Hit Points has been reduced to negative HP. Roll `d20` + TOU DR12.
+When a player character's Hit Points have been reduced to negative HP. Roll `d20` + TOU DR12.
 
-- On a success = Broken
-- On a fail, you are DEAD. 
+- On a success = **BROKEN**.
+- On a fail, you are **DEAD**. 
 
-GM or Broken player character can roll at the broken table (`d6`).
+GM or a Broken player character can roll at the broken table (`d6`).
 
 #### Broken
 
@@ -261,7 +254,7 @@ All tests are DR16 until you are treated.
 
 ---
 
-#### Bandit Leader & Swarm Mechanics
+#### Example: Bandit Leader & Swarm Mechanics
 
 - The **GM controls a Bandit Leader** with **7 HP** and **3 Bandits**, each with **5 HP** under normal conditions.
 
