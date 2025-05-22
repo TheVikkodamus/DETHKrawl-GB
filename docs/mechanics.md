@@ -15,15 +15,43 @@ Each character has four stats:
 - **PRE** – Presence: awareness, ranged attacks, magic
 - **TOU** – Toughness: survival, resistance, HP bonus
 
-Stats are determined by rolling `3d6`. Don’t keep the total—convert to bonus:
+Roll `3d6` for each stat. Use the total to determine:
 
-| Roll | Bonus |
-|------|-------|
-| 3–5  | -1    |
-| 6–10 | 0     |
-| 11–14| +1    |
-| 15–17| +2    |
-| 18   | +3    |
+- Your **stat bonus** (used in most rolls)
+- Your **passive chance of success** (`d6` behind-the-screen rolls by the GM)
+- Your **spells per day** (only for characters who can cast)
+
+| `3d6` Roll | Stat Bonus | `d6` Chance (GM behind screen) | Spells per Day |
+|------------|-------------|-------------------------------|----------------|
+| 3–5        | -1          | 1-in-6                        | —              |
+| 6–10       | 0           | 2-in-6                        | +`d2`          |
+| 11–14      | +1          | 3-in-6                        | +`d3`          |
+| 15–17      | +2          | 4-in-6                        | +`d4`          |
+| 18         | +3          | 5-in-6                        | +`d6`          |
+
+
+> Sometimes, the GM will roll in secret to determine if a player **notices** or **reacts** to something without declaring an action — like spotting a trap, hearing footsteps, sensing danger, or intuiting a lie.
+> Use the player's stat to determine their **passive success chance** on a `d6`.
+
+**Examples of Passive Use:**
+- **AGI**: Detecting a tripwire, reflexively dodging a sudden hazard
+- **PRE**: Hearing whispers behind a door, noticing someone's lying
+- **TOU**: Resisting fatigue, poison, or mind-altering fog
+- **STR**: Bracing against sudden collapse or holding a door shut
+
+> The GM rolls the `d6` behind the screen and only informs the player if something is noticed or resisted — or if it’s too late.
+
+---
+
+### Active vs Passive
+
+- If a **player chooses to do something**, they roll a standard test:  
+  `d20 + STAT` vs DR (usually DR12)
+- If a **player is unaware** or not actively trying, the GM uses the passive `d6` chance.
+
+> Use passive rolls to keep tension and surprise alive. If players always roll, they always suspect something is up.
+
+---
 
 ## Advantage & Disadvantage
 
