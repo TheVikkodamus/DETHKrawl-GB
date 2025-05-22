@@ -280,6 +280,31 @@ You may spend one to:
   - On a failure, the attack hits.
   - Roll any available **Damage Reduction**, subtract from incoming damage.
 
+#### Optional: Quicker Combat
+
+To speed up combat and keep the flow brutal and unpredictable, you can skip initiative entirely and resolve both offense and defense in a single moment.
+
+**How it works:**
+
+1. **Roll a die equal to the number of players at the table** (e.g., `d4`, `d6`, etc.).  
+   Count clockwise from the GM’s left. The result determines **which player takes their turn next**.
+
+2. That player rolls **two different-colored d20s**:
+   - One die is their **attack** roll (targeting an enemy)
+   - One die is their **defense** roll (to avoid the incoming attack this round)
+
+3. The GM narrates the action, weaving both dice into the outcome:
+   - What the player attempts
+   - What the enemy does in response
+
+4. **Resolve both rolls**:
+   - If **attack ≥ DR**, the player hits their target — roll damage.
+   - If **defense ≥ DR**, the player avoids the enemy’s attack.
+   - If **attack fails**, the enemy may counterattack or reposition (GM's discretion).
+   - If **defense fails**, the player is hit — roll damage and apply armor reduction.
+
+> Both rolls happen simultaneously, keeping the rhythm tight and dramatic. One roll, two sides of the blade.
+
 ---
 
 ### Criticals & Fumbles
@@ -289,6 +314,7 @@ You may spend one to:
 - Target’s armor drops one tier
 
 **Critical Defense**:
+- Avoids Attack
 - Free counterattack
 
 **Fumble (Nat 1)**:
