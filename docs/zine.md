@@ -51,7 +51,6 @@ The **Game Master** may also award Advantage when the fiction favors the player.
 **Disadvantage**  
 You suffer a Disadvantage when:
 
-- Your target has cover  
 - The terrain is slippery or unstable  
 - You lack the right tools for the task  
 
@@ -68,9 +67,21 @@ When it hits 0 — **you are unconscious.** for **TOU** rounds. If no player cha
 
 ---
 
-#### Broken
+### Encumbrance
 
-### Broken `d6` Table
+Player characters can carry a number of items equal to **8 + STR**.  
+Each item, weapon, or piece of gear typically takes up **1 slot** (bulky items take 2 slots, at the GM's discretion).
+
+If a character exceeds their **carrying capacity**:
+
+- They can **only move up to Close range**.
+- All **AGI-based tests** and **Defense rolls** are made at **DR +2** due to the extra burden.
+
+> Travel light, or get dragged down into the dark.
+
+### Broken
+
+#### Broken `d6` Table
 
 | `d6` Roll | Result                                                                 |
 |---------|------------------------------------------------------------------------|
