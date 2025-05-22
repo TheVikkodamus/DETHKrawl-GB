@@ -64,7 +64,7 @@ The **Game Master** may assign a Disadvantage when the fiction works against the
 ### Health
 
 Start with `2d6` + **TOU** HP.  
-When it hits 0 — **you die.** No save. Another fool will take your place.
+When it hits 0 — **you are unconscious.** for **TOU** rounds. If no player character stabilizes the unconscious player character. The player will have to roll as they have negative HP.  If they die. Another fool will take their place.
 
 ---
 
