@@ -309,7 +309,14 @@ GM or a Broken player character can roll at the broken table (`d6`).
 All tests are DR16 until you are treated.
 
 ### Recovery
-- 
+
+#### Short Rest
+Player character who takes a short rest and takes a ration and water will heal `d4` HP.
+
+#### Long Rest
+Player character who takes an uninterrupted rest and takes a ration and water will heal `d6` HP. 
+If player rests without eating and driking. No HP will be recovered when resting or sleeping.  After two days, a character is
+starving and loses d4 HP per day.
 
 > **Optional**
 
