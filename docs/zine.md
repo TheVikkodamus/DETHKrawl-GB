@@ -250,11 +250,11 @@ Each player rolls `1d6` + AGI. Enemies roll `1d6`. The highest goes first
 ### Crit (Natural 20)
 
 - **Attack**: X2 damage and armor reduced 1 tier.
-- **defence**: PC gets a free attack.
+- **Defence**: PC gets a free attack.
 
 ### Fumble (Natural 1)
 - **Attack**: Weapon Breaks.
-- **defence**: PC takes double damage, armor is reduced one tier. 
+- **Defence**: PC takes double damage, armor is reduced one tier. 
 
 ---
 
