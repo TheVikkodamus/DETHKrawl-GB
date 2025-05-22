@@ -34,6 +34,28 @@ Assign bonuses to:
 - **PRE** – *Spot, aim, cast*  
 - **TOU** – *Resist, heal, survive*
 
+> Sometimes, the GM will roll in secret to determine if a player **notices** or **reacts** to something without declaring an action — like spotting a trap, hearing footsteps, sensing danger, or intuiting a lie.
+> Use the player's stat to determine their **passive success chance** on a `d6`.
+
+**Examples of Passive Use:**
+- **AGI**: Detecting a tripwire, reflexively dodging a sudden hazard
+- **PRE**: Hearing whispers behind a door, noticing someone's lying
+- **TOU**: Resisting fatigue, poison, or mind-altering fog
+- **STR**: Bracing against sudden collapse or holding a door shut
+
+> The GM rolls the `d6` behind the screen and only informs the player if something is noticed or resisted — or if it’s too late.
+
+---
+
+### Active vs Passive
+
+- If a **player chooses to do something**, they roll a standard test:  
+  `d20 + STAT` vs DR (usually DR12)
+- If a **player is unaware** or not actively trying, the GM uses the passive `d6` chance.
+
+> Use passive rolls to keep tension and surprise alive. If players always roll, they always suspect something is up.
+
+
 ---
 
 ### Advantage vs Disadvantage
