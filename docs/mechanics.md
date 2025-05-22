@@ -65,7 +65,6 @@ The **Game Master** may also award Advantage when the fiction favors the player.
 **Disadvantage**  
 You suffer a Disadvantage when:
 
-- Your target has cover  
 - The terrain is slippery or unstable  
 - You lack the right tools for the task  
 
