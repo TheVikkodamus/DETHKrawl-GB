@@ -314,8 +314,8 @@ To speed up combat and keep the flow brutal and unpredictable, you can skip init
 - Target’s armor drops one tier
 
 **Critical Defense**:
-- Avoids Attack
-- Free counterattack
+- Avoids Attack 
+- Free counterattack (this is a regular attack damage)
 
 **Fumble (Nat 1)**:
 - Weapon breaks (on attack)
