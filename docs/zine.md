@@ -329,7 +329,7 @@ To speed up combat and keep the flow brutal and unpredictable, you can skip init
 Use cover to reduce hit chance:
 
 | Cover Type       | DR (No Armor) | DR (With Armor) |
-|------------------|---------------|-----------------|
+|:------------------|:---------------:|:-----------------:|
 | No Cover         | 12            | 14              |
 | Half Cover       | 10            | 12              |
 | 3/4 Cover        | 8             | 10              |
