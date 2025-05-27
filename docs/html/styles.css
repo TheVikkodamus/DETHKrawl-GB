@@ -1,4 +1,5 @@
 /* CSS file for DethKrawler */
+
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
@@ -7,6 +8,8 @@ body {
   display: flex;
   min-height: 100vh;
 }
+
+/* Navigation Menu */
 
 .sidebar {
   display: flex;
@@ -51,6 +54,8 @@ body {
   color: #ccc;
   text-decoration: underline;
 }
+
+/* Footer Section in the Nav */
 
 .sidebar footer {
   font-size: 0.7rem;
@@ -167,4 +172,5 @@ blockquote:before {
 
 blockquote p {
   display: inline;
+  color: #ffffff;
 }
