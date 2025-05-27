@@ -111,13 +111,13 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 2rem 0;
-  background-color: #f8f3ef; /* parchment vibe */
+  background-color: #f8f3ef; /* parchment color */
   font-family: 'Courier New', monospace;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 thead th {
-  background-color: #7b0000; /* deep blood red */
+  background-color: #CC0100; /* color from the navigation menu */
   color: white;
   padding: 1rem;
   font-size: 1rem;
