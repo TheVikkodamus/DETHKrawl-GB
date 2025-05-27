@@ -174,3 +174,7 @@ blockquote p {
   display: inline;
   color: white;
 }
+
+blockquote code {
+  color: #fff;
+}
