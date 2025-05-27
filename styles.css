@@ -1,7 +1,7 @@
 /* CSS file for DethKrawler */
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   background-color: white;
   color: black;
   display: flex;
@@ -24,7 +24,7 @@ body {
 }
 
 .sidebar h1 {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 1.6rem;
   margin-bottom: 2rem;
   text-align: left;
@@ -104,4 +104,3 @@ body {
   display: block;
   margin: 2rem auto;
 }
-
