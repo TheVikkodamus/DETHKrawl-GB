@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff000">
+    <meta property="og:site_name" content="DethKrawl TTRPG">
+    <title>DethKrawl TTRPG</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!--add a DK logo that looks metal for the favicon.-->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- sidebar | navigation -->
+    <div class="sidebar">
+      <img src="/assets/images/DK_logo_3.png" alt="DethKrawl logo">
+      <ul>
+        <li>
+          <a href="docs/html/randomly_creating_characters.html">0. Random Character Creation</a>
+        </li>
+        <li>
+          <a href="#">1. Game Mechanics</a>
+        </li>
+        <li>
+          <a href="#">2. Armor and Weapons</a>
+        </li>
+        <li>
+          <a href="#">3. Combat</a>
+        </li>
+        <li>
+          <a href="#">4. Advancement</a>
+        </li>
+        <!--  <li><a href="#">Go to main page</a> [remove this from the index.html file, make sure to have it on the other pages.] -->
+      </ul>
+      <!--footer with credits infor-->
+      <footer>
+        <a href="https://creativecommons.org">DethKrawl TTRPG</a> © 2025 by <a href="https://creativecommons.org">Victor Gregory Matos</a>
+        <br> Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+      </footer>
+    </div>
+    <!-- main content goes here -->
+    <div class="main-content">
+      <h1>Core Mechanics</h1>
+      <h3>Core Resolution</h3>
+
+<ul>
+<li>Roll <code>d20 + STAT</code> vs DR (Difficulty Rating)</li>
+<li>If the result is equal to or higher than DR → success</li>
+<li>Default DR is <strong>12</strong>, but it can shift based on the situation</li>
+</ul>
+
+<h2>Stats</h2>
+
+<p>Each character has four stats:</p>
+
+<ul>
+<li><strong>STR</strong> – Strength: melee, brute force, lifting</li>
+<li><strong>AGI</strong> – Agility: dodging, stealth, defense</li>
+<li><strong>PRE</strong> – Presence: awareness, ranged attacks, magic</li>
+<li><strong>TOU</strong> – Toughness: survival, resistance, HP bonus</li>
+</ul>
+
+<p>Roll <code>3d6</code> for each stat. Use the total to determine:</p>
+
+<ul>
+<li>Your <strong>stat bonus</strong> (used in most rolls)</li>
+<li>Your <strong>passive chance of success</strong> (<code>d6</code> behind-the-screen rolls by the GM)</li>
+<li>Your <strong>spells per day</strong> (only for characters who can cast)</li>
+</ul>
+
+<p>| <code>3d6</code> Roll | Stat Bonus | <code>d6</code> Chance (GM behind screen) | Spells per Day |
+|------------|-------------|-------------------------------|----------------|
+| 3–5        | -1          | 1-in-6                        | —              |
+| 6–10       | 0           | 2-in-6                        | +<code>d2</code>          |
+| 11–14      | +1          | 3-in-6                        | +<code>d3</code>          |
+| 15–17      | +2          | 4-in-6                        | +<code>d4</code>          |
+| 18         | +3          | 5-in-6                        | +<code>d6</code>          |</p>
+
+<blockquote>
+  <p>Sometimes, the GM will roll in secret to determine if a player <strong>notices</strong> or <strong>reacts</strong> to something without declaring an action — like spotting a trap, hearing footsteps, sensing danger, or intuiting a lie.
+  Use the player's stat to determine their <strong>passive success chance</strong> on a <code>d6</code>.</p>
+</blockquote>
+
+<p><strong>Examples of Passive Use:</strong>
+- <strong>AGI</strong>: Detecting a tripwire, reflexively dodging a sudden hazard
+- <strong>PRE</strong>: Hearing whispers behind a door, noticing someone's lying
+- <strong>TOU</strong>: Resisting fatigue, poison, or mind-altering fog
+- <strong>STR</strong>: Bracing against sudden collapse or holding a door shut</p>
+
+<blockquote>
+  <p>The GM rolls the <code>d6</code> behind the screen and only informs the player if something is noticed or resisted — or if it’s too late.</p>
+</blockquote>
+
+<hr />
+
+<h3>Active vs Passive</h3>
+
+<ul>
+<li>If a <strong>player chooses to do something</strong>, they roll a standard test:<br />
+<code>d20 + STAT</code> vs DR (usually DR12)</li>
+<li>If a <strong>player is unaware</strong> or not actively trying, the GM uses the passive <code>d6</code> chance.</li>
+</ul>
+
+<blockquote>
+  <p>Use passive rolls to keep tension and surprise alive. If players always roll, they always suspect something is up.</p>
+</blockquote>
+
+<hr />
+
+<h2>Advantage &amp; Disadvantage</h2>
+
+<ul>
+<li><strong>Advantage</strong>: Roll <code>d20 + STAT +2</code></li>
+<li><strong>Disadvantage</strong>: Roll <code>d20 + STAT -2</code></li>
+</ul>
+
+<p>The GM applies these based on narrative positioning, tools, or environment.</p>
+
+<h2>Health &amp; Damage</h2>
+
+<ul>
+<li>Starting HP = <code>2d6 + TOU</code></li>
+<li>At 0 HP, fall unconscious for <code>TOU</code> rounds</li>
+<li>If not stabilized in time, make a <strong>TOU test (DR14)</strong>:
+<ul>
+<li>Success = gain a <strong>Wound</strong>, return with <code>d4</code> HP</li>
+<li>Failure = death</li>
+</ul></li>
+</ul>
+
+<h2>Death &amp; Broken</h2>
+
+<p>If HP drops below zero again, roll <code>d20 + TOU</code> vs DR12:</p>
+
+<ul>
+<li>Success = <strong>Broken</strong> (roll on the Broken Table)</li>
+<li>Failure = <strong>Dead</strong></li>
+</ul>
+
+<p>When <strong>Broken</strong>, roll a <code>d6</code> to determine outcome (e.g., unconscious, wounded, or bleeding out). All rolls become DR16 until treated.</p>
+
+<h2>Defense Rolls</h2>
+
+<p>When attacked, roll <code>d20 + AGI + Armor Bonus</code>:</p>
+
+<ul>
+<li>On failure = attack hits</li>
+<li>If you have Damage Reduction, roll and subtract that value from damage taken</li>
+</ul>
+
+<h2>Combat</h2>
+
+<ul>
+<li><strong>Melee Attack</strong>: <code>d20 + STR</code> vs DR</li>
+<li><strong>Ranged Attack</strong>: <code>d20 + PRE</code> vs DR</li>
+<li><strong>Spellcasting</strong>: <code>d20 + PRE</code> vs DR</li>
+</ul>
+
+<p>Critical (natural 20):
+- x2 damage, downgrade enemy armor</p>
+
+<p>Fumble (natural 1):
+- Weapon breaks (attack)
+- Double damage taken &amp; armor reduced (defense)</p>
+
+<h2>Encumbrance</h2>
+
+<ul>
+<li>Carrying limit = <code>8 + STR</code> slots</li>
+<li>Bulky items = 2 slots</li>
+<li>Over capacity? Move limited to Close range and all AGI/DEF rolls are made at <strong>DR +2</strong></li>
+</ul>
+
+<h2>DethKrawler’s Die</h2>
+
+<p>You start with <strong>1 DethKrawler Die per level</strong> (<code>d6</code>s). You may spend one to:</p>
+
+<ul>
+<li>Add to a Test or Damage roll</li>
+<li>Block <code>d6</code> incoming damage</li>
+</ul>
+
+<p>Cannot be used on a <strong>natural 1</strong>.<br />
+You may gift one die to another player.</p>
+
+<h2>Movement &amp; Ranges</h2>
+
+<ul>
+<li>Ranges are abstract: <strong>Close</strong>, <strong>Near</strong>, <strong>Far</strong></li>
+<li>You may move one range band per turn unless hindered</li>
+</ul>
+
+<h2>Recovery</h2>
+
+<p><strong>Short Rest</strong>: Eat and drink → regain <code>d4</code> HP<br />
+<strong>Long Rest</strong>: Eat, drink, and rest undisturbed → regain <code>d6</code> HP</p>
+
+<p>No food or water = no HP recovery<br />
+After 2 days without sustenance = lose <code>d4</code> HP per day</p>
+
+<h2>Initiative</h2>
+
+<p><strong>Group</strong>: GM and a player both roll <code>d6</code>; higher roll acts first<br />
+<strong>Individual</strong>: Each player rolls <code>1d6 + AGI</code>, enemies roll <code>1d6</code></p>
+
+<h2>Cover</h2>
+
+<!--- Add Cover Table --->
+
+<h2>Kin (Optional Rule)</h2>
+
+<hr />
+
+<p>This is the backbone of DethKrawl. The rest is rot, ruin, and whatever you bring to the table.</p>
+
+    </div>
+  </body>
+</html>
