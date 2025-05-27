@@ -142,20 +142,7 @@ If a character exceeds their **carrying capacity**:
 
 Roll `d12` to determine a cosmetic scar or injury:
 
-| `d12` | Scar Description                                                  |
-|-------|-------------------------------------------------------------------|
-| 1     | A jagged scar crosses your cheek.                                |
-| 2     | One ear is partially torn off.                                   |
-| 3     | A deep burn marks your forearm.                                  |
-| 4     | Your nose is crooked from an old break.                          |
-| 5     | Several knuckles are fused and swollen.                          |
-| 6     | A scar circles your neck — rope, wire, or worse.                 |
-| 7     | A bite mark near your shoulder.                                  |
-| 8     | Your lips are cracked and split.                                 |
-| 9     | A single eye is permanently bloodshot.                           |
-| 10    | A long scratch runs down your back.                              |
-| 11    | The flesh on one hand looks melted.                              |
-| 12    | A crude stitch scar on your chest.                               |
+
 
 ---
 
