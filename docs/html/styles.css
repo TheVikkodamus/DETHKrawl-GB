@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   background-color: white;
   color: black;
   display: flex;
@@ -27,7 +27,7 @@ body {
 }
 
 .sidebar h1 {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 1.6rem;
   margin-bottom: 2rem;
   text-align: left;
@@ -117,12 +117,12 @@ table {
   border-collapse: collapse;
   margin: 2rem 0;
   background-color: #f8f3ef; /* parchment color */
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 thead th {
-  background-color: #CC0100; /* color from the navigation menu */
+  background-color: #cc0100; /* color from the navigation menu */
   color: white;
   padding: 1rem;
   font-size: 1rem;
@@ -147,14 +147,14 @@ tbody tr:hover {
 }
 
 code {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   color: #191817; /* black d6 color on the table */
 }
 
 /* blockquote styles */
 
 blockquote {
-  background:#CC0100;
+  background: #cc0100;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
