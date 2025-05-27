@@ -9,7 +9,7 @@ Inspired by **Mörk Borg**, **Deathbringer**, and the rotting glory of retro TTR
 ## What Is This?
 
 **DethKrawl** is a rules-light, stat-gritty dungeon crawler soaked in black powder smoke, corpse rot, and forgotten curses.  
-There are no classes. Your **gear**, **stats**, and **luck** define your legend — or your death.
+There are no classes. Your **gear**, **stats**, and **luck** define your legend or your death.
 
 ---
 
@@ -35,6 +35,7 @@ Assign bonuses to:
 - **TOU** – *Resist, heal, survive*
 
 ---
+
 ### Active vs Passive
 
 - If a **player chooses to do something**, they roll a standard test:  
@@ -60,21 +61,21 @@ Assign bonuses to:
 
 The number of spells a player character can cast each day depends on their **PRE (Presence)** stat.
 
-> **PRE -1?** You can still cast a spell once per day — but it **brings something unwanted** through. The GM decides what that is. Blood runs cold. Reality groans.
+> **PRE-1?** You can still cast a spell once per day — but it **brings something unwanted** through. The GM decides what that is. Blood runs cold. Or a wicked demon. 
 
 **Important Notes:**
 - This limit applies to **spells you know or have found** (scrolls, rituals, whispered madness).
 - You may not regain spell uses until after a **Long Rest**.
 - Once spent, a spell slot is gone until the next day.
 
-> Magic is not free. It costs memory, flesh, or worse. You weren’t meant to know this — but here you are.
+> Magic is not free. It costs memory, flesh, or worse. You weren’t meant to know this, but here you are.
 
 ---
 
 ### Advantage vs Disadvantage
 
 **Advantage**  
-You gain Advantage when:
+You gain an advantage when:
 - You attack by surprise or from behind  
 - You fire a ranged weapon from an elevated position  
 - You use the right tools for the job  
@@ -84,11 +85,11 @@ The **Game Master** may also award Advantage when the fiction favors the player.
 > When rolling with Advantage, roll **`d20 + STAT +2`** vs DR.
 
 **Disadvantage**  
-You suffer Disadvantage when:
+You suffer a disadvantage when:
 - The terrain is slippery or unstable  
 - You lack the right tools for the task  
 
-The **Game Master** may assign Disadvantage when the fiction works against the player.
+The **Game Master** may assign a disadvantage when the fiction works against the player.
 
 > When rolling with Disadvantage, roll **`d20 + STAT -2`** vs DR.
 
@@ -111,7 +112,7 @@ Another fool will take your place.
 
 ### Encumbrance
 
-Player characters can carry a number of items equal to **8 + STR**.  
+Player characters can carry several items equal to **8 + STR**.  
 Each item, weapon, or piece of gear typically takes up **1 slot** (bulky items take 2 slots, at the GM's discretion).
 
 If a character exceeds their **carrying capacity**:
@@ -244,7 +245,7 @@ Roll `d12` to determine a cosmetic scar or injury:
 
 ## DethKrawler's Die
 
-You begin with **1 DethKrawler Die per level** (`d6`s).
+You begin with (level) + 1 **DethKrawler Die per level** (`d6`s).
 
 You may spend one to:
 
@@ -270,16 +271,18 @@ You may spend one to:
 ### Attack Phase
 
 - Player declares a target and attack type:
+  - Roll `d20 + STAT`. Hit if result ≥ DR.
   - **Melee**: `STR`, or `AGI` if weapon has *Finesse*
   - **Ranged**: `PRE`
-- Roll `d20 + STAT`. Hit if result ≥ DR.
+  - In the event of a success, the PC rolls for damage.
+  - GM may roll for armor reduction if the enemy has it and record it.
 
 ### Defense Phase
 
 - GM declares enemy attack.
 - Player rolls `d20 + AGI + Armor Bonus`.
-  - On a failure, the attack hits.
-  - Roll any available **Damage Reduction**, subtract from incoming damage.
+  - In the event of a failure, the enemy's attack successfully hits the player character (PC).
+  - Roll any available **Damage Reduction**, subtract from incoming damage. PC records the new hit points. 
 
 #### Optional: Quicker Combat
 
@@ -302,7 +305,7 @@ To speed up combat and keep the flow brutal and unpredictable, you can skip init
    - If **attack ≥ DR**, the player hits their target — roll damage.
    - If **defense ≥ DR**, the player avoids the enemy’s attack.
    - If **attack fails**, the enemy may counterattack or reposition (GM's discretion).
-   - If **defense fails**, the player is hit — roll damage and apply armor reduction.
+   - If **defense fails**, the player is hit, rolls damage, and applies armor reduction.
 
 > Both rolls happen simultaneously, keeping the rhythm tight and dramatic. One roll, two sides of the blade.
 
@@ -344,7 +347,7 @@ Use cover to reduce hit chance:
 
 **Long Rest**  
 - Uninterrupted rest + ration & water → regain `d6` HP.  
-Without food or water: no HP regained.   After 2 days without sustenance: lose `d4` HP per day from starvation.
+Without food or water, no HP is regained.   After 2 days without sustenance, lose `d4` HP per day from starvation.
 
 ---
 
