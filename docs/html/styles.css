@@ -105,3 +105,44 @@ body {
   margin: 2rem auto;
 }
 
+/* Thematic Table Styling for DethKrawl */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background-color: #f8f3ef; /* parchment vibe */
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+thead th {
+  background-color: #7b0000; /* deep blood red */
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  border-bottom: 2px solid black;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+tbody td {
+  padding: 0.75rem;
+  border: 1px solid #444;
+  text-align: center;
+  color: #111;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eee7e2; /* subtle alt row */
+}
+
+tbody tr:hover {
+  background-color: #d9c9c3;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+  color: #b30000;
+}
+
