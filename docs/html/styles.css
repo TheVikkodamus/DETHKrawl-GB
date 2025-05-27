@@ -146,6 +146,8 @@ code {
   color: #191817; /* black d6 color on the table */
 }
 
+/* blockquote styles */
+
 blockquote {
   background:#CC0100;
   border-left: 10px solid #ccc;
@@ -155,7 +157,7 @@ blockquote {
 }
 
 blockquote:before {
-  color: #ccc;
+  color: #ffffff;
   content: open-quote;
   font-size: 4em;
   line-height: 0.1em;
