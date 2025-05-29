@@ -10,7 +10,14 @@ body {
   min-height: 100vh;
 }
 
-h1, h2, h3 {
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: black;
+}
+
+h2, h3 {
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
