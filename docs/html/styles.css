@@ -159,6 +159,7 @@ code {
 /* blockquote styles */
 
 blockquote {
+  font-family: "Trirong", serif;
   background: #cc0100;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
