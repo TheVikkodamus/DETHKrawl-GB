@@ -11,7 +11,9 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   color: red;
 }
 
