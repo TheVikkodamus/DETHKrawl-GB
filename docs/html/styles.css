@@ -27,16 +27,11 @@ h2, h3 {
 /* hr style */
 hr {
   border: none;
-  height: 2px;
-  background: repeating-linear-gradient(
-    to right,
-    #999,
-    #999 10px,
-    transparent 10px,
-    transparent 20px
-  );
-     margin: 2rem 0;
+  border-top: 1px solid #444;
+  margin: 2rem 0;
+  opacity: 0.5;
 }
+
 
 
 /* Navigation Menu */
