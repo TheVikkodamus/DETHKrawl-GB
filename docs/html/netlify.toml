@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/"
+  to = "/docs/html/404.html" 
+  status = 404
