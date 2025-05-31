@@ -8,6 +8,15 @@ body {
   min-height: 100vh;
 }
 
+/* sidebar */
+
+.sidebar img {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
 .sidebar {
   display: flex;
   flex-direction: column;
