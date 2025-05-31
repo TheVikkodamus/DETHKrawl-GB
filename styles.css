@@ -125,6 +125,12 @@ body {
     margin-left: 220px;
     padding: 2rem 1rem;
   }
+
+  .sidebar img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 @media (max-width: 480px) {
@@ -137,8 +143,10 @@ body {
     justify-content: center;
   }
 
-  .main-content {
+    .main-content {
     margin-left: 0;
     padding: 1rem;
   }
+}
+  
 }
