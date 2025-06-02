@@ -205,7 +205,7 @@ blockquote code {
 }
  
  /* Dark mode — only if user prefers it */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   body {
     background-color: #121212;
     color: #e0e0e0;
