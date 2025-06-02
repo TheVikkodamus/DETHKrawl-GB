@@ -37,13 +37,15 @@ hr {
 }
 
 /* image on main content */
-img {
-  border-radius: 8px;
- 
+.content-img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #444;
+  margin: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 /* Navigation Menu */
-
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -86,6 +88,16 @@ img {
 .sidebar ul li a:hover {
   color: #ccc;
   text-decoration: underline;
+}
+
+/*sidebar img */
+.sidebar img {
+  width: 200px; /* fixed size */
+  height: auto; /* keep aspect ratio */
+  object-fit: contain;
+  padding: 10px;
+  border: none;
+  background: none;
 }
 
 /* Footer Section in the Nav */
