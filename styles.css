@@ -76,7 +76,7 @@ hr {
 }
 
 .sidebar ul li {
-  margin: 0.75rem 0;
+  margin: 2.75rem 0;
 }
 
 .sidebar ul li a {
@@ -110,7 +110,7 @@ hr {
   margin-top: 2rem;
   line-height: 1.4;
   background: none;
-  padding: 0;
+  padding: 10px;
   border: none;
   word-break: break-word;
   max-width: 200px;
