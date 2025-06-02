@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--- Head portion of the site and add the metas, titles, and links --->
+  <!--- head, meta, links --->
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ff0000">
-    <meta property="og:site_name" content="DethKrawl TTRPG">
-    <meta name="description" content="DethKrawl TTRPG - A cursed dungeon-crawling tabletop RPG inspired by Mörk Borg and Deathbringer. Free rules, downloads, and resources.">
-    <title>DethKrawl TTRPG</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DethKrawl TTRPG - A Cursed Dungeon-Crawling RPG" />
+    <meta property="og:description" content="A cursed dungeon-crawling TTRPG inspired by Mörk Borg & Deathbringer. Free rules, downloads, and brutal fun!" />
+    <meta property="og:url" content="https://dethkrawlttrpg.netlify.app/" />
+    <meta property="og:image" content="https://dethkrawlttrpg.netlify.app/assets/images/DK_logo_3.png" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <!--add a DK logo that looks metal for the favicon.-->
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
@@ -18,42 +19,30 @@
     <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
   </head>
   <body>
-    <!--- sidebar | navigation --->
+    <!-- sidebar | navigation -->
     <div class="sidebar">
       <img src="/assets/images/DK_logo_3.png" alt="DethKrawl logo">
       <ul>
         <li>
-          <a href="/docs/html/randomly_creating_characters.html">0. Random Character Creation</a>
+          <a href="docs/html/randomly_creating_characters.html">0. Random Character Creation</a>
         </li>
         <li>
           <a href="/docs/html/mechanics.html">1. Game Mechanics</a>
         </li>
-           <!--- <li>
-          <a href="#">2. #</a>
-        </li>
+        <!-- Placeholder for future pages -->
         <li>
-          <a href="#">3. Combat</a>
-        </li>
-        <li>
-          <a href="#">4. Advancement</a> 
-        </li> --->
-          <!--- Possible BIG CARTEL store with printing of shirts and other goodies--->
-        <li>
-          <a href="#">5. Store</a>
-        </li>
-        <li>
-          <a href="/index.html"> Go to main page</a>
+          <a href="#">5. Store (Coming Soon)</a>
         </li>
       </ul>
-      <!--footer with credits infor-->
+      <!--footer with credits info-->
       <footer>
         <a href="https://creativecommons.org">DethKrawl TTRPG</a> © 2025 by <a href="https://creativecommons.org">Victor Gregory Matos</a>
         <br> Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
-        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY">
       </footer>
     </div>
-    <!--- main content goes here -->
+ <!--- main content goes here -->
     <div class="main-content">
       <h1>Randomly Creating Character</h1>
       <p>Player will roll 3 <b>six-sided</b> dice, also known as a <b>d6</b>. Use the total and use the table to record your modifier/bonus in your record sheet. </p>
@@ -144,32 +133,67 @@
           <tr>
             <td>1-2</td>
             <td>Human</td>
-            <td>+1 on any one <code>STAT</code>. Once per session, you may substitute one <code>STAT</code> for another for a single roll <strong>(must be declared before rolling)</strong>. </td>
+            <td>+1 on any one <code>STAT</code>. </td>
           </tr>
           <tr>
             <td>3</td>
-            <td>Stoneborn</td>
-            <td>+1 on <code>TOU</code>. They can sense hollow spaces and underground tremors. When making a PRE test to detect traps, weak walls, or buried passages, they gain <b>Advantage</b>.
+            <td>Stoneborn (Dwarf)</td>
+            <td>+1 on <code>TOU</code>, a -1 on <code>AGI</code>. 
 
             </td>
           </tr>
           <tr>
             <td>4</td>
-            <td>Burrowfolk</td>
-            <td>+1 on <code>AGI</code> and <code>DEF</code> rolls against taller creatures. </td>
+            <td>Burrowfolk (Halfling)</td>
+            <td>+1 on <code>AGI</code>, -1 on <code>STR</code>. 
+            </td>
           </tr>
           <tr>
             <td>5</td>
             <td>Firstborn</td>
-            <td>+1 on <code>PRE</code> test when recalling history and <code>PRE</code> test when spell casting. </td>
+            <td>+1 on <code>PRE</code> , -1 on <code>TOU</code>
+            </td>
           </tr>
           <tr>
             <td>6</td>
             <td>Infernal</td>
-            <td>+1 on <code>PRE</code> test when charming or intimidating a creature and <code>PRE</code> test when spell casting. </td>
+            <td>+1 on <code>PRE</code> , -1 on <code>TOU</code>
+            </td>
           </tr>
         </tbody>
       </table>
+      <h3>Kin Description and Backstory</h3>
+      <h4>Human</h4>
+      <p>
+       The youngest Kin and the most adaptable. They take what they want, and burn what they can’t use.
++1 to any stat. No penalty. The old scriptures are gone. No one remembers where your kind came from, only that you found these lands... and now all others call you a plague.
+      </p>
+      
+      <h4>Firstborn (Elf)</h4>
+      <p>
+        Ancient and strange. Their senses are sharp, their bodies frail. They remember too much.
++1 PRE, -1 TOU.
+The Firstborn see all other Kin as lesser. They are beneath you. You are the closest thing to perfection, and you know it.
+      </p>
+      
+      <h4>Burrowfolk (Halfling)</h4>
+      <p>
+        Small and fast. Clever. They live in the cracks where bigger things can’t reach.
++1 AGI, -1 STR
+To survive, your kind forged new alliances, trading crops and cloth in exchange for peace. But the other Kin still see you as weak. Let them. They do not know how cunning or how charming your folk truly are.
+      </p>
+      <h4>Stoneborn (Dwarf)</h4>
+      <p>
+        Forged of stone and spite. Tough beyond reason, but slow to move and slower to trust.
++1 TOU, -1 AGI
+Your ancestors built this plane. You do not forget. The Firstborn used your kin as labor, driving them deep into the dark. Let them walk proudly now, they stand on the bones of your forefathers.
+      </p>
+      
+      <h4>Infernal</h4>
+      <p>
+        Fire-touched. Marked. Their very presence twists the air, but their bodies burn from within.
++1 PRE, -1 TOU. You do not know when the unholy pact was struck — only that you bear its mark. Horns. Fangs. Skin red as clay. The villagers see you as an omen of the end. Let them. They will never understand the power that coils beneath your skin.
+      </p>
       <!--- Gear Table --->
     </div>
   </body>
