@@ -1,6 +1,9 @@
 /* CSS file for DethKrawler */
 /* I took inspiration from Troika's SRD design. */ 
 /* Default light mode */
+/* CSS file for DethKrawler */
+
+/* Default light mode */
 body {
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
@@ -31,6 +34,13 @@ hr {
   border-top: 1px solid #444;
   margin: 2rem 0;
   opacity: 0.5;
+}
+
+/* image on main content */
+img {
+  border-radius: 8px;
+  box-shadow: 2px 2px;
+  filter: sepia;
 }
 
 /* Navigation Menu */
@@ -206,6 +216,7 @@ blockquote code {
  
  /* Dark mode — only if user prefers it */
 @media (prefers-color-scheme: light) {
+ 
   body {
     background-color: #121212;
     color: #e0e0e0;
