@@ -204,3 +204,73 @@ blockquote p {
 blockquote code {
   color: #fff;
 }
+ 
+  /* DethKrawl - Dark Mode */
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.sidebar {
+  background-color: #1a1a1a;
+  border-right: 1px solid #333;
+}
+
+.sidebar img {
+  filter: brightness(85%);
+}
+
+.sidebar ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  color: #ff4444;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+.sidebar footer {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.sidebar footer a {
+  color: #aaa;
+}
+
+.main-content {
+  padding: 2rem;
+  background-color: #181818;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+h1, h2, h3, h4, h5 {
+  color: #ff4444;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+a {
+  color: #ff6666;
+}
+
+a:hover {
+  color: #ff9999;
+  text-shadow: 0 0 5px #ff4444;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  margin: 2rem 0;
+}
+
+/* Dark Mode code styling */
+code {
+  color: #ffcc66; /* example: amber/yellow for contrast */
+  background-color: #222; /* optional: subtle background to make code stand out */
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+}
