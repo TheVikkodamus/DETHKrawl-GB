@@ -154,5 +154,223 @@ body {
     margin-left: 0;
     padding: 1rem;
   }
-  
+
+  /* CSS file for DethKrawler */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: white;
+  color: black;
+  display: flex;
+  min-height: 100vh;
 }
+
+/* sidebar */
+
+.sidebar img {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  background-color: #cc0000;
+  color: white;
+  padding: 2rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.sidebar h1 {
+  font-family: "Courier New", monospace;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.sidebar ul li {
+  margin: 0.75rem 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+.sidebar footer {
+  font-size: 0.7rem;
+  color: white;
+  text-align: left;
+  margin-top: 2rem;
+  line-height: 1.4;
+  background: none;
+  padding: 0;
+  border: none;
+  word-break: break-word;
+  max-width: 200px;
+}
+
+.sidebar footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.sidebar footer a:hover {
+  color: #ccc;
+}
+
+.sidebar footer img {
+  vertical-align: middle;
+  max-width: 1em;
+  max-height: 1em;
+  margin-left: 0.2em;
+}
+
+.main-content {
+  margin-left: 350px;
+  padding: 3rem 2rem;
+  max-width: 900px;
+}
+
+.main-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.main-content p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.main-content img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+}
+
+/* responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .main-content {
+    margin-left: 220px;
+    padding: 2rem 1rem;
+  }
+
+  .sidebar img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+    .sidebar img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+    .main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+ 
+  /* DethKrawl - Dark Mode */
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.sidebar {
+  background-color: #1a1a1a;
+  border-right: 1px solid #333;
+}
+
+.sidebar img {
+  filter: brightness(85%);
+}
+
+.sidebar ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  color: #ff4444;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+.sidebar footer {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.sidebar footer a {
+  color: #aaa;
+}
+
+.main-content {
+  padding: 2rem;
+  background-color: #181818;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+h1, h2, h3, h4, h5 {
+  color: #ff4444;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+a {
+  color: #ff6666;
+}
+
+a:hover {
+  color: #ff9999;
+  text-shadow: 0 0 5px #ff4444;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  margin: 2rem 0;
+}
+
