@@ -1,8 +1,9 @@
 /* CSS file for DethKrawler */
 
+/* Default light mode */
 body {
   margin: 0;
-  font-family: 'Noto Sans', sans-seif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
   background-color: white;
   color: black;
@@ -31,8 +32,6 @@ hr {
   margin: 2rem 0;
   opacity: 0.5;
 }
-
-
 
 /* Navigation Menu */
 
@@ -205,21 +204,21 @@ blockquote code {
   color: #fff;
 }
  
-  /* DethKrawl - Dark Mode */
+ /* Dark mode — only if user prefers it */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
 
-body {
-  background-color: #121212;
-  color: #e0e0e0;
-}
+  .sidebar {
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+  }
 
-.sidebar {
-  background-color: #1a1a1a;
-  border-right: 1px solid #333;
-}
-
-.sidebar img {
-  filter: brightness(85%);
-}
+  .sidebar img {
+    filter: brightness(85%);
+  }
 
 .sidebar ul li a {
   color: #e0e0e0;
@@ -273,4 +272,5 @@ code {
   background-color: #222; /* optional: subtle background to make code stand out */
   padding: 0.1em 0.3em;
   border-radius: 4px;
-}
+
+  }
