@@ -1,325 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
- <!--- head, meta, links --->
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ff0000">
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="DethKrawl TTRPG - A Cursed Dungeon-Crawling RPG" />
-    <meta property="og:description" content="A cursed dungeon-crawling TTRPG inspired by Mörk Borg & Deathbringer. Free rules, downloads, and brutal fun!" />
-    <meta property="og:url" content="https://dethkrawlttrpg.netlify.app/" />
-    <meta property="og:image" content="https://dethkrawlttrpg.netlify.app/assets/images/DK_logo_3.png" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-  </head>
-  <body>
-    <!-- sidebar | navigation -->
-    <div class="sidebar">
-      <img src="/assets/images/DK_logo_3.png" alt="DethKrawl logo">
-      <ul>
-        <li>
-          <a href="/docs/html/randomly_creating_characters.html">0. Random Character Creation</a>
-        </li>
-        <li>
-          <a href="/docs/html/mechanics.html">1. Game Mechanics</a>
-        </li>
-        <!-- Possible BIG CARTEL store with printing of shirts and other goodies -->
-        <li>
-          <a href="#">5. Store</a>
-        </li>
-        <li>
-          <a href="/index.html">Go to main page</a>
-        </li>
-      </ul>
-      <!-- footer with credits info -->
-      <footer>
-        <a href="https://creativecommons.org">DethKrawl TTRPG</a> © 2025 by <a href="https://creativecommons.org">Victor Gregory Matos</a>
-        <br> Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
-      </footer>
-    </div>
-    <!-- main content -->
-    <div class="main-content">
-      <h1>Core Mechanics</h1>
-      <h2>Core Resolution</h2>
-      <ul>
-        <li>Roll <code>d20 + STAT modifier</code> vs DR (Difficulty Rating) </li>
-        <li>If the result is equal to or higher than DR → <b>success</b>
-        </li>
-        <li>Default DR is <strong>12</strong>, but it can shift based on the situation </li>
-      </ul>
-      <hr />
-      <h2>Stats</h2>
-      <p>Each character has <b>four stats</b>: </p>
-      <ul>
-        <li>
-          <strong>STR</strong> – Strength: melee, brute force, lifting
-        </li>
-        <li>
-          <strong>AGI</strong> – Agility: dodging, stealth, defense
-        </li>
-        <li>
-          <strong>PRE</strong> – Presence: awareness, ranged attacks, magic
-        </li>
-        <li>
-          <strong>TOU</strong> – Toughness: survival, resistance, HP bonus
-        </li>
-      </ul>
-      <p>Roll <code>3d6</code> for each stat. Use the total to determine: </p>
-      <ul>
-        <li>Your <strong>stat bonus or modifiers</strong> (used in most rolls) </li>
-        <li>Your <strong>passive chance of success</strong> ( <code>d6</code> behind-the-screen rolls by the GM) </li>
-        <li>Your <strong>spells per day</strong> (only for characters who can cast) </li>
-      </ul>
-      <!-- Add Table -->
-      <table>
-        <thead>
-          <tr>
-            <th>
-              <code>3d6</code> Roll
-            </th>
-            <th>STAT Bonus</th>
-            <th>
-              <code>d6</code> chances (GM rolls behind screen)
-            </th>
-            <th>Spells per Day</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>3–5</td>
-            <td>-1</td>
-            <td>1-in-6</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>6–10</td>
-            <td>0</td>
-            <td>2-in-6</td>
-            <td>+ <code>d2</code> per day </td>
-          </tr>
-          <tr>
-            <td>11–14</td>
-            <td>+1</td>
-            <td>3-in-6</td>
-            <td>+ <code>d3</code> per day </td>
-          </tr>
-          <tr>
-            <td>15–17</td>
-            <td>+2</td>
-            <td>4-in-6</td>
-            <td>+ <code>d4</code> per day </td>
-          </tr>
-          <tr>
-            <td>18</td>
-            <td>+3</td>
-            <td>5-in-6</td>
-            <td>+ <code>d6</code> per day </td>
-          </tr>
-        </tbody>
-      </table>
-      <blockquote>
-        <p>Sometimes, the GM will roll in secret to determine if a player <strong>notices</strong> or <strong>reacts</strong> to something without declaring an action, like spotting a trap, hearing footsteps, sensing danger, or intuiting a lie. Use the player's stat to determine their <strong>passive success chance</strong> on a <code>d6</code>. </p>
-      </blockquote>
-      <hr />
-      <h2>Active vs Passive Abilities</h2>
-      <ul>
-        <li>If a <strong>player chooses to do something</strong>, they roll a standard test: <br>
-          <code>d20 + STAT</code> vs DR (usually DR12)
-        </li>
-        <li>If a <strong>player is unaware</strong> or not actively trying, the GM uses the passive <code>d6</code> chance. </li>
-      </ul>
-      <p>
-        <strong>Examples of Passive Use:</strong>
-      </p>
-      <ul>
-        <li>
-          <strong>AGI</strong>: Detecting a tripwire, reflexively dodging a sudden hazard
-        </li>
-        <li>
-          <strong>PRE</strong>: Hearing whispers behind a door, noticing someone's lying
-        </li>
-        <li>
-          <strong>TOU</strong>: Resisting fatigue, poison, or mind-altering fog
-        </li>
-        <li>
-          <strong>STR</strong>: Bracing against sudden collapse or holding a door shut
-        </li>
-      </ul>
-      <blockquote>
-        <p>The GM rolls the <code>d6</code> behind the screen and only informs the player if something is noticed, resisted, or if it’s too late. If preferred, this roll can be made openly, either by the GM or by the player in front of everyone. </p>
-      </blockquote>
-      <hr />
-      <h2>Advantage &amp; Disadvantage</h2>
-      <ul>
-        <li>
-          <strong>Advantage</strong>: Roll <code>d20 + STAT Modifier +2</code>
-        </li>
-        <li>
-          <strong>Disadvantage</strong>: Roll <code>d20 + STAT Modifier -2</code>
-        </li>
-      </ul>
-      <p>The GM applies these based on narrative positioning, tools, or environment.</p>
-      <hr />
-      <h2>MAX Health</h2>
-      <p>Starting <b>MAX HP</b> = <code>1d6 + TOU</code>
-      </p>
-      <hr />
-      <h2>Death &amp; Broken</h2>
-      <p>If HP drops <b>below zero</b>, roll <code>d20 + TOU</code> vs DR15: </p>
-      <p>If HP <b>drops to 0</b>, roll <code>d20 + TOU</code> vs DR12: </p>
-      <ul>
-        <li>
-          <b>Success</b> = <strong>Broken</strong> (roll on the Broken Table)
-        </li>
-        <li>
-          <b>Failure</b> = <strong>Dead</strong>
-        </li>
-      </ul>
-      <p>When <strong>Broken</strong>, roll a <code>d6</code> to determine outcome (e.g., unconscious, wounded, or bleeding out). All rolls become DR16 until treated. </p>
-      <hr />
-      <h2>Encumbrance</h2>
-      <ul>
-        <li>Carrying limit = <code>8 + STR</code> slots </li>
-        <li>Bulky items = 2 slots</li>
-        <li>Over capacity? Move limited to Close range and all AGI/DEF rolls are made at <strong>DR +2</strong>
-        </li>
-      </ul>
-      <hr />
-      <h2>DethKrawler’s Die</h2>
-      <p>You start with Level + 1 <strong>DethKrawler Die</strong> ( <code>d6</code>). You may spend one to: </p>
-      <ul>
-        <li>Add to a Test or Damage roll</li>
-        <li>Block <code>d6</code> incoming damage </li>
-      </ul>
-      <p>Cannot be used on a <strong>natural 1</strong>. <br>You may gift one die to another player. </p>
-      <hr />
-      <h2>Movement &amp; Ranges</h2>
-      <ul>
-        <li>Ranges are abstract: <strong>Close</strong>, <strong>Mid</strong>, <strong>Far</strong>, <strong>Out of Range</strong>
-        </li>
-        <li>You may move one range band per turn unless hindered.</li>
-      </ul>
-      <h3>Close</h3>
-      <em>(Melee, 5 ft)</em>
-      <p>You are within <strong>5 feet of a creature</strong>, close enough to take a step and make a <b>melee attack</b>. If you are within 5 feet of another creature, both of you are considered engaged in melee and may target each other with melee attacks or opportunity attacks. </p>
-      <h3>Mid</h3>
-      <em>(Reach/Thrown/Spell Range, ~15 ft or as specified)</em>
-      <p>You are within the effective range of a reach weapon (such as a glaive or whip), thrown weapon, or short-range spell. Attacks follow normal range rules. For ranged weapons and spells with longer ranges, attacks beyond the normal range (but within maximum range) are made at disadvantage.</p>
-      <h3>Far</h3>
-      <em>(Ranged Line of Sight, ~60 ft or greater)</em>
-      <p>You are far enough that you can hear combat (a Perception check may be required), but you cannot currently see or target any creatures involved. You must move to gain line of sight or a usable range to interact.</p>
-      <h3>Out of Range</h3>
-      <em>(Beyond ~120 ft / Unaware)</em>
-      <p>You are so far away that you are unaware the combat is occurring — you cannot hear, see, or otherwise sense the fight, and cannot interact with it in any way until informed or moved closer.</p>
-      <hr />
-      <h2>Recovery</h2>
-      <p>
-        <strong>Short Rest</strong>: Eat and drink → regain <code>d4</code> HP <br>
-        <strong>Long Rest</strong>: Eat, drink, and rest undisturbed → regain <code>d6</code> HP
-      </p>
-      <p>No food or water = no HP recovery <br>After 2 days without sustenance = lose <code>d4</code> HP per day </p>
-      <hr />
-      
-   <h2>Spell Casting</h2>
-<p>
-When a player chooses to play a spellcaster, their <strong>PRE modifier</strong> determines how many spells they can cast each day (see the Stat Table). This is their <strong>spells per day</strong> limit.
-</p>
+<!--- head, meta, links --->
 
-<p>
-When PC rolls for spellcasting, and they are using a source with spell levels, each spell’s difficulty rating increases with its level: Level 1 spells are DR12, Level 2 spells are DR13, and each higher level adds +1 DR.
-</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff0000">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DethKrawl TTRPG - A Cursed Dungeon-Crawling RPG" />
+  <meta property="og:description" content="A cursed dungeon-crawling TTRPG inspired by Mörk Borg & Deathbringer. Free rules, downloads, and brutal fun!" />
+  <meta property="og:url" content="https://dethkrawlttrpg.netlify.app/" />
+  <meta property="og:image" content="https://dethkrawlttrpg.netlify.app/assets/images/DK_logo_3.png" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+</head>
 
-      <h3>Spell Dice Resolution</h3>
-<ul>
-  <li>
-    Roll <code>d20 + PRE</code> vs DR (Difficulty Rating)
-  </li>
-  <li>
-    If the result is <strong>equal to or higher than DR</strong> → <b>success</b>
-      
-    </li>
-  <li>
-    Spellcasting DR is <b>12</b>, but it can shift based on the situation.
-  </li>
-</ul>
-<p>
-  When casting a spell, the player <strong>cannot use a DethKrawler Die</strong> if they roll a natural <b>1</b>. In this case, the GM will roll on the <strong>Mishap Table</strong> and narrate the outcome.
-</p>
-      <h3>Corruption</h3>
-<p>
-  Whenever a player commits an <strong>evil deed</strong> or rolls a natural <b>1</b> when spellcasting, they gain <strong>1 point of Corruption</strong>. 
-  When a player character reaches <b>10 Corruption points</b>, the GM takes control of the character and may use them as a monster in the game.
-</p>
+<body>
+  <!-- sidebar | navigation -->
+  <div class="sidebar">
+    <img src="/assets/images/DK_logo_3.png" alt="DethKrawl logo">
+    <ul>
+      <li>
+        <a href="/docs/html/randomly_creating_characters.html">0. Random Character Creation</a>
+      </li>
+      <li>
+        <a href="/docs/html/mechanics.html">1. Game Mechanics</a>
+      </li>
+      <!-- Possible BIG CARTEL store with printing of shirts and other goodies -->
+      <li>
+        <a href="#">5. Store</a>
+      </li>
+      <li>
+        <a href="/index.html">Go to main page</a>
+      </li>
+    </ul>
+    <!-- footer with credits info -->
+    <footer>
+      <a href="https://creativecommons.org">DethKrawl TTRPG</a> © 2025 by <a href="https://creativecommons.org">Victor Gregory Matos</a>
+      <br> Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+    </footer>
+  </div>
+  <!-- main content -->
+  <div class="main-content">
+    <h1>Core Mechanics</h1>
+    <h2>Core Resolution</h2>
+    <ul>
+      <li>Roll <code>d20 + STAT modifier</code> vs DR (Difficulty Rating) </li>
+      <li>If the result is equal to or higher than DR → <b>success</b>
+      </li>
+      <li>Default DR is <strong>12</strong>, but it can shift based on the situation </li>
+    </ul>
+    <hr />
+    <h2>Stats</h2>
+    <p>Each character has <b>four stats</b>: </p>
+    <ul>
+      <li>
+        <strong>STR</strong> – Strength: melee, brute force, lifting
+      </li>
+      <li>
+        <strong>AGI</strong> – Agility: dodging, stealth, defense
+      </li>
+      <li>
+        <strong>PRE</strong> – Presence: awareness, ranged attacks, magic
+      </li>
+      <li>
+        <strong>TOU</strong> – Toughness: survival, resistance, HP bonus
+      </li>
+    </ul>
+    <p>Roll <code>3d6</code> for each stat. Use the total to determine: </p>
+    <ul>
+      <li>Your <strong>stat bonus or modifiers</strong> (used in most rolls) </li>
+      <li>Your <strong>passive chance of success</strong> ( <code>d6</code> behind-the-screen rolls by the GM) </li>
+      <li>Your <strong>spells per day</strong> (only for characters who can cast) </li>
+    </ul>
+    <!-- Add Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <code>3d6</code> Roll
+          </th>
+          <th>STAT Bonus</th>
+          <th>
+            <code>d6</code> chances (GM rolls behind screen)
+          </th>
+          <th>Spells per Day</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>3–5</td>
+          <td>-1</td>
+          <td>1-in-6</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>6–10</td>
+          <td>0</td>
+          <td>2-in-6</td>
+          <td>+ <code>d2</code> per day </td>
+        </tr>
+        <tr>
+          <td>11–14</td>
+          <td>+1</td>
+          <td>3-in-6</td>
+          <td>+ <code>d3</code> per day </td>
+        </tr>
+        <tr>
+          <td>15–17</td>
+          <td>+2</td>
+          <td>4-in-6</td>
+          <td>+ <code>d4</code> per day </td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>+3</td>
+          <td>5-in-6</td>
+          <td>+ <code>d6</code> per day </td>
+        </tr>
+      </tbody>
+    </table>
+    <blockquote>
+      <p>Sometimes, the GM will roll in secret to determine if a player <strong>notices</strong> or <strong>reacts</strong> to something without declaring an action, like spotting a trap, hearing footsteps, sensing danger, or intuiting a lie. Use the player's stat to determine their <strong>passive success chance</strong> on a <code>d6</code>. </p>
+    </blockquote>
+    <hr />
+    <h2>Active vs Passive Abilities</h2>
+    <ul>
+      <li>If a <strong>player chooses to do something</strong>, they roll a standard test: <br>
+        <code>d20 + STAT</code> vs DR (usually DR12)
+      </li>
+      <li>If a <strong>player is unaware</strong> or not actively trying, the GM uses the passive <code>d6</code> chance. </li>
+    </ul>
+    <p>
+      <strong>Examples of Passive Use:</strong>
+    </p>
+    <ul>
+      <li>
+        <strong>AGI</strong>: Detecting a tripwire, reflexively dodging a sudden hazard
+      </li>
+      <li>
+        <strong>PRE</strong>: Hearing whispers behind a door, noticing someone's lying
+      </li>
+      <li>
+        <strong>TOU</strong>: Resisting fatigue, poison, or mind-altering fog
+      </li>
+      <li>
+        <strong>STR</strong>: Bracing against sudden collapse or holding a door shut
+      </li>
+    </ul>
+    <blockquote>
+      <p>The GM rolls the <code>d6</code> behind the screen and only informs the player if something is noticed, resisted, or if it’s too late. If preferred, this roll can be made openly, either by the GM or by the player in front of everyone. </p>
+    </blockquote>
+    <hr />
+    <h2>Advantage &amp; Disadvantage</h2>
+    <ul>
+      <li>
+        <strong>Advantage</strong>: Roll <code>d20 + STAT Modifier +2</code>
+      </li>
+      <li>
+        <strong>Disadvantage</strong>: Roll <code>d20 + STAT Modifier -2</code>
+      </li>
+    </ul>
+    <p>The GM applies these based on narrative positioning, tools, or environment.</p>
+    <hr />
+    <h2>MAX Health</h2>
+    <p>Starting <b>MAX HP</b> = <code>1d6 + TOU</code>
+    </p>
+    <hr />
+    <h2>Death &amp; Broken</h2>
+    <p>If HP drops <b>below zero</b>, roll <code>d20 + TOU</code> vs DR15: </p>
+    <p>If HP <b>drops to 0</b>, roll <code>d20 + TOU</code> vs DR12: </p>
+    <ul>
+      <li>
+        <b>Success</b> = <strong>Broken</strong> (roll on the Broken Table)
+      </li>
+      <li>
+        <b>Failure</b> = <strong>Dead</strong>
+      </li>
+    </ul>
+    <p>When <strong>Broken</strong>, roll a <code>d6</code> to determine outcome (e.g., unconscious, wounded, or bleeding out). All rolls become DR16 until treated. </p>
+    <hr />
+    <h2>Encumbrance</h2>
+    <ul>
+      <li>Carrying limit = <code>8 + STR</code> slots </li>
+      <li>Bulky items = 2 slots</li>
+      <li>Over capacity? Move limited to Close range and all AGI/DEF rolls are made at <strong>DR +2</strong>
+      </li>
+    </ul>
+    <hr />
+    <h2>DethKrawler’s Die</h2>
+    <p>You start with Level + 1 <strong>DethKrawler Die</strong> ( <code>d6</code>). You may spend one to: </p>
+    <ul>
+      <li>Add to a Test or Damage roll</li>
+      <li>Block <code>d6</code> incoming damage </li>
+    </ul>
+    <p>Cannot be used on a <strong>natural 1</strong>. <br>You may gift one die to another player. </p>
+    <hr />
+    <h2>Movement &amp; Ranges</h2>
+    <ul>
+      <li>Ranges are abstract: <strong>Close</strong>, <strong>Mid</strong>, <strong>Far</strong>, <strong>Out of Range</strong>
+      </li>
+      <li>You may move one range band per turn unless hindered.</li>
+    </ul>
+    <h3>Close</h3>
+    <em>(Melee, 5 ft)</em>
+    <p>You are within <strong>5 feet of a creature</strong>, close enough to take a step and make a <b>melee attack</b>. If you are within 5 feet of another creature, both of you are considered engaged in melee and may target each other with melee attacks or opportunity attacks. </p>
+    <h3>Mid</h3>
+    <em>(Reach/Thrown/Spell Range, ~15 ft or as specified)</em>
+    <p>You are within the effective range of a reach weapon (such as a glaive or whip), thrown weapon, or short-range spell. Attacks follow normal range rules. For ranged weapons and spells with longer ranges, attacks beyond the normal range (but within maximum range) are made at disadvantage.</p>
+    <h3>Far</h3>
+    <em>(Ranged Line of Sight, ~60 ft or greater)</em>
+    <p>You are far enough that you can hear combat (a Perception check may be required), but you cannot currently see or target any creatures involved. You must move to gain line of sight or a usable range to interact.</p>
+    <h3>Out of Range</h3>
+    <em>(Beyond ~120 ft / Unaware)</em>
+    <p>You are so far away that you are unaware the combat is occurring — you cannot hear, see, or otherwise sense the fight, and cannot interact with it in any way until informed or moved closer.</p>
+    <hr />
+    <h2>Recovery</h2>
+    <p>
+      <strong>Short Rest</strong>: Eat and drink → regain <code>d4</code> HP <br>
+      <strong>Long Rest</strong>: Eat, drink, and rest undisturbed → regain <code>d6</code> HP
+    </p>
+    <p>No food or water = no HP recovery <br>After 2 days without sustenance = lose <code>d4</code> HP per day </p>
+    <hr />
 
-      <h3>Critical Miscast</h3>
-<p>
-  On a natural <b>1</b> when spellcasting, the caster gains <b>+1 Corruption</b> and must roll <code>d20</code> on the following table:
-</p>
+    <h2>Spell Casting</h2>
+    <p>
+      When a player chooses to play a spellcaster, their <strong>PRE modifier</strong> determines how many spells they can cast each day (see the Stat Table). This is their <strong>spells per day</strong> limit.
+    </p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Roll</th>
-      <th>Effect</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1–5</td>
-      <td><strong>Fizzle</strong><br>Spell does not work. Ghostly laughter fills the room.</td>
-    </tr>
-    <tr>
-      <td>6–10</td>
-      <td><strong>Inconvenience</strong><br>The caster’s nose bleeds uncontrollably, their hair turns white or falls out, boils appear on their skin, or they forget the spell for the rest of the day.</td>
-    </tr>
-    <tr>
-      <td>11–15</td>
-      <td><strong>Backfire</strong><br>The caster takes the damage or effect, or the opposite of the intended spell occurs (e.g., a shield spell lowers the caster’s armor class).</td>
-    </tr>
-    <tr>
-      <td>16</td>
-      <td><strong>Friendly Fire</strong><br>The caster hits a friend or innocent victim.</td>
-    </tr>
-    <tr>
-      <td>17</td>
-      <td><strong>Armor Melt</strong><br>All armor—friend and foe—in the room is disintegrated.</td>
-    </tr>
-    <tr>
-      <td>18</td>
-      <td><strong>Mutation</strong><br>The caster gains a mutation (third eye, tentacle, conjoined twin, etc.).</td>
-    </tr>
-    <tr>
-      <td>19</td>
-      <td><strong>Power Loss</strong><br>The caster ages <code>d20</code> years or loses a level.</td>
-    </tr>
-    <tr>
-      <td>20</td>
-      <td><strong>Catastrophe</strong><br>The caster explodes in a shower of gore, or a portal to hell opens and they are dragged away by demons.</td>
-    </tr>
-  </tbody>
-</table>
-     <h3>How Many Spells Can I Learn?</h3>
-<p>
-In addition to your daily casting limit (based on <b>PRE</b>), you may learn and retain a number of spells equal to your <b>PRE</b> stat <i>(minimum 1)</i> plus your level. This removes the need for complex spell slot tracking and keeps bookkeeping simple. After character creation, the GM may assign spells, generate them randomly, or let you select them from any OSR or 5E source.
-</p>
+    <p>
+      When PC rolls for spellcasting, and they are using a source with spell levels, each spell’s difficulty rating increases with its level: Level 1 spells are DR12, Level 2 spells are DR13, and each higher level adds +1 DR.
+    </p>
 
-      
-     <h4>How Can I Learn New Spells?</h4>
-        <p>
-          Knowledge is dangerous. The mind can only hold           so many whispers of the arcane without       shattering. In addition to your daily casting limit (based on <b>PRE</b>), you may learn and retain a number of spells equal to your <b>PRE</b> stat <i>(minimum 1)</i> plus your level. This removes the need for complex spell slot tracking and keeps bookkeeping simple. After character creation, the GM may assign spells, generate them randomly, or let you select them from any OSR or 5E source.
-</p>
+    <h3>Spell Dice Resolution</h3>
+    <ul>
+      <li>
+        Roll <code>d20 + PRE</code> vs DR (Difficulty Rating)
+      </li>
+      <li>
+        If the result is <strong>equal to or higher than DR</strong> → <b>success</b>
 
+      </li>
+      <li>
+        Spellcasting DR is <b>12</b>, but it can shift based on the situation.
+      </li>
+    </ul>
+    <p>
+      When casting a spell, the player <strong>cannot use a DethKrawler Die</strong> if they roll a natural <b>1</b>. In this case, the GM will roll on the <strong>Mishap Table</strong> and narrate the outcome.
+    </p>
+    <h3>Corruption</h3>
+    <p>
+      Whenever a player commits an <strong>evil deed</strong> or rolls a natural <b>1</b> when spellcasting, they gain <strong>1 point of Corruption</strong>.
+      When a player character reaches <b>10 Corruption points</b>, the GM takes control of the character and may use them as a monster in the game.
+    </p>
 
-<p>
-Wizards trust no one. Most hide among villages or within the ruins of fallen towers, jealously guarding their knowledge. To convince such a wizard to teach you a spell, you must succeed on a <b>PRE</b> test against <b>DR18</b>. Even then, payment is steep and the price may be more than coin. The wise fear the true cost of wielding the arcane.
-</p>
+    <h3>Critical Miscast</h3>
+    <p>
+      On a natural <b>1</b> when spellcasting, the caster gains <b>+1 Corruption</b> and must roll <code>d20</code> on the following table:
+    </p>
 
-    </div>
-  </body>
+    <table>
+      <thead>
+        <tr>
+          <th>Roll</th>
+          <th>Effect</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1–5</td>
+          <td><strong>Fizzle</strong><br>Spell does not work. Ghostly laughter fills the room.</td>
+        </tr>
+        <tr>
+          <td>6–10</td>
+          <td><strong>Inconvenience</strong><br>The caster’s nose bleeds uncontrollably, their hair turns white or falls out, boils appear on their skin, or they forget the spell for the rest of the day.</td>
+        </tr>
+        <tr>
+          <td>11–15</td>
+          <td><strong>Backfire</strong><br>The caster takes the damage or effect, or the opposite of the intended spell occurs (e.g., a shield spell lowers the caster’s armor class).</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td><strong>Friendly Fire</strong><br>The caster hits a friend or innocent victim.</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td><strong>Armor Melt</strong><br>All armor—friend and foe—in the room is disintegrated.</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td><strong>Mutation</strong><br>The caster gains a mutation (third eye, tentacle, conjoined twin, etc.).</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td><strong>Power Loss</strong><br>The caster ages <code>d20</code> years or loses a level.</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td><strong>Catastrophe</strong><br>The caster explodes in a shower of gore, or a portal to hell opens and they are dragged away by demons.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>How Many Spells Can I Learn?</h3>
+    <p>
+      In addition to your daily casting limit (based on <b>PRE</b>), you may learn and retain a number of spells equal to your <b>PRE</b> stat <i>(minimum 1)</i> plus your level. This removes the need for complex spell slot tracking and keeps bookkeeping simple. After character creation, the GM may assign spells, generate them randomly, or let you select them from any OSR or 5E source.
+    </p>
+
+    <h4>How Can I Learn New Spells?</h4>
+    <p>
+      Knowledge is dangerous. The mind can only hold so many whispers of the arcane without shattering. In addition to your daily casting limit (based on <b>PRE</b>), you may learn and retain a number of spells equal to your <b>PRE</b> stat <i>(minimum 1)</i> plus your level. This removes the need for complex spell slot tracking and keeps bookkeeping simple. After character creation, the GM may assign spells, generate them randomly, or let you select them from any OSR or 5E source.
+    </p>
+
+    <p>
+      Wizards trust no one. Most hide among villages or within the ruins of fallen towers, jealously guarding their knowledge. To convince such a wizard to teach you a spell, you must succeed on a <b>PRE</b> test against <b>DR18</b>. Even then, payment is steep and the price may be more than coin. The wise fear the true cost of wielding the arcane.
+    </p>
+  </div>
+</body>
+
 </html>
