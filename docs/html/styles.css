@@ -28,6 +28,12 @@ h2, h3 {
   color: red;
 }
 
+h4 {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: orange;
+ }
+
 /* hr style */
 hr {
   border: none;
