@@ -32,7 +32,8 @@ h4 {
   letter-spacing: 4px;
   text-transform: uppercase;
   color: orange;
-  background-color: black;
+  background-color: red;
+  margin-left: 5.75px;
  }
 
 /* hr style */
