@@ -157,7 +157,6 @@ hr {
 }
 
 /* Thematic Table Styling for DethKrawl */
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -194,7 +193,8 @@ tbody tr:hover {
 
 code {
   font-family: "Courier New", monospace;
-  color: #191817; /* black d6 color on the table */
+  color: #000000; /* black d6 color on the table */
+  background-color: orange;
 }
 
 /* blockquote styles */
