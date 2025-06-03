@@ -28,6 +28,14 @@ h2, h3 {
   color: red;
 }
 
+h4 {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: orange;
+  background-color: red;
+  margin-left: 5.75px;
+ }
+
 /* hr style */
 hr {
   border: none;
@@ -109,16 +117,18 @@ hr {
   text-align: left;
   margin-top: 2rem;
   line-height: 1.4;
-  background: none;
+  background: black;
   padding: 10px;
   border: none;
   word-break: break-word;
   max-width: 200px;
+  
 }
 
 .sidebar footer a {
   color: white;
   text-decoration: underline;
+ 
 }
 
 .sidebar footer a:hover {
@@ -149,7 +159,7 @@ hr {
 }
 
 .main-content img {
-  max-width: 425px;
+  max-width: 455px;
   width: 100%;
   height: auto;
   display: block;
@@ -157,7 +167,6 @@ hr {
 }
 
 /* Thematic Table Styling for DethKrawl */
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -194,7 +203,8 @@ tbody tr:hover {
 
 code {
   font-family: "Courier New", monospace;
-  color: #191817; /* black d6 color on the table */
+  color: #000000; /* black d6 color on the table */
+  background-color: orange;
 }
 
 /* blockquote styles */
