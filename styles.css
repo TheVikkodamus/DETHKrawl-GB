@@ -160,6 +160,7 @@ hr {
   margin-top: 0.1rem;
   margin-bottom: 1rem; /* normal space below image */
   max-width: 450px;
+  max-heigth: 250px;
   width: 100%;
   height: auto;
   display: block;
@@ -171,10 +172,12 @@ hr {
   margin-top: 0.1rem; /* almost touching h4 */
   margin-bottom: 1rem;
   max-width: 450px;
+  max-heigth: 250px;
   width: 100%;
   height: auto;
   border: 2px solid #444;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  object-fit: fill;
 }
 
 /* Thematic Table Styling for DethKrawl */
