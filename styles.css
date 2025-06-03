@@ -70,13 +70,13 @@ hr {
 
 .sidebar ul {
   list-style: none;
-  padding: 0;
+  padding: 6px;
   margin: 0;
   flex-grow: 1;
 }
 
 .sidebar ul li {
-  margin: 2.75rem 0;
+  margin: 2.25rem 0;
 }
 
 .sidebar ul li a {
