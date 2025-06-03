@@ -34,7 +34,8 @@ h4 {
   color: white;
   background-color: black;
   margin-left: 5.75px;
- }
+  margin-bottom: 0.01rem; /* even tighter */
+}
 
 /* hr style */
 hr {
@@ -91,6 +92,7 @@ hr {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  
 }
 
 .sidebar ul li a:hover {
@@ -108,9 +110,7 @@ hr {
   background: none;
 }
 
-
 /* Footer Section in the Nav */
-
 .sidebar footer {
   font-size: 0.7rem;
   color: white;
@@ -122,13 +122,11 @@ hr {
   border: none;
   word-break: break-word;
   max-width: 200px;
-  
 }
 
 .sidebar footer a {
   color: white;
-  text-decoration: underline;
- 
+  text-decoration: underline; 
 }
 
 .sidebar footer a:hover {
@@ -159,11 +157,24 @@ hr {
 }
 
 .main-content img {
-  max-width: 455px;
+  margin-top: 0.1rem;
+  margin-bottom: 1rem; /* normal space below image */
+  max-width: 450px;
   width: 100%;
   height: auto;
   display: block;
   margin: 2.5rem auto;
+}
+
+.content-img {
+  display: block;
+  margin-top: 0.1rem; /* almost touching h4 */
+  margin-bottom: 1rem;
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  border: 2px solid #444;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 /* Thematic Table Styling for DethKrawl */
@@ -305,5 +316,5 @@ code {
   background-color: #222; /* optional: subtle background to make code stand out */
   padding: 0.1em 0.3em;
   border-radius: 4px;
-
   }
+}
