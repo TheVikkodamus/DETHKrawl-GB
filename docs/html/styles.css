@@ -243,10 +243,16 @@ blockquote:before {
   vertical-align: -0.4em;
 }
 
-blockquote p ul {
+blockquote p {
   display: inline;
   color: white;
 }
+
+blockquote ul {
+  color: white;
+  list-style-position: inside; /* optional: makes bullets align inside the blockquote */
+}
+
 
 blockquote code {
   color: #fff;
