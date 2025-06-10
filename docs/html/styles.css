@@ -63,7 +63,7 @@ hr {
   width: 250px;
   background-color: #cc0000;
   color: white;
-  padding: 2rem 1rem;
+  padding: 0rem 1rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -80,13 +80,13 @@ hr {
 
 .sidebar ul {
   list-style: none;
-  padding: 6px;
+  padding: 1px;
   margin: 0;
   flex-grow: 1;
 }
 
 .sidebar ul li {
-  margin: 2.25rem 0;
+  margin: 1.25rem 0;
 }
 
 .sidebar ul li a {
