@@ -248,6 +248,10 @@ blockquote p {
   color: white;
 }
 
+blockquote ul {
+  color: white;
+}
+
 blockquote code {
   color: #fff;
 }
