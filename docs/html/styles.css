@@ -243,12 +243,10 @@ blockquote:before {
   vertical-align: -0.4em;
 }
 
-blockquote p ul {
+blockquote p ul hr {
   display: inline;
   color: white;
 }
-
-
 
 blockquote code {
   color: #fff;
