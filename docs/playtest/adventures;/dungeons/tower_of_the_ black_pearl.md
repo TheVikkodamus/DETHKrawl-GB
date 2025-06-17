@@ -111,10 +111,19 @@ Each archway is a portal. In order to activate a portal, blood must be poured on
 
 This is where Sezrekan and his apprentices performed the rituals necessary to transfer the soul of the mage in preparation for his journey to the overworld, underworld, and numinous world. The vessels on the shelf contain Sezrekan’s organs; though painted black, each is plated in hammered gold. The five vessels and the bowl are each worth 25 gp. Note that a caster with the “sympathetic magic” mercurial result for patron bond or invoke patron may find the desiccated contents more valuable than the containers! The secret door hidden in the back of the room cannot be opened from this side. The door is made of a mighty granite slab that cannot be destroyed save by mighty magic. 
 
-### Monster Encounter: 
+#### Monster Encounter: 
 
 - [Pirate Ruffians](#pirate-ruffian)
 
+
+---
+
+### Area 1-6: Boatman of the Depth
+
+> Roughhewn steps descend to a wooden dock and dark lake that wends its way out of sight. A brazier stands to either side, wreathed in cold flames. A skiff emerges from the darkness, poled by a cloaked boatman. As the boatman draws nearer, you can see the cloak’s hood hides a pale skull with blue flames for eyes. The skiff brushes up against the dock, and the boatman extends a single skeletal hand.
+
+
+The silent boatman will accept any coin as payment, but will not shove off until every passenger has paid at least one coin. If paid, the boatman will deliver the PCs safely to area 1-7. PCs can choose to avoid the boatman and swim to area 1-7, but swimming in the unnaturally cold waters is very difficult, (see rules below). The lake is 20 ft. deep here, growing to a depth of 40 ft. near area 1-7.
 
 ---
 
