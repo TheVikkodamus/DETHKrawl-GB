@@ -65,10 +65,14 @@ Any loud noise (like the PCs’ skiff knocking the side of the tower) wakes the 
 
 ---
 
-### Area 1-2:
+### Area 1-2: Candle Room of Lawful Heroes
 <a name="1-2"></a>
 
+> Hundreds of candles line the walls. Each represents a Lawful hero’s soul. A black registry book sits on a pedestal.
 
+- **Trap**: Touching a candle triggers flame hands (2 attacks, +4 to hit, `d4` each).
+- **Lawful PCs** can relight their own candle if they die (DR check to find it).
+- **If room floods**: All Lawful heroes in the world die. Dark Age begins.
 
 ## Monsters
 
