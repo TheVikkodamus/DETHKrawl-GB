@@ -36,7 +36,7 @@ Converted DCC/Goodman Games to Dethkrawl TTRPG.
 ## Areas of the Map
 
 ### Area 1-1:
-<a name:="1-1"></a>
+<a name="1-1"></a>
 
 > The tower rises from the sea like something out of a fairy tale. And yet, it must be real, for waves crash against it just as they lap at the planks of your skiff. Snarling gargoyles crown the four corners of the tower, peering from coral-encrusted battlements. More worrisome than the eldritch tower or the snarling gargoyles is the worn longboat moored on the far side of the tower. Squinting through the darkness, it seems that the deck of the longboat is empty.
 
@@ -69,6 +69,39 @@ kings and emperors with a wave of their wands; meek rogues growing to become dar
 
 ---
 
+### Area 1-3: False Hopes
+<a name="1-3"></a>
+
+> A trickle of sea water runs down the staircase. In places the wooden stairs are rotten and in one case they’ve fallen through altogether. Passage will require vaulting the gap. The walls along the stairs shelter a trio of small alcoves. In each alcove are small figurines: hand-painted fetishes carved from ivory and decorated with hair and small beads. The first nook holds a fierce-looking barbarian, the second a pair of snarling panthers, and the last a somber knight.
+
+The gap in the stairs is 7 ft. across, and with the drop in elevation it is an easy jump (Strength or Agility, DR5), even for small creatures. The landing is deceptive – the marked area of the Page 8 map notes where the rotted steps break away, pitching PCs down onto the next
+flight of stairs below (1d6 falling damage). Leaping the full distance to safety requires DR15 AGI Test. Coming back up these steps is far harder, requiring a DR18 STR or AGI test to bypass the dangerous section. Using a rope to traverse the area to the stairs below is far safer.
+
+The fetishes are actually tiny animated objects. If disturbed, they launch into a coordinated defense, doing their best to force attackers off the stairs.
+
+![Area 1-3](https://i.imgur.com/04JmnR7.png)
+
+#### Monster Encounter
+[Animated Fetishes](#animated-fetishes)
+
+---
+
+### Area 1-4: Chamber of Portals
+
+> This chamber is dominated by a trio of arches set against the walls of the room. Each arch resembles a snarling dragon; all are carved from dark mahogany and bound in bronze.
+
+The arches would be identical were it not for their gemstone eyes. The dragon in the southwest corner of the room has emeralds for eyes; the dragon in the northwest corner, pearls; the dragon in the northeast is missing its gemstones and the
+eye sockets are empty. 
+
+> Beneath the arches are flat slabs of blank obsidian. An enormous eldritch sigil is etched into the stone floor, dividing the room into three distinct vectors. A fight must have taken place here recently: fresh blood is pooled near the pearl
+archway.
+
+Each archway is a portal. In order to activate a portal, blood must be poured onto the sigil directly before the arch. This doesn’t require a great amount of blood a single drop will do – activating the portal for 5 rounds. Whatever character provides the blood takes 1 point of ability damage, as though it had utilized spellburn, when the portal is activated. During this time the obsidian slab is washed over by a shimmering, rippling pool of absolute blackness. Puzzling out the portals is made more difficult because presently only the pearl portal can be activated (it leads to area 1-5). The northeast portal can only be activated once the rubies from area 1-11 are placed in the dragon’s eye sockets (it leads to area 1-12). The emerald portal can only be activated with the blood from an 8 HD+ creature. Its destination is not specified; the judge should make it lead to some interesting location in his own campaign world where he’d like to take the characters once they’re of a higher level. Players should be encouraged to work out the portal puzzle on their own, but appropriate occupations and Intelligence checks for wizards can provide hints for stumped parties at the judge’s discretion. Prying the gems from an arch disables a portal. The emeralds are worth 65 gp each, and the pearls 50 gp.
+
+![area 1-4](https://i.imgur.com/qYphYxY.png)
+
+---
+
 ## Flood Countdown (if Pearl Taken)
 
 | Round | Event |
@@ -93,8 +126,8 @@ HP 7, Morale 8, No Armor
 
 > An infected character does not benefit from resting. Instead, d6 HP is lost daily. 
 
-### Animated Fetish
-<a name="animated-fetish"></a>
+### Animated Fetishes
+<a name="animated-fetishes"></a>
 HP 2, DR 14
 
 Slam `d3–1`, Reduces all damage by 8
@@ -113,9 +146,10 @@ Immune to mundane weapons
 **Special – Diseased Bite**: 
 When bitten, test `TOU` vs **DR12**. 
 
-- **Fail**: Lose `d3` TOU each day until cured  
+- **Fail**: Lose `d3` dmg TOU each day until cured.  
 - **Effect**: All rolls made with **Disadvantage** while infected
 - **Cure**: Magical healing or rest + successful healing test (GM’s call)
+
 ### Savage Quenn (Boss)
 <a name="savage-quenn"></a>
 HP 14, *Armor* -d4
