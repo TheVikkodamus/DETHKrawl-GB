@@ -1,7 +1,10 @@
 
 # Playtest Notes
 <br />
+author: 
+- "Victor Gregory Matos" [Game designer, GM]
 date: "`r format(Sys.time(), '%d %B, %Y')`"
+
 ---
 
 location: Online / In-person
