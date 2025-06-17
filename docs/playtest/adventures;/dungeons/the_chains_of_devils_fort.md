@@ -184,5 +184,4 @@ But you are not the only ones hunting. A **cult of the Black Veil** approaches. 
 |---------|--------|
 | Creature captured alive | Full reward — 100 silver each |
 | Creature slain | Half reward — 50 silver each |
-| Cult repelled | Bonus — +1 DethKrawler Die each |
 | Party wiped out | Another group may follow...
