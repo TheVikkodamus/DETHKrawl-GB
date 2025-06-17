@@ -126,6 +126,8 @@ This is where Sezrekan and his apprentices performed the rituals necessary to tr
 
 The silent boatman will accept any coin as payment, but will not shove off until every passenger has paid at least one coin. If paid, the boatman will deliver the PCs safely to area 1-7. PCs can choose to avoid the boatman and swim to area 1-7, but swimming in the unnaturally cold waters is very difficult, (see rules below). The lake is 20 ft. deep here, growing to a depth of 40 ft. near area 1-7.
 
+![area 1-6](https://i.imgur.com/cEbZUfs.png)
+
 ---
 
 ## Flood Countdown (if Pearl Taken)
