@@ -119,6 +119,7 @@ This is where Sezrekan and his apprentices performed the rituals necessary to tr
 ---
 
 ### Area 1-6: Boatman of the Depth
+<a name="1-6"></a>
 
 > Roughhewn steps descend to a wooden dock and dark lake that wends its way out of sight. A brazier stands to either side, wreathed in cold flames. A skiff emerges from the darkness, poled by a cloaked boatman. As the boatman draws nearer, you can see the cloak’s hood hides a pale skull with blue flames for eyes. The skiff brushes up against the dock, and the boatman extends a single skeletal hand.
 
