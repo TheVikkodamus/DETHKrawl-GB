@@ -87,6 +87,7 @@ The fetishes are actually tiny animated objects. If disturbed, they launch into 
 ---
 
 ### Area 1-4: Chamber of Portals
+<a name="1-4"></a>
 
 > This chamber is dominated by a trio of arches set against the walls of the room. Each arch resembles a snarling dragon; all are carved from dark mahogany and bound in bronze.
 
