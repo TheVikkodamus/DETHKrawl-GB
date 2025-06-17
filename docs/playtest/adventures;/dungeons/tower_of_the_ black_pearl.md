@@ -115,6 +115,16 @@ Each archway is a portal. In order to activate a portal, blood must be poured on
 
 ---
 
+### Area 1-5 A: Ceremonial Chamber
+
+> The air in this room is thick with the scent of mold. Rotting crimson robes hang from hooks on the walls, and several dark vessels rest on a rickety shelf. A seemingly endless series of runes are carved into the floor, walls and ceiling, covering every inch of the room.
+> Resting on the floor, in a shallow gold bowl, is a rusty knife with a long, curved blade. 
+
+This is where Sezrekan and his apprentices performed the rituals necessary to transfer the soul of the mage in preparation for his journey to the overworld, underworld, and numinous world. The vessels on the shelf contain Sezrekan’s organs; though painted black, each is plated in hammered gold. The five vessels and the bowl are each worth 25 gp. Note that a caster with the “sympathetic magic” mercurial result for patron bond or invoke patron may find the desiccated contents more valuable than the containers! The secret door hidden in the back of the room cannot be opened from this side. The door is made of a mighty granite slab that cannot be destroyed save by mighty magic. 
+
+
+---
+
 ## Monsters
 
 ### Pirate Ruffian
