@@ -23,7 +23,7 @@ Converted DCC/Goodman Games to Dethkrawl TTRPG.
 | [1-3](#1-3) | Fetish Alcoves, Pit Trap | Animated Fetishes attack |
 | [1-4](#1-4) | Portal Room (needs blood/gems) | Portal puzzle |
 | [1-5](#1-5) | Lower Chambers, 5 Pirates | Pirate ambush |
-| 1-6 | Boatman Ride or freezing swim | Drowning risk |
+| [1-6](#1-6) | Boatman Ride or freezing swim | Drowning risk |
 | 1-7 | Iron Gate, Savage Quenn encounter | Trapped door |
 | 1-8 | Flooding Trap Room | 6-round full-room flood |
 | 1-9 | Spear Trap Room | Auto-spear vs door tampering |
