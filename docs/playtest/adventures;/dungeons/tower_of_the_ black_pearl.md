@@ -104,6 +104,7 @@ Each archway is a portal. In order to activate a portal, blood must be poured on
 ---
 
 ### Area 1-5 A: Ceremonial Chamber
+<a name="1-5"></a>
 
 > The air in this room is thick with the scent of mold. Rotting crimson robes hang from hooks on the walls, and several dark vessels rest on a rickety shelf. A seemingly endless series of runes are carved into the floor, walls and ceiling, covering every inch of the room.
 > Resting on the floor, in a shallow gold bowl, is a rusty knife with a long, curved blade. 
