@@ -19,7 +19,7 @@ Converted DCC/Goodman Games to Dethkrawl TTRPG.
 | Area | Description | Danger |
 |------|-------------|--------|
 | [1-1](#1-1) | Tower Entry, 3 Drunken Pirates | Pirate ambush |
-| 1-2 | Candle Room of Lawful Heroes | Trap: Flame Hands if candles disturbed |
+| [1-2](#1-2) | Candle Room of Lawful Heroes | Trap: Flame Hands if candles disturbed |
 | 1-3 | Fetish Alcoves, Pit Trap | Animated Fetishes attack |
 | 1-4 | Portal Room (needs blood/gems) | Portal puzzle |
 | 1-5 | Lower Chambers, 5 Pirates | Pirate ambush |
@@ -63,6 +63,11 @@ Any loud noise (like the PCs’ skiff knocking the side of the tower) wakes the 
 | 13    | Area 1-2 floods |
 
 ---
+
+### Area 1-2:
+<a name="1-2"></a>
+
+
 
 ## Monsters
 
