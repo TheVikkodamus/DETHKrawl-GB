@@ -151,10 +151,7 @@ The silent boatman will accept any coin as payment, but will not shove off until
 **Attacks**  
 - **Shortsword** – `1d4` damage 
 - **Poisoned Dagger** – `[1d4]` damage + SPECIAL
-> 🝮 **Infection**: Player will lose `[1d3]` TOU per day until treated. 
-
-
-
+> **Infection**: DR12 `TOU` test. If failed player character will lose `[1d3]` `TOU` per day until treated. 
 
 ---
 
