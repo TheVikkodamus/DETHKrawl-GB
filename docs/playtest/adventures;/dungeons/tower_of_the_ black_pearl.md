@@ -145,13 +145,18 @@ The silent boatman will accept any coin as payment, but will not shove off until
 
 ### Pirate Ruffian
 <a name="pirate-ruffian"></a>
-HP 7, Morale 8, No Armor
 
-**Short Sword**, d4 dmg
+**HP**: 7  **Morale**: 8  **Armor**: None  
 
-**Poisoned Knife**, d4 dmg + _**Special**_ PC. Test `TOU` DR10 or **become infected**. 
+**Attacks**  
+- **Shortsword** – `1d4` damage 
+- **Poisoned Dagger** – `[1d4]` damage + SPECIAL
+> 🝮 **Infection**: Player will lose `[1d3]` TOU per day until treated. 
 
-> An infected character does not benefit from resting. Instead, d6 HP is lost daily. 
+
+
+
+---
 
 ### Animated Fetishes
 <a name="animated-fetishes"></a>
@@ -160,6 +165,8 @@ HP 2, DR 14
 Slam `d3–1`, Reduces all damage by 8
 
 Immune to mundane weapons
+
+---
 
 ### Crab-Rat
 <a name="crab-rat"></a>
@@ -176,6 +183,8 @@ When bitten, test `TOU` vs **DR12**.
 - **Fail**: Lose `d3` dmg TOU each day until cured.  
 - **Effect**: All rolls made with **Disadvantage** while infected
 - **Cure**: Magical healing or rest + successful healing test (GM’s call)
+
+---
 
 ### Savage Quenn (Boss)
 <a name="savage-quenn"></a>
