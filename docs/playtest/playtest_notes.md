@@ -1,5 +1,5 @@
 ---
-# Play Test Notes
+title: Playtest Notes
 date: "`r Sys.Date()`"
 ---
 
