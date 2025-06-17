@@ -18,7 +18,7 @@ Converted DCC/Goodman Games to Dethkrawl TTRPG.
 
 | Area | Description | Danger |
 |------|-------------|--------|
-| 1-1 | Tower Entry, 3 Drunken Pirates | Pirate ambush |
+| [1-1](#1-1) | Tower Entry, 3 Drunken Pirates | Pirate ambush |
 | 1-2 | Candle Room of Lawful Heroes | Trap: Flame Hands if candles disturbed |
 | 1-3 | Fetish Alcoves, Pit Trap | Animated Fetishes attack |
 | 1-4 | Portal Room (needs blood/gems) | Portal puzzle |
@@ -36,6 +36,7 @@ Converted DCC/Goodman Games to Dethkrawl TTRPG.
 ## Areas of the Map
 
 ### Area 1-1:
+<a name:="1-1"></a>
 
 > The tower rises from the sea like something out of a fairy tale. And yet, it must be real, for waves crash against it just as they lap at the planks of your skiff. Snarling gargoyles crown the four corners of the tower, peering from coral-encrusted battlements. More worrisome than the eldritch tower or the snarling gargoyles is the worn longboat moored on the far side of the tower. Squinting through the darkness, it seems that the deck of the longboat is empty.
 
