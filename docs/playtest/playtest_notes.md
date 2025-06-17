@@ -1,7 +1,7 @@
 
-title: Playtest Notes
-
-date: "`r Sys.Date()`"
+# Playtest Notes
+<br />
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 ---
 
 location: Online / In-person
