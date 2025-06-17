@@ -1,9 +1,10 @@
 
 # Playtest Notes
 <br />
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+
 author: 
 - "Victor Gregory Matos" [Game designer, GM]
-date: "`r format(Sys.time(), '%d %B, %Y')`"
 
 ---
 
