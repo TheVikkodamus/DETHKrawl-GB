@@ -1,22 +1,21 @@
-
 # Playtest Notes
-<br />
 
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+**Date:** {{DATE}}
 
-author: 
-- "Victor Gregory Matos" [Game designer, GM]
+**Author:** Victor Gregory Matos – Game Designer, GM
+
+**Players:**
+- Player Name - PC Name
+- Player Name - PC Name
 
 ---
 
-location: Online / In-person
+**Location:** Online / In-person
 
 ### GM Notes
 - add note here
-- add note here
 
 ### Player Feedback
-- add note here
 - add note here
 
 /new page
