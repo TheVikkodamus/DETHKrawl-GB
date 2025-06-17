@@ -53,6 +53,22 @@ Any loud noise (like the PCs’ skiff knocking the side of the tower) wakes the 
 - **Entry**: Trace glyph to open.
 - Or: DR15 AGI to pick, DR20 STR to bash.
 
+---
+
+### Area 1-2: Candle Room of Lawful Heroes
+<a name="1-2"></a>
+
+> Hundreds of candles line the walls, their flames swaying and dancing to your every move. Some are tall, as if they were lit just moments ago, while others are burnt down to stubby mounds of wax. In the center of the room stands an onyx pedestal supporting a massive tome bound in gold and worn black scales. The walls are decorated with detailed murals depicting what must be the lives of heroes. You can see warriors rising up from humble beginning to lead armies against forces of darkness; humble apprentices inheriting arcane powers from their masters, casting down
+kings and emperors with a wave of their wands; meek rogues growing to become daring shadow-lords; and destitute warrior-monks rising to become leaders of holy armies.
+
+- **Trap**: Touching a candle triggers flame hands (2 attacks, +4 DR to DEF, `d4` dmg each).
+- **Lawful PCs** can relight their own candle if they die (DR15 PRE check to find it).
+- **If room floods**: All Lawful heroes in the world die. Dark Age begins.
+
+  ![Area 1-2](https://i.imgur.com/V2fj8zX.png)
+
+---
+
 ## Flood Countdown (if Pearl Taken)
 
 | Round | Event |
@@ -64,15 +80,6 @@ Any loud noise (like the PCs’ skiff knocking the side of the tower) wakes the 
 | 13    | Area 1-2 floods |
 
 ---
-
-### Area 1-2: Candle Room of Lawful Heroes
-<a name="1-2"></a>
-
-> Hundreds of candles line the walls. Each represents a Lawful hero’s soul. A black registry book sits on a pedestal.
-
-- **Trap**: Touching a candle triggers flame hands (2 attacks, +4 to hit, `d4` each).
-- **Lawful PCs** can relight their own candle if they die (DR check to find it).
-- **If room floods**: All Lawful heroes in the world die. Dark Age begins.
 
 ## Monsters
 
