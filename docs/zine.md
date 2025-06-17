@@ -22,7 +22,7 @@ Roll `3d6` for each stat. Don’t record the total — just use the table to det
 | `3d6` Roll | STAT Bonus | `d6` chances (GM rolls behind screen) | Spells per Day |
 |:----------:|:-----------:|:--------------------------------------:|:----------------:|
 | 3–5        | -1          | 0-in-6                                | —                |
-| 6–10       | 0           | 0-in-6                                | -    |
+| 6–10       | 0           | 0-in-6                                | —                |
 | 11–14      | +1          | 1-in-6                                | +`d2` per day    |
 | 15–17      | +2          | 2-in-6                                | +`d3` per day    |
 | 18         | +3          | 3-in-6                                | +`d4` per day    |
