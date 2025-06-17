@@ -50,7 +50,8 @@ Any loud noise (like the PCs’ skiff knocking the side of the tower) wakes the 
 - [Pirate Ruffian](#pirate-ruffian)
 
 #### Puzzle Area 1-1
-- **Entry**: Trace glyph to open. Or: DR15 AGI to pick, DR20 STR to bash.
+- **Entry**: Trace glyph to open.
+- Or: DR15 AGI to pick, DR20 STR to bash.
 
 ## Flood Countdown (if Pearl Taken)
 
