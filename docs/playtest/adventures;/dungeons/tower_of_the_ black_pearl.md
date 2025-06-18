@@ -139,6 +139,10 @@ The silent boatman will accept any coin as payment, but will not shove off until
 
 ![area 1-6](https://i.imgur.com/cEbZUfs.png)
 
+#### Monster Encounter:
+
+- [Silent Boatman](#silent-boatman)
+
 ---
 
 ## Flood Countdown (if Pearl Taken)
@@ -202,6 +206,31 @@ HP 14, *Armor* -d4
 Can cast *Locate Object* 2x/day
 
 ---
+
+### Silent Boatman
+<a name="[silent-boatman]"></a>
+
+HP: -  Morale: -  Armor: None
+
+Attacks
+
+**Pole** – `1d4+1` damage 
+**Claw** – `1d3` damage + SPECIAL (if applicable)
+
+**Abilities**  
+- **Ethereal Form**: Cannot be harmed directly. Attacks, spells, and effects pass through it.  
+- **Boat-Bound**: If the boat is destroyed (25 HP), the Boatman vanishes forever.  
+- **Infravision 60 ft.**  
+- **Final Fare**: Will not depart until each rider pays **one coin**. If unpaid, it waits indefinitely.  
+
+**Behavior**  
+- Will not speak. Does not initiate violence unless attacked.  
+- If destroyed indirectly, it sinks silently into the black water.
+
+**Disposition**: Lawful, bound by ancient pacts  
+
+---
+
 ## Arcane Artifacts
 
 ### The Black Pearl
