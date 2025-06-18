@@ -155,6 +155,17 @@ DR 10 PRE Test. Roll 1d4 to determine the search results:
 |3|1d6 gp|
 |4|1d12 sp|
 
+
+#### Swimming Test
+
+- **Swimming** PCs must make a DR5 STR test each round to stay afloat. This is modified by armor. A PC can choose to sink but risks drowning. 
+- **Drowning:** A submerged PC without an air source can hold his breath for as many rounds as his Stamina score. If he engages in actions while submerged, this duration is halved. Once this time limit expires, the PC begins drowning and must make a DR10 TOU test each round or temporarily lose 1 point of TOU. The test DR increases by 1 each round after the first. A drowning PC can take no actions and must be rescued by another character. When a PC’s TOU reaches 0, he dies. If the PC is rescued, the lost Stamina is restored immediately.
+- **Hypothermia:** In addition, characters swimming or submerged in the cold water must make a DC 10 Fortitude save each round, or temporarily lose 1 point of TOU. When a PC’s Stamina reaches 0, he dies. If the PC is rescued, the lost TOU is restored at a rate of 1 per minute spent warm and dry.
+- The base speed of all swimming or submerged characters is halved. That rate is further modified by armor.
+- Swimming targets gain a -2 DR DEF roll against ranged attacks originating outside the water. Targets completely underwater add -4 to their DR DEF against attacks from outside the water.
+- Attacks by submerged characters are less effective. Slashing and bludgeoning weapons such as axes, clubs, and two-handed swords inflict half-normal damage. Piercing weapons such as spears, daggers, and short swords do normal damage. Missile fire attacks are impossible underwater.
+- Spells may not be cast while submerged. Spells may be attempted while treading water, but the caster suffers a +2 DR penalty to his spell check when doing so. 
+
 ---
 
 ## Flood Countdown (if Pearl Taken)
