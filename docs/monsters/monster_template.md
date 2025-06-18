@@ -1,7 +1,7 @@
 ### Monster Name
 <a name="[anchor-name]"></a>
 
-HP: X  Morale: X  Armor: [None / Light / d2 / d4 / d6]
+HP: --  Morale: X  Armor: [None / Light / d2 / d4 / d6]
 
 Attacks
 
