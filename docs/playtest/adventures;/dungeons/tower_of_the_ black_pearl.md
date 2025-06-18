@@ -227,6 +227,7 @@ HP: -  Morale: -  Armor: None
 Attacks
 
 **Pole** – `1d4+1` damage 
+
 **Claw** – `1d3` damage + SPECIAL (if applicable)
 
 **Abilities**  
