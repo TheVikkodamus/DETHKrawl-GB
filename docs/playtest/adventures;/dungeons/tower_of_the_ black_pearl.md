@@ -143,6 +143,18 @@ The silent boatman will accept any coin as payment, but will not shove off until
 
 - [Silent Boatman](#silent-boatman)
 
+#### Treasure:
+
+Treasure: The boatman does not keep any of the fares it collects. Instead it casts the coins over the side of the skiff, where they sink into the mud and muck. PCs willing to brave the frigid waters find a random amount of coins with each successful
+DR 10 PRE Test. Roll 1d4 to determine the search results:
+
+|Roll `1d4`|Search Result|
+|:---:|:---:|
+|1|1d12 gp, 1d6 sp|
+|2|1d8 gp, 1d4 cp|
+|3|1d6 gp|
+|4|1d12 sp|
+
 ---
 
 ## Flood Countdown (if Pearl Taken)
@@ -220,7 +232,6 @@ Attacks
 **Abilities**  
 - **Ethereal Form**: Cannot be harmed directly. Attacks, spells, and effects pass through it.  
 - **Boat-Bound**: If the boat is destroyed (25 HP), the Boatman vanishes forever.  
-- **Infravision 60 ft.**  
 - **Final Fare**: Will not depart until each rider pays **one coin**. If unpaid, it waits indefinitely.  
 
 **Behavior**  
