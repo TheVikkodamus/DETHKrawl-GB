@@ -3,7 +3,7 @@
 ## Monster Are in Alphabetical Order:
 
 ### Table of Content
-1. [Beast A] (#a)
+1. [Beast A](#a)
 
 ### A
 <a name="a"></a>
