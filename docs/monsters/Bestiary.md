@@ -89,7 +89,7 @@ Mooncurse Effects: The infected suffer strange dreams, heightened senses, and vi
 
 - Lose '1d4' TOU afterward from exhaustion
 
-Cure: Rare alchemical mixtures, three nights bound in silver chains, or a holy ritual at dawn.
+**Cure:** Rare alchemical mixtures, three nights bound in silver chains, or a holy ritual at dawn.
 
 ---
 
