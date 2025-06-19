@@ -28,6 +28,7 @@ Pack Howl – No damage + SPECIAL
 ---
 
 ### Dogman Alpha
+<a name="dogman-alpha"></a>
 
 HP: 12  Morale: 11  Armor: Medium (d4)
 
@@ -44,11 +45,11 @@ Commanding Howl – No damage + SPECIAL
 
 #### Mooncurse (Optional Rule)
 
-Origin of the Curse Only a Dogman Alpha may pass on the Mooncurse to others. If a player character is reduced to 0 HP by the Alpha’s Mauling Bite, they must succeed on a TOU DR14 test after combat or become infected.
+Only a Dogman Alpha may pass on the Mooncurse to others. If a player character is reduced to 0 HP by the Alpha’s Mauling Bite, they must succeed on a TOU DR14 test after combat or become infected.
 
 Mooncurse Effects: The infected suffer strange dreams, heightened senses, and violent urges. Under moonlight or stress, they must pass a PRE DR16 test or transform into a Dogman for `1d4` hours:
 
-Gain Dogman stats
+**Gain Dogman stats**
 
 - Cannot distinguish friend from foe
 
