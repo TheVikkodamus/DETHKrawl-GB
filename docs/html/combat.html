@@ -70,58 +70,114 @@
     <h2>Initiative</h2>
       <p>Dethkrawl is about fast combat. GM can decide whether to use a <code>1d6</code> roll to determine which group goes first in a PC vs. GM roll. The person who rolls the highest will go first. Remember Game Master (GM) will ask for declarations before rolling for <strong>initiative</strong>.</p>
 
-    <h2>Quicker Combat</h2>
-<p>
-  Before asking for player declarations at the beginning of the round, the GM rolls <code>1dY</code>, where
- <em>Y</em> is the number of players at the table.
-</p>
-<p>
-  This determines which players the enemies will target during the round.
-</p>
-<p>
-  Once targets are set, each targeted player rolls <strong>2d20</strong>:
-</p>
-<ul>
-  <li>One die is the <strong>ATTACK</strong> roll</li>
-  <li>The other die is the <strong>DEFENSE</strong> roll</li>
-</ul>
-<p>
-  Resolve both rolls in the same beat. The GM narrates what happens based on both rolls, blending action and reaction into a single cinematic moment.
-</p>
-<h4>Quick Combat Example:</h4>
-<blockquote>
-  <p>
-    The GM is running combat for <strong>4 players</strong>, so they roll <code>4d4</code> one die per enemy. The results are: <strong>3, 3, 1, 4</strong>.
-  </p>
-  <ul>
-    <li>Two enemies target <strong>Player 3</strong></li>
-    <li>One enemy targets <strong>Player 1</strong></li>
-    <li>One enemy targets <strong>Player 4</strong></li>
-  </ul>
-  </blockquote>
-    <h4>Aftermath</h4>
-  <blockquote>
-  <p>
-    The GM narrates how the enemies advance — some charging with blades drawn, others firing from a distance.<br>
-    The GM then prompts <strong>Player 3</strong> to roll their <strong>ATTACK</strong> and <strong>DEFENSE</strong> dice.
-  </p>
-  <p>
-    Player 3 rolls:
+  <section class="quicker-combat">
+  <h2>Quicker Combat</h2>
+  
+  <details open>
+    <summary><strong>Step 1: Target Assignment</strong></summary>
+    <p>
+      At the start of combat, the GM rolls <code>1dY</code> where <em>Y</em> is the number of players at the table. This determines which player each enemy targets.
+    </p>
+    <p>
+      For example, if there are 4 players and 4 enemies, the GM rolls <code>4d4</code>. The result might be: <code>3, 3, 1, 4</code> — meaning:
     </p>
     <ul>
-    <li>
-      <strong>4</strong> on the ATTACK die
-    </li>
-    <li>
-      <strong>8</strong> on the DEFENSE die
-    </li>
+      <li>Two enemies target <strong>Player 3</strong></li>
+      <li>One enemy targets <strong>Player 1</strong></li>
+      <li>One enemy targets <strong>Player 4</strong></li>
     </ul>
-  <p>
-    Since both rolls are below the standard <code>DR12+1 (two enemies attacking player 3)</code>, the attack <strong>misses</strong>, and the player is <strong>hit</strong> by the enemy’s assault. 
-    The GM rolls damage (the highest damage die and +1 due to having an extra enemy on the PC), then PC can roll armor reduction if they are wearing armor. If you have more players that were not attacked they can do their actions, 
-    get in close combat or attack from afar with range weapons. Then, at top of the round GM will ask for declaration. Repeat. If a player character or enemy moves away to attack another player. They can roll AGI test to avoid being hit. 
-  </p>
-</blockquote>
+  </details>
+
+  <details open>
+    <summary><strong>Step 2: Player Rolls</strong></summary>
+    <p>
+      Each <strong>targeted player</strong> rolls <code>2d20</code>:
+    </p>
+    <ul>
+      <li>One for <strong>ATTACK</strong></li>
+      <li>One for <strong>DEFENSE</strong></li>
+    </ul>
+    <p>
+      Resolve both results in a single beat of action. The GM narrates what happens based on the outcome of both rolls — blending offense and defense into a cinematic moment.
+    </p>
+    <div class="rulebox">
+      <strong>Defense Difficulty:</strong><br>
+      Base DR is <code>12</code>. Increase by +1 for each additional enemy targeting the same player.
+    </div>
+  </details>
+
+  <details open>
+    <summary><strong>Step 3: Untargeted Players</strong></summary>
+    <p>
+      Players who are <strong>not targeted</strong> by enemies this round may act freely:
+    </p>
+    <ul>
+      <li>Make a ranged or melee attack</li>
+      <li>Move into combat or reposition</li>
+      <li>Use an item, cast a spell, or help another player</li>
+    </ul>
+  </details>
+
+  <details open>
+    <summary><strong>Step 4: Resolve Damage</strong></summary>
+    <p>
+      If a player fails their <strong>DEFENSE roll</strong>, they are hit. The GM rolls damage using the <strong>highest damage die</strong> among the attacking enemies, plus <code>+1</code> for each extra enemy beyond the first.
+    </p>
+    <p>
+      The player may then roll for <strong>armor reduction</strong>, if wearing armor.
+    </p>
+  </details>
+
+  <details open>
+    <summary><strong>Disengaging & Movement</strong></summary>
+    <p>
+      If a player or enemy attempts to <strong>move away</strong> from a target they are engaged with in melee, they must succeed on an <strong>AGILITY test</strong> (usually DR12) to avoid a free attack of opportunity.
+    </p>
+  </details>
+
+  <details open>
+    <summary><strong>End of Round</strong></summary>
+    <p>
+      After all actions have resolved, the GM asks for declarations for the next round. Repeat the process.
+    </p>
+  </details>
+
+  <aside class="reference-box">
+    <h4>Combat Result Breakdown</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Attack Roll</th>
+          <th>Defense Roll</th>
+          <th>Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>✓</td>
+          <td>✓</td>
+          <td>You hit and avoid being hit</td>
+        </tr>
+        <tr>
+          <td>✓</td>
+          <td>✗</td>
+          <td>Both you and the enemy hit</td>
+        </tr>
+        <tr>
+          <td>✗</td>
+          <td>✓</td>
+          <td>You miss, but avoid being hit</td>
+        </tr>
+        <tr>
+          <td>✗</td>
+          <td>✗</td>
+          <td>You miss, and are hit</td>
+        </tr>
+      </tbody>
+    </table>
+  </aside>
+</section>
+
 <hr>
     <h3>Optional: Alternative Armor Play</h3>
     <p>
