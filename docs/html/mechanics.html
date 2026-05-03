@@ -1,61 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta & SEO -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ff0000" />
-    <meta name="description" content="DethKrawl is a cursed dungeon-crawling TTRPG inspired by Mörk Borg & Deathbringer. Free rules, downloads, and brutal fun." />
-    <link rel="canonical" href="https://dethkrawlttrpg.netlify.app/" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#cc0000" />
+  <meta name="description" content="DethKrawl is a cursed dungeon-crawling TTRPG inspired by Mörk Borg & Deathbringer. Free rules, downloads, and brutal fun." />
+  <link rel="canonical" href="https://dethkrawlttrpg.netlify.app/docs/html/mechanics.html" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="DethKrawl TTRPG - A Cursed Dungeon-Crawling RPG" />
-    <meta property="og:description" content="A cursed dungeon-crawling TTRPG inspired by Mörk Borg & Deathbringer. Free rules, downloads, and brutal fun!" />
-    <meta property="og:url" content="https://dethkrawlttrpg.netlify.app/" />
-    <meta property="og:image" content="https://dethkrawlttrpg.netlify.app/assets/images/DK_logo_3.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DethKrawl TTRPG — Core Mechanics" />
+  <meta property="og:description" content="A cursed dungeon-crawling TTRPG inspired by Mörk Borg & Deathbringer. Free rules, downloads, and brutal fun!" />
+  <meta property="og:url" content="https://dethkrawlttrpg.netlify.app/" />
+  <meta property="og:image" content="https://dethkrawlttrpg.netlify.app/assets/images/DK_logo_3.png" />
 
-    <!-- Icons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
 
-    <!-- Styles & Fonts -->
-    <link rel="stylesheet" href="/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
-    <title>DethKrawl TTRPG — Core Mechanics</title>
-  </head>
+  <title>Core Mechanics — DethKrawl TTRPG</title>
 
-  <body>
-    <!-- Skip link for a11y -->
-    <a class="skip-link" href="#main">Skip to content</a>
+  <style>
+    /* ─── CUSTOM PROPERTIES ─── */
+    :root {
+      --red:        #cc0000;
+      --red-dark:   #8b0000;
+      --red-glow:   rgba(204, 0, 0, 0.25);
+      --bg:         #0e0b0b;
+      --bg-surface: #161010;
+      --bg-sidebar: #110808;
+      --text:       #ddd5c8;
+      --text-muted: #8a7a6e;
+      --border:     rgba(204, 0, 0, 0.2);
+      --sidebar-w:  260px;
+    }
 
-    <!-- Sidebar / Header + Nav -->
-    <header class="sidebar" role="banner">
-      <a href="/" aria-label="DethKrawl Home">
-        <img
-          src="/assets/images/DK_logo_3.png"
-          alt="DethKrawl logo"
-          width="256"
-          height="256"
-          loading="eager"
-          decoding="async"
-        />
-      </a>
+    /* ─── GRAIN TEXTURE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.35;
+    }
 
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="/docs/html/randomly_creating_characters.html">Random Character Creation</a></li>
-          <li><a href="/docs/html/mechanics.html" aria-current="page">Game Mechanics</a></li>
-          <li><a href="/docs/html/combat.html">Combat</a></li>
-          <li><a href="#" aria-disabled="true">Store (Coming Soon)</a></li>
-        </ul>
-          <!-- footer with credits info -->
-    <footer>
-      <footer class="site-footer" role="contentinfo">
+    /* ─── SKIP LINK (accessibility) ─── */
+    .skip-link {
+      position: absolute;
+      top: -9999px;
+      left: 1rem;
+      background: var(--red-dark);
+      color: var(--text);
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      z-index: 10000;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--red);
+      text-decoration: none;
+      transition: color 0.2s, text-shadow 0.2s;
+    }
+    a:hover {
+      color: #ff4444;
+      text-shadow: 0 0 8px var(--red-glow);
+    }
+
+    /* ─── TYPOGRAPHY ─── */
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--text);
+      line-height: 1.05;
+      border-bottom: 2px solid var(--red);
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.25rem;
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin: 2rem 0 0.65rem;
+    }
+
+    h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin: 1.5rem 0 0.25rem;
+    }
+
+    h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text);
+      background-color: var(--red-dark);
+      display: inline-block;
+      padding: 0.2rem 0.85rem;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    em { color: var(--text-muted); font-style: italic; }
+
+    p { margin-bottom: 1.2rem; }
+
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    li { margin: 0.35rem 0; }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar {
+      width: var(--sidebar-w);
+      background-color: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      padding: 1.5rem 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      z-index: 100;
+    }
+
+    .sidebar a[aria-label] {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 0 12px var(--red-glow));
+      transition: filter 0.3s;
+    }
+    .sidebar img:hover {
+      filter: drop-shadow(0 0 20px rgba(204, 0, 0, 0.5));
+    }
+
+    .sidebar nav { flex: 1; }
+
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar nav ul li {
+      margin: 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar nav ul li:first-child { border-top: 1px solid var(--border); }
+
+    .sidebar nav ul li a {
+      display: block;
+      padding: 0.7rem 0.5rem;
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: color 0.2s, padding-left 0.2s, background 0.2s;
+    }
+    .sidebar nav ul li a:hover,
+    .sidebar nav ul li a[aria-current="page"] {
+      color: #ff4444;
+      padding-left: 1rem;
+      background: rgba(204, 0, 0, 0.08);
+      text-shadow: none;
+    }
+    .sidebar nav ul li a[aria-current="page"] {
+      border-left: 3px solid var(--red);
+    }
+    .sidebar nav ul li a[aria-disabled="true"] {
+      color: var(--text-muted);
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* ─── SIDEBAR FOOTER ─── */
+    .site-footer {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 2rem;
+      line-height: 1.5;
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      word-break: break-word;
+    }
+    .site-footer p { margin-bottom: 0.75rem; font-size: inherit; }
+    .site-footer a {
+      color: var(--text-muted);
+      text-decoration: underline;
+    }
+    .site-footer a:hover { color: var(--text); text-shadow: none; }
+
+    /* ─── MAIN CONTENT ─── */
+    .main-content {
+      margin-left: var(--sidebar-w);
+      padding: 3rem 3rem 5rem;
+      max-width: 860px;
+      width: 100%;
+    }
+
+    /* ─── CODE ─── */
+    code {
+      font-family: "Courier New", monospace;
+      color: #ffcc44;
+      background-color: #1e1515;
+      padding: 0.1em 0.4em;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    /* ─── BLOCKQUOTE ─── */
+    blockquote {
+      background: rgba(139, 0, 0, 0.2);
+      border-left: 4px solid var(--red);
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-radius: 0 4px 4px 0;
+    }
+    blockquote p { color: var(--text); margin-bottom: 0; }
+    blockquote code { color: #ffcc44; background: rgba(0,0,0,0.35); }
+
+    /* ─── TABLES ─── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-family: "Courier New", monospace;
+      font-size: 0.9rem;
+      background-color: #130e0e;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    }
+
+    thead th {
+      background-color: var(--red-dark);
+      color: var(--text);
+      padding: 0.75rem 1rem;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--red);
+      text-align: center;
+    }
+
+    tbody td {
+      padding: 0.6rem 0.85rem;
+      border: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+      color: var(--text);
+    }
+
+    tbody tr:nth-child(even) { background-color: rgba(255,255,255,0.03); }
+    tbody tr:hover { background-color: rgba(204, 0, 0, 0.08); }
+
+    /* ─── LIGHT MODE OVERRIDE ─── */
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg:         #f5f0ea;
+        --bg-surface: #ffffff;
+        --bg-sidebar: #1a0a0a;
+        --text:       #1a1a1a;
+        --text-muted: #666;
+        --border:     rgba(204, 0, 0, 0.25);
+      }
+
+      body::before { opacity: 0.12; }
+      h1 { color: #1a1a1a; }
+      em { color: #555; }
+      blockquote { background: rgba(139, 0, 0, 0.07); }
+      blockquote p { color: #1a1a1a; }
+      table { background-color: #f8f3ef; }
+      tbody td { color: #1a1a1a; }
+      tbody tr:nth-child(even) { background-color: #ede7e0; }
+      code { color: #8b0000; background-color: #fce9e9; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ─── SIDEBAR ─── -->
+  <header class="sidebar" role="banner">
+    <a href="/" aria-label="DethKrawl Home">
+      <img
+        src="/assets/images/DK_logo_3.png"
+        alt="DethKrawl logo"
+        width="256"
+        height="256"
+        loading="eager"
+        decoding="async"
+      />
+    </a>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/docs/html/randomly_creating_characters.html">Random Character Creation</a></li>
+        <li><a href="/docs/html/mechanics.html" aria-current="page">Game Mechanics</a></li>
+        <li><a href="/docs/html/combat.html">Combat</a></li>
+        <li><a href="#" aria-disabled="true">Store (Coming Soon)</a></li>
+      </ul>
+    </nav>
+
+    <footer class="site-footer" role="contentinfo">
       <p>
         <a href="https://creativecommons.org" target="_blank" rel="noopener noreferrer">DethKrawl TTRPG</a> © 2025 by
         <a href="https://creativecommons.org" target="_blank" rel="noopener noreferrer">Victor Gregory Matos</a><br />
@@ -64,226 +360,229 @@
       </p>
       <p>
         <em>DethKrawl TTRPG</em> is an independent production by Victor Gregory and Kill the D20 and is not affiliated with
-        <strong>Ockult Örtmästare Games</strong> or <strong>Stockholm Kartell</strong>. It is published under the
+        <strong>Ockult Örtmästare Games</strong> or <strong>Stockholm Kartell</strong>. Published under the
         <em>MÖRK BORG</em> Third Party License. <em>MÖRK BORG</em> is copyright Ockult Örtmästare Games and Stockholm Kartell.
       </p>
     </footer>
-      </nav>
-    </header>
+  </header>
 
-    <!-- Main content -->
-    <main id="main" class="main-content">
-      <h1>Core Mechanics</h1>
+  <!-- ─── MAIN CONTENT ─── -->
+  <main id="main" class="main-content">
+    <h1>Core Mechanics</h1>
 
-      <h2 id="core-resolutions">Core Resolution</h2>
-      <ul>
-        <li>Roll <code>1d20 + STAT modifier</code> vs DR (Difficulty Rating).</li>
-        <li>If the result is equal to or higher than DR → <strong>success</strong>.</li>
-        <li>Default DR is <strong>12</strong>, but it can shift based on the situation.</li>
-      </ul>
-      <hr />
+    <!-- ─── CORE RESOLUTION ─── -->
+    <h2 id="core-resolution">Core Resolution</h2>
+    <ul>
+      <li>Roll <code>1d20 + STAT modifier</code> vs DR (Difficulty Rating).</li>
+      <li>If the result equals or exceeds the DR → <strong>success</strong>.</li>
+      <li>Default DR is <strong>12</strong>, but it can shift based on the situation.</li>
+    </ul>
 
-      <h2 id="difficulty-rating">Difficulty Rating (DR)</h2>
-      <p>When a player attempts something risky, the GM sets a <strong>Difficulty Rating (DR)</strong> for the task. The player rolls <code>1d20 + STAT modifier</code> and compares it to the DR. If the total equals or exceeds the DR, the action succeeds.</p>
-      <ul>
-        <li><strong>6</strong> – Trivial</li>
-        <li><strong>8</strong> – Routine</li>
-        <li><strong>10</strong> – Skilled</li>
-        <li><strong>12</strong> – Pressured</li>
-        <li><strong>14</strong> – Tough</li>
-        <li><strong>16</strong> – Heroic</li>
-        <li><strong>18+</strong> – Nearly Impossible</li>
-      </ul>
-      <p>Most checks are <strong>DR12</strong> unless the situation calls for something <em>easier or more challenging</em>. Let the fiction guide the number.</p>
-      <hr />
+    <hr />
 
-      <h2 id="stats">Stats</h2>
-      <p>Each character has <strong>four stats</strong>:</p>
-      <ul>
-        <li><strong>STR</strong> – Strength: melee, brute force, lifting</li>
-        <li><strong>AGI</strong> – Agility: dodging, stealth, defense</li>
-        <li><strong>PRE</strong> – Presence: awareness, ranged attacks, magic</li>
-        <li><strong>TOU</strong> – Toughness: survival, resistance, HP bonus</li>
-      </ul>
-      <p>Roll <code>3d6</code> for each stat. Use the total to determine:</p>
-      <ul>
-        <li>Your <strong>stat bonus</strong> (used in most rolls)</li>
-        <li>Your <strong>passive chance of success</strong> (<code>d6</code> behind-the-screen rolls by the GM)</li>
-        <li>Your <strong>spells per day</strong> (for characters who can cast)</li>
-      </ul>
+    <!-- ─── DIFFICULTY RATING ─── -->
+    <h2 id="difficulty-rating">Difficulty Rating (DR)</h2>
+    <p>When a player attempts something risky, the GM sets a <strong>Difficulty Rating (DR)</strong> for the task. The player rolls <code>1d20 + STAT modifier</code> and compares it to the DR. If the total equals or exceeds the DR, the action succeeds.</p>
+    <ul>
+      <li><strong>6</strong> — Trivial</li>
+      <li><strong>8</strong> — Routine</li>
+      <li><strong>10</strong> — Skilled</li>
+      <li><strong>12</strong> — Pressured</li>
+      <li><strong>14</strong> — Tough</li>
+      <li><strong>16</strong> — Heroic</li>
+      <li><strong>18+</strong> — Nearly Impossible</li>
+    </ul>
+    <p>Most checks are <strong>DR 12</strong> unless the situation calls for something <em>easier or more challenging</em>. Let the fiction guide the number.</p>
 
-      <!-- Stat Table aligned to zine -->
-      <table>
-        <thead>
-          <tr>
-            <th><code>3d6</code> Roll</th>
-            <th>STAT Bonus</th>
-            <th><code>d6</code> Passive</th>
-            <th>Spells per Day</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>3–5</td>
-            <td>-1</td>
-            <td>1-in-6</td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td>6–10</td>
-            <td>0</td>
-            <td>2-in-6</td>
-            <td>+ <code>d2</code> per day</td>
-          </tr>
-          <tr>
-            <td>11–14</td>
-            <td>+1</td>
-            <td>3-in-6</td>
-            <td>+ <code>d3</code> per day</td>
-          </tr>
-          <tr>
-            <td>15–17</td>
-            <td>+2</td>
-            <td>4-in-6</td>
-            <td>+ <code>d4</code> per day</td>
-          </tr>
-          <tr>
-            <td>18</td>
-            <td>+3</td>
-            <td>5-in-6</td>
-            <td>+ <code>d6</code> per day</td>
-          </tr>
-        </tbody>
-      </table>
+    <hr />
 
-      <blockquote>
-        <p>Sometimes, the GM will roll in secret to determine if a player <strong>notices</strong> or <strong>reacts</strong> to something without declaring an action—like spotting a trap, hearing footsteps, sensing danger, or intuiting a lie. Use the player's stat to determine their <strong>passive success chance</strong> on a <code>d6</code>.</p>
-      </blockquote>
-      <hr />
+    <!-- ─── STATS ─── -->
+    <h2 id="stats">Stats</h2>
+    <p>Each character has <strong>four stats</strong>:</p>
+    <ul>
+      <li><strong>STR</strong> — Strength: melee, brute force, lifting</li>
+      <li><strong>AGI</strong> — Agility: dodging, stealth, defense</li>
+      <li><strong>PRE</strong> — Presence: awareness, ranged attacks, magic</li>
+      <li><strong>TOU</strong> — Toughness: survival, resistance, HP bonus</li>
+    </ul>
+    <p>Roll <code>3d6</code> for each stat. Use the total to determine:</p>
+    <ul>
+      <li>Your <strong>stat bonus</strong> (used in most rolls)</li>
+      <li>Your <strong>passive chance of success</strong> (<code>d6</code> behind-the-screen rolls by the GM)</li>
+      <li>Your <strong>spells per day</strong> (for characters who can cast)</li>
+    </ul>
 
-      <h2 id="active-vs-passive-abilities">Active vs Passive Abilities</h2>
-      <ul>
-        <li>If a <strong>player chooses to do something</strong>, they roll a standard test: <code>1d20 + STAT</code> vs DR (usually DR12).</li>
-        <li>If a <strong>player is unaware</strong> or not actively trying, the GM uses the passive <code>d6</code> chance.</li>
-      </ul>
-      <p><strong>Examples of Passive Use:</strong></p>
-      <ul>
-        <li><strong>AGI</strong>: Detecting a tripwire, reflexively dodging a sudden hazard</li>
-        <li><strong>PRE</strong>: Hearing whispers behind a door, noticing someone's lying</li>
-        <li><strong>TOU</strong>: Resisting fatigue, poison, or mind-altering fog</li>
-        <li><strong>STR</strong>: Bracing against sudden collapse or holding a door shut</li>
-      </ul>
-      <blockquote>
-        <p>The GM rolls the <code>d6</code> behind the screen and only informs the player if something is noticed, resisted, or if it’s too late. If preferred, this roll can be made openly, either by the GM or by the player in front of everyone.</p>
-      </blockquote>
-      <hr />
+    <table>
+      <thead>
+        <tr>
+          <th><code>3d6</code> Roll</th>
+          <th>STAT Bonus</th>
+          <th><code>d6</code> Passive</th>
+          <th>Spells per Day</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>3–5</td><td>−1</td><td>1-in-6</td><td>—</td></tr>
+        <tr><td>6–10</td><td>0</td><td>2-in-6</td><td>+ <code>d2</code> per day</td></tr>
+        <tr><td>11–14</td><td>+1</td><td>3-in-6</td><td>+ <code>d3</code> per day</td></tr>
+        <tr><td>15–17</td><td>+2</td><td>4-in-6</td><td>+ <code>d4</code> per day</td></tr>
+        <tr><td>18</td><td>+3</td><td>5-in-6</td><td>+ <code>d6</code> per day</td></tr>
+      </tbody>
+    </table>
 
-      <h2 id="advantage-vs-disadvantage">Advantage &amp; Disadvantage</h2>
-      <ul>
-        <li><strong>Advantage</strong>: Roll <code>1d20 + STAT + 2</code></li>
-        <li><strong>Disadvantage</strong>: Roll <code>1d20 + STAT - 2</code></li>
-      </ul>
-      <p>The GM applies these based on narrative positioning, tools, or environment.</p>
-      <blockquote><p><strong>GM Advice:</strong> Advantage and Disadvantage never stack. You’re either favored or you’re not.</p></blockquote>
-      <hr />
+    <blockquote>
+      <p>Sometimes the GM will roll in secret to determine if a player <strong>notices</strong> or <strong>reacts</strong> to something without declaring an action — like spotting a trap, hearing footsteps, sensing danger, or intuiting a lie. Use the player's stat to determine their <strong>passive success chance</strong> on a <code>d6</code>.</p>
+    </blockquote>
 
-      <h2 id="max-health">MAX Health</h2>
-      <p>Starting <strong>MAX HP</strong> = <code>2d6 + TOU</code>.</p>
-      <hr />
+    <hr />
 
-      <h2 id="death-&-broken">Death &amp; Broken</h2>
-      <p><strong>Death</strong> lurks around every corner.</p>
-      <p>If HP drops <strong>to 0</strong>, roll <code>1d20 + TOU</code> vs DR12.</p>
-      <p>If HP drops <strong>below 0</strong>, the DethKrawler is dead. Another one takes their place.</p>
-      <ul>
-        <li><strong>Success</strong> = <strong>Broken</strong> (roll on the Broken Table)</li>
-        <li><strong>Failure</strong> = <strong>Dead</strong></li>
-      </ul>
-      <blockquote>
-        <p><strong>GM Advice:</strong> Encourage each player to keep a pool of backup characters. When one falls, the next takes up the cause.</p>
-      </blockquote>
-      <p>When <strong>Broken</strong>, roll a <code>d6</code> to determine outcome (e.g., unconscious, wounded, or bleeding out). All rolls become DR16 until treated.</p>
-      <hr />
+    <!-- ─── ACTIVE VS PASSIVE ─── -->
+    <h2 id="active-vs-passive">Active vs Passive Abilities</h2>
+    <ul>
+      <li>If a <strong>player chooses to do something</strong>, they roll a standard test: <code>1d20 + STAT</code> vs DR (usually DR 12).</li>
+      <li>If a <strong>player is unaware</strong> or not actively trying, the GM uses the passive <code>d6</code> chance.</li>
+    </ul>
+    <p><strong>Examples of Passive Use:</strong></p>
+    <ul>
+      <li><strong>AGI</strong>: Detecting a tripwire, reflexively dodging a sudden hazard</li>
+      <li><strong>PRE</strong>: Hearing whispers behind a door, noticing someone's lying</li>
+      <li><strong>TOU</strong>: Resisting fatigue, poison, or mind-altering fog</li>
+      <li><strong>STR</strong>: Bracing against sudden collapse or holding a door shut</li>
+    </ul>
+    <blockquote>
+      <p>The GM rolls the <code>d6</code> behind the screen and only informs the player if something is noticed, resisted, or if it's too late. If preferred, this roll can be made openly — by the GM or the player in front of everyone.</p>
+    </blockquote>
 
-      <h2 id="encumbrance">Encumbrance</h2>
-      <ul>
-        <li>Carrying limit = <code>8 + STR</code> slots</li>
-        <li>Bulky items = 2 slots</li>
-        <li>If encumbered: movement limited to <strong>Close</strong>; apply <strong>+2 DR</strong> to all AGI-based tests and Defense rolls.</li>
-      </ul>
-      <hr />
+    <hr />
 
-      <h2 id="dethkrawler-die">DethKrawler’s Die</h2>
-      <p>You start with <strong>1 DethKrawler Die per level</strong> (<code>d6</code>). You may spend one to:</p>
-      <ul>
-        <li>Add to a Test or Damage roll</li>
-        <li>Block <code>d6</code> incoming damage</li>
-        <li>Aid an ally</li>
-      </ul>
-      <p>Cannot be used on a <strong>natural 1</strong>. You may gift one die to another player.</p>
-      <hr />
+    <!-- ─── ADVANTAGE & DISADVANTAGE ─── -->
+    <h2 id="advantage-disadvantage">Advantage &amp; Disadvantage</h2>
+    <ul>
+      <li><strong>Advantage</strong>: Roll <code>1d20 + STAT + 2</code></li>
+      <li><strong>Disadvantage</strong>: Roll <code>1d20 + STAT − 2</code></li>
+    </ul>
+    <p>The GM applies these based on narrative positioning, tools, or environment.</p>
+    <blockquote>
+      <p><strong>GM Advice:</strong> Advantage and Disadvantage never stack. You're either favored or you're not.</p>
+    </blockquote>
 
-      <h2 id="omens">Omen</h2>
-      <p>DethKrawl characters begin with <strong>d2 Omens</strong>. Spend an Omen to:</p>
-      <ul>
-        <li>Reroll any die you rolled (keep the new result)</li>
-        <li>Reduce a test’s DR by 4</li>
-        <li>Maximize damage on a successful hit</li>
-        <li>Neutralize a Crit or Fumble</li>
-       </ul>
-      <hr />
+    <hr />
 
-      <h2 id="movement-ranges">Movement &amp; Ranges</h2>
-      <ul>
-        <li>Ranges are abstract: <strong>Close</strong>, <strong>Mid</strong>, <strong>Far</strong>, <strong>Out of Range</strong></li>
-        <li>You may move one range band per turn unless hindered.</li>
-      </ul>
-      <h3>Close</h3>
-      <em>(Melee, ~5 ft)</em>
-      <p>Within 5 feet, you can make melee attacks; both creatures are engaged.</p>
+    <!-- ─── MAX HEALTH ─── -->
+    <h2 id="max-health">Max Health</h2>
+    <p>Starting <strong>MAX HP</strong> = <code>2d6 + TOU</code>.</p>
 
-      <h3>Mid</h3>
-      <em>(Reach/Thrown/Spell Range, ~15 ft or as specified)</em>
-      <p>Effective for reach weapons, thrown weapons, or short-range spells.</p>
+    <hr />
 
-      <h3>Far</h3>
-      <em>(Ranged line of sight, ~60 ft or greater)</em>
-      <p>You may see but might not have a clean shot or range for all effects.</p>
+    <!-- ─── DEATH & BROKEN ─── -->
+    <h2 id="death-and-broken">Death &amp; Broken</h2>
+    <p><strong>Death</strong> lurks around every corner.</p>
+    <p>If HP drops <strong>to 0</strong>, roll <code>1d20 + TOU</code> vs DR 12.</p>
+    <p>If HP drops <strong>below 0</strong>, the DethKrawler is dead. Another one takes their place.</p>
+    <ul>
+      <li><strong>Success</strong> = <strong>Broken</strong> (roll on the Broken Table)</li>
+      <li><strong>Failure</strong> = <strong>Dead</strong></li>
+    </ul>
+    <blockquote>
+      <p><strong>GM Advice:</strong> Encourage each player to keep a pool of backup characters. When one falls, the next takes up the cause.</p>
+    </blockquote>
+    <p>When <strong>Broken</strong>, roll a <code>d6</code> to determine outcome (e.g., unconscious, wounded, or bleeding out). All rolls become DR 16 until treated.</p>
 
-      <h3>Out of Range</h3>
-      <em>(Beyond ~120 ft / Unaware)</em>
-      <p>You can’t meaningfully interact until you move closer or are alerted.</p>
-      <hr />
+    <hr />
 
-      <h2 id="recovery">Recovery</h2>
-      <p><strong>Short Rest</strong>: Eat and drink → regain <code>d4</code> HP</p>
-      <p><strong>Long Rest</strong>: Eat, drink, and rest undisturbed → regain <code>d6</code> HP</p>
-      <p>No food or water = no HP recovery. After 2 days without sustenance, lose <code>d4</code> HP per day.</p>
-      <hr />
+    <!-- ─── ENCUMBRANCE ─── -->
+    <h2 id="encumbrance">Encumbrance</h2>
+    <ul>
+      <li>Carrying limit = <code>8 + STR</code> slots</li>
+      <li>Bulky items = 2 slots</li>
+      <li>If encumbered: movement limited to <strong>Close</strong>; apply <strong>+2 DR</strong> to all AGI-based tests and Defense rolls.</li>
+    </ul>
 
-      <h2 id="spell-casting">Spell Casting</h2>
-      <p>Your <strong>PRE</strong> determines how many spells you can cast each day (see the Stat Table).</p>
-      <p>When using sources with spell levels, a spell’s DR increases by its level: L1 = DR12, L2 = DR13, etc.</p>
+    <hr />
 
-      <h3>Spell Dice Resolution</h3>
-      <ul>
-        <li>Roll <code>1d20 + PRE</code> vs DR</li>
-        <li>If the result is equal to or higher than DR → <strong>success</strong></li>
-        <li>Spellcasting DR is <strong>12</strong> unless modified by level or fiction</li>
-      </ul>
-      <p>On a natural <strong>1</strong>, you cannot use a DethKrawler Die; roll on the <strong>Mishap</strong> table.</p>
+    <!-- ─── DETHKRAWLER'S DIE ─── -->
+    <h2 id="dethkrawlers-die">DethKrawler's Die</h2>
+    <p>You start with <strong>1 DethKrawler Die per level</strong> (<code>d6</code>). You may spend one to:</p>
+    <ul>
+      <li>Add to a Test or Damage roll</li>
+      <li>Block <code>d6</code> incoming damage</li>
+      <li>Aid an ally</li>
+    </ul>
+    <p>Cannot be used on a <strong>natural 1</strong>. You may gift one die to another player.</p>
 
-      <h3>Corruption</h3>
-      <p>Whenever you commit an <strong>evil deed</strong> or roll a natural <strong>1</strong> casting, gain <strong>1 Corruption</strong>. At <strong>10 Corruption</strong>, the GM takes control of the character.</p>
+    <hr />
 
-      <h3>Critical Miscast</h3>
-      <p>On a natural <strong>1</strong> when spellcasting, gain +1 Corruption and roll <code>1d20</code> on the Miscast table.</p>
+    <!-- ─── OMEN ─── -->
+    <h2 id="omen">Omen</h2>
+    <p>DethKrawl characters begin with <strong>d2 Omens</strong>. Spend an Omen to:</p>
+    <ul>
+      <li>Reroll any die you rolled (keep the new result)</li>
+      <li>Reduce a test's DR by 4</li>
+      <li>Maximize damage on a successful hit</li>
+      <li>Neutralize a Crit or Fumble</li>
+    </ul>
 
-      <h3>How Many Spells Can I Cast Per Day?</h3>
-      <p>At the start of the day, determine your casts from the Stat Table’s Spells/Day entry tied to your PRE result.</p>
+    <hr />
 
-      <h3>How Can I Learn New Spells?</h3>
-      <p>You may learn and retain a number of spells equal to <strong>PRE + Level</strong> (minimum 1). To learn from a powerful entity, succeed on a <strong>PRE</strong> test vs <strong>DR18</strong>, then pay the price.</p>
-    </main>
-  </body>
+    <!-- ─── MOVEMENT & RANGES ─── -->
+    <h2 id="movement-ranges">Movement &amp; Ranges</h2>
+    <ul>
+      <li>Ranges are abstract: <strong>Close</strong>, <strong>Mid</strong>, <strong>Far</strong>, <strong>Out of Range</strong></li>
+      <li>You may move one range band per turn unless hindered.</li>
+    </ul>
+
+    <h3>Close</h3>
+    <p><em>Melee — approx. 5 ft</em></p>
+    <p>Within 5 feet you can make melee attacks; both creatures are engaged.</p>
+
+    <h3>Mid</h3>
+    <p><em>Reach / Thrown / Spell Range — approx. 15 ft or as specified</em></p>
+    <p>Effective for reach weapons, thrown weapons, or short-range spells.</p>
+
+    <h3>Far</h3>
+    <p><em>Ranged line of sight — approx. 60 ft or greater</em></p>
+    <p>You may see but might not have a clean shot or range for all effects.</p>
+
+    <h3>Out of Range</h3>
+    <p><em>Beyond approx. 120 ft / Unaware</em></p>
+    <p>You can't meaningfully interact until you move closer or are alerted.</p>
+
+    <hr />
+
+    <!-- ─── RECOVERY ─── -->
+    <h2 id="recovery">Recovery</h2>
+    <p><strong>Short Rest</strong>: Eat and drink → regain <code>d4</code> HP</p>
+    <p><strong>Long Rest</strong>: Eat, drink, and rest undisturbed → regain <code>d6</code> HP</p>
+    <p>No food or water = no HP recovery. After 2 days without sustenance, lose <code>d4</code> HP per day.</p>
+
+    <hr />
+
+    <!-- ─── SPELL CASTING ─── -->
+    <h2 id="spell-casting">Spell Casting</h2>
+    <p>Your <strong>PRE</strong> determines how many spells you can cast each day (see the Stat Table above).</p>
+    <p>When using sources with spell levels, a spell's DR increases by its level: L1 = DR 12, L2 = DR 13, etc.</p>
+
+    <h3>Spell Dice Resolution</h3>
+    <ul>
+      <li>Roll <code>1d20 + PRE</code> vs DR</li>
+      <li>If the result equals or exceeds the DR → <strong>success</strong></li>
+      <li>Spellcasting DR is <strong>12</strong> unless modified by level or fiction</li>
+    </ul>
+    <p>On a natural <strong>1</strong>, you cannot use a DethKrawler Die — roll on the <strong>Mishap</strong> table.</p>
+
+    <h3>Corruption</h3>
+    <p>Whenever you commit an <strong>evil deed</strong> or roll a natural <strong>1</strong> while casting, gain <strong>1 Corruption</strong>. At <strong>10 Corruption</strong>, the GM takes control of the character.</p>
+
+    <h3>Critical Miscast</h3>
+    <p>On a natural <strong>1</strong> when spellcasting, gain +1 Corruption and roll <code>1d20</code> on the Miscast table.</p>
+
+    <h3>How Many Spells Can I Cast Per Day?</h3>
+    <p>At the start of the day, determine your casts from the Stat Table's Spells/Day entry tied to your PRE result.</p>
+
+    <h3>How Can I Learn New Spells?</h3>
+    <p>You may learn and retain a number of spells equal to <strong>PRE + Level</strong> (minimum 1). To learn from a powerful entity, succeed on a <strong>PRE</strong> test vs <strong>DR 18</strong>, then pay the price.</p>
+
+  </main>
+
+</body>
 </html>
