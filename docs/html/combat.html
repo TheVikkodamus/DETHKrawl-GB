@@ -1,213 +1,555 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--- head, meta, links --->
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#ff0000">
+  <meta name="theme-color" content="#cc0000">
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="DethKrawl TTRPG - A Cursed Dungeon-Crawling RPG" />
+  <meta property="og:title" content="DethKrawl TTRPG - Combat" />
   <meta property="og:description" content="A cursed dungeon-crawling TTRPG inspired by Mörk Borg & Deathbringer. Free rules, downloads, and brutal fun!" />
   <meta property="og:url" content="https://dethkrawlttrpg.netlify.app/" />
   <meta property="og:image" content="https://dethkrawlttrpg.netlify.app/assets/images/DK_logo_3.png" />
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&display=swap" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
   <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <title>Combat — DethKrawl TTRPG</title>
+
+  <style>
+    /* ─── CUSTOM PROPERTIES ─── */
+    :root {
+      --red:        #cc0000;
+      --red-dark:   #8b0000;
+      --red-glow:   rgba(204, 0, 0, 0.25);
+      --bg:         #0e0b0b;
+      --bg-surface: #161010;
+      --bg-sidebar: #110808;
+      --text:       #ddd5c8;
+      --text-muted: #8a7a6e;
+      --border:     rgba(204, 0, 0, 0.2);
+      --sidebar-w:  260px;
+    }
+
+    /* ─── GRAIN TEXTURE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.35;
+    }
+
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--red);
+      text-decoration: none;
+      transition: color 0.2s, text-shadow 0.2s;
+    }
+    a:hover {
+      color: #ff4444;
+      text-shadow: 0 0 8px var(--red-glow);
+    }
+
+    /* ─── TYPOGRAPHY ─── */
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--text);
+      line-height: 1.05;
+      border-bottom: 2px solid var(--red);
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.25rem;
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin: 2rem 0 0.65rem;
+    }
+
+    h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin: 1.75rem 0 0.5rem;
+    }
+
+    h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text);
+      background-color: var(--red-dark);
+      display: inline-block;
+      padding: 0.2rem 0.85rem;
+      margin: 1.5rem 0 0.6rem;
+    }
+
+    p { margin-bottom: 1.2rem; }
+
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    li { margin: 0.4rem 0; }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar {
+      width: var(--sidebar-w);
+      background-color: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      padding: 1.5rem 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      z-index: 100;
+    }
+
+    .sidebar img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 0 12px var(--red-glow));
+      transition: filter 0.3s;
+    }
+    .sidebar img:hover {
+      filter: drop-shadow(0 0 20px rgba(204, 0, 0, 0.5));
+    }
+
+    .sidebar nav { flex: 1; }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      margin: 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar ul li:first-child { border-top: 1px solid var(--border); }
+
+    .sidebar ul li a {
+      display: block;
+      padding: 0.7rem 0.5rem;
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: color 0.2s, padding-left 0.2s, background 0.2s;
+    }
+    .sidebar ul li a:hover {
+      color: #ff4444;
+      padding-left: 1rem;
+      background: rgba(204, 0, 0, 0.08);
+      text-shadow: none;
+    }
+
+    .sidebar footer {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 2rem;
+      line-height: 1.5;
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      word-break: break-word;
+    }
+    .sidebar footer a {
+      color: var(--text-muted);
+      text-decoration: underline;
+    }
+    .sidebar footer a:hover { color: var(--text); text-shadow: none; }
+
+    /* ─── MAIN CONTENT ─── */
+    .main-content {
+      margin-left: var(--sidebar-w);
+      padding: 3rem 3rem 5rem;
+      max-width: 860px;
+      width: 100%;
+    }
+
+    /* ─── CODE ─── */
+    code {
+      font-family: "Courier New", monospace;
+      color: #ffcc44;
+      background-color: #1e1515;
+      padding: 0.1em 0.4em;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    /* ─── BLOCKQUOTE ─── */
+    blockquote {
+      background: rgba(139, 0, 0, 0.2);
+      border-left: 4px solid var(--red);
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    blockquote p { color: var(--text); margin: 0; }
+    blockquote ul { margin: 0.5rem 0 0; }
+    blockquote code { color: #ffcc44; background: rgba(0,0,0,0.35); }
+
+    /* ─── DETAILS / SUMMARY (Quicker Combat Steps) ─── */
+    details {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 0.8rem 1rem;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.15rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text);
+      background: rgba(139, 0, 0, 0.25);
+      border-bottom: 1px solid var(--border);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.2s;
+      user-select: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::before {
+      content: '▶';
+      font-size: 0.6rem;
+      color: var(--red);
+      transition: transform 0.2s;
+    }
+    details[open] summary::before { transform: rotate(90deg); }
+    details[open] summary { background: rgba(139, 0, 0, 0.35); }
+    summary:hover { background: rgba(204, 0, 0, 0.2); }
+
+    details > *:not(summary) {
+      padding: 1rem 1.15rem;
+    }
+    details > p, details > ul { padding: 0.85rem 1.15rem; }
+    details > p + p { padding-top: 0; }
+
+    /* ─── RULE BOX ─── */
+    .rulebox {
+      background: rgba(204, 0, 0, 0.1);
+      border: 1px solid var(--red);
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      margin: 0.75rem 0;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* ─── REFERENCE TABLE BOX ─── */
+    .reference-box {
+      margin: 2rem 0;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    /* ─── TABLES ─── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "Courier New", monospace;
+      font-size: 0.9rem;
+      background-color: #130e0e;
+    }
+
+    thead th {
+      background-color: var(--red-dark);
+      color: var(--text);
+      padding: 0.75rem 1rem;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--red);
+      text-align: center;
+    }
+
+    tbody td {
+      padding: 0.6rem 0.85rem;
+      border: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+      color: var(--text);
+    }
+
+    tbody tr:nth-child(even) { background-color: rgba(255,255,255,0.03); }
+    tbody tr:hover { background-color: rgba(204, 0, 0, 0.08); }
+
+    /* ─── QUICKER COMBAT SECTION WRAPPER ─── */
+    .quicker-combat {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.25rem 1.25rem 0.25rem;
+      margin: 1.5rem 0;
+      background: rgba(255,255,255,0.015);
+    }
+
+    .quicker-combat > h2 {
+      margin-top: 0;
+    }
+
+    /* ─── LIGHT MODE OVERRIDE ─── */
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg:         #f5f0ea;
+        --bg-surface: #ffffff;
+        --bg-sidebar: #1a0a0a;
+        --text:       #1a1a1a;
+        --text-muted: #666;
+        --border:     rgba(204, 0, 0, 0.25);
+      }
+
+      body::before { opacity: 0.12; }
+
+      h1 { color: #1a1a1a; }
+      blockquote { background: rgba(139, 0, 0, 0.07); }
+      blockquote p { color: #1a1a1a; }
+      details { background: #ffffff; }
+      summary { background: rgba(139, 0, 0, 0.1); }
+      details[open] summary { background: rgba(139, 0, 0, 0.16); }
+      table { background-color: #f8f3ef; }
+      tbody td { color: #1a1a1a; }
+      tbody tr:nth-child(even) { background-color: #ede7e0; }
+      code { color: #8b0000; background-color: #fce9e9; }
+      .rulebox { background: rgba(204, 0, 0, 0.05); }
+      .quicker-combat { background: rgba(0,0,0,0.02); }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- sidebar | navigation -->
-  <div class="sidebar">
+
+  <!-- ─── SIDEBAR ─── -->
+  <aside class="sidebar">
     <img src="/assets/images/DK_logo_3.png" alt="DethKrawl logo">
-    <ul>
-      <li>
-        <a href="/docs/html/randomly_creating_characters.html">Random Character Creation</a>
-      </li>
-      <li>
-        <a href="/docs/html/mechanics.html">Game Mechanics</a>
-      </li>
-      <li>
-          <a href="/docs/html/combat.html">Combat</a>
-       </li>
-      <!-- Possible BIG CARTEL store with printing of shirts and other goodies -->
-      <li>
-        <a href="#">Store</a>
-      </li>
-      <li>
-        <a href="/index.html">Go to main page</a>
-      </li>
-    </ul>
-    <!-- footer with credits info -->
+
+    <nav>
+      <ul>
+        <li><a href="/docs/html/randomly_creating_characters.html">Random Character Creation</a></li>
+        <li><a href="/docs/html/mechanics.html">Game Mechanics</a></li>
+        <li><a href="/docs/html/combat.html">Combat</a></li>
+        <li><a href="#">Store</a></li>
+        <li><a href="/index.html">Main Page</a></li>
+      </ul>
+    </nav>
+
     <footer>
-      <a href="https://creativecommons.org">DethKrawl TTRPG</a> © 2025 by <a href="https://creativecommons.org">Victor Gregory Matos</a>
-      <br> Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
-       <p>
-        <em>DethKrawl TTRPG</em> is an independent production by Victor Gregory and Kill the D20 and is not affiliated with <strong>Ockult Örtmästare Games</strong> or <strong>Stockholm Kartell</strong>. It is published under the <em>MÖRK BORG</em> Third Party License.  <em>MÖRK BORG</em> is copyright Ockult Örtmästare Games and Stockholm Kartell.
-        </p>
+      <a href="https://creativecommons.org">DethKrawl TTRPG</a> © 2025 by
+      <a href="https://creativecommons.org">Victor Gregory Matos</a><br>
+      Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+      <br><br>
+      <em>DethKrawl TTRPG</em> is an independent production by Victor Gregory and Kill the D20 and is not affiliated with <strong>Ockult Örtmästare Games</strong> or <strong>Stockholm Kartell</strong>. Published under the <em>MÖRK BORG</em> Third Party License. <em>MÖRK BORG</em> is copyright Ockult Örtmästare Games and Stockholm Kartell.
     </footer>
-  </div>
-  <!-- main content -->
-  <div class="main-content">
-    <h1>Combat</h1>
-      <h2>Surprise Roll</h2>
-<p>Before combat or a tense encounter, the <strong>GM and the scouting player each roll a <code>d6</code></strong>.</p>
-<ul>
-  <li>If the <strong>player rolls higher</strong>, <strong>they are not surprised</strong> and may act normally.</li>
-  <li>If the <strong>GM rolls higher</strong>, the <strong>player is surprised</strong>,  they cannot act during the first round.</li>
-  <li>On a <strong>tie</strong>, both parties act cautiously, no one is truly surprised, but initiative proceeds as normal.</li>
-</ul>
-<blockquote>
-  <p>
-    If no player is scouting or keeping watch, the GM rolls only, and surprise is automatic unless the players succeed on an <strong>Active PRE</strong> test roll.
-  </p>
-</blockquote>
-<hr>
-    <h2>Initiative</h2>
-      <p>Dethkrawl is about fast combat. GM can decide whether to use a <code>1d6</code> roll to determine which group goes first in a PC vs. GM roll. The person who rolls the highest will go first. Remember Game Master (GM) will ask for declarations before rolling for <strong>initiative</strong>.</p>
-
-  <section class="quicker-combat">
-  <h2>Quicker Combat</h2>
-  
-  <details open>
-    <summary><strong>Step 1: Target Assignment</strong></summary>
-    <p>
-      At the start of combat, the GM rolls <code>1dY</code> where <em>Y</em> is the number of players at the table. This determines which player each enemy targets.
-    </p>
-    <p>
-      For example, if there are 4 players and 4 enemies, the GM rolls <code>4d4</code>. The result might be: <code>3, 3, 1, 4</code> — meaning:
-    </p>
-    <ul>
-      <li>Two enemies target <strong>Player 3</strong></li>
-      <li>One enemy targets <strong>Player 1</strong></li>
-      <li>One enemy targets <strong>Player 4</strong></li>
-    </ul>
-  </details>
-
-  <details open>
-    <summary><strong>Step 2: Player Rolls</strong></summary>
-    <p>
-      Each <strong>targeted player</strong> rolls <code>2d20</code>:
-    </p>
-    <ul>
-      <li>One for <strong>ATTACK</strong></li>
-      <li>One for <strong>DEFENSE</strong></li>
-    </ul>
-    <p>
-      Resolve both results in a single beat of action. The GM narrates what happens based on the outcome of both rolls — blending offense and defense into a cinematic moment.
-    </p>
-    <div class="rulebox">
-      <strong>Defense Difficulty:</strong><br>
-      Base DR is <code>12</code>. Increase by +1 for each additional enemy targeting the same player.
-    </div>
-  </details>
-<br>
-  <details open>
-    <summary><strong>Step 3: Untargeted Players</strong></summary>
-    <p>
-      Players who are <strong>not targeted</strong> by enemies this round may act freely:
-    </p>
-    <ul>
-      <li>Make a ranged or melee attack</li>
-      <li>Move into combat or reposition</li>
-      <li>Use an item, cast a spell, or help another player</li>
-    </ul>
-  </details>
-
-  <details open>
-    <summary><strong>Step 4: Resolve Damage</strong></summary>
-    <p>
-      If a player fails their <strong>DEFENSE roll</strong>, they are hit. The GM rolls damage using the <strong>highest damage die</strong> among the attacking enemies, plus <code>+1</code> for each extra enemy beyond the first.
-    </p>
-    <p>
-      The player may then roll for <strong>armor reduction</strong>, if wearing armor.
-    </p>
-  </details>
-
-   <details open>
-    <summary><strong>End of Round</strong></summary>
-    <p>
-      After all actions have resolved, the GM asks for declarations for the next round. Repeat the process.
-    </p>
-  </details>
-
-  <aside class="reference-box">
-    <h4>Combat Result Breakdown</h4>
-    <table>
-      <thead>
-        <tr>
-          <th>Attack Roll</th>
-          <th>Defense Roll</th>
-          <th>Outcome</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>✓</td>
-          <td>✓</td>
-          <td>You hit and avoid being hit</td>
-        </tr>
-        <tr>
-          <td>✓</td>
-          <td>✗</td>
-          <td>Both you and the enemy hit</td>
-        </tr>
-        <tr>
-          <td>✗</td>
-          <td>✓</td>
-          <td>You miss, but avoid being hit</td>
-        </tr>
-        <tr>
-          <td>✗</td>
-          <td>✗</td>
-          <td>You miss, and are hit</td>
-        </tr>
-      </tbody>
-    </table>
   </aside>
-</section>
 
-<hr>
-<h3>Optional: Alternative Armor Play (AC Mode)</h3>
-<p>
-  If you prefer to use <strong>Ascending Armor Class (AC)</strong> instead of rolling armor for damage reduction, you may use this optional rule. This method is more streamlined for players familiar with 5e-style gameplay or traditional OSR systems. It also enables clearer mechanics in rare cases of <strong>player vs. player</strong> conflict.
-</p>
+  <!-- ─── MAIN CONTENT ─── -->
+  <main class="main-content">
+    <h1>Combat</h1>
 
-<h4>Armor Conversion</h4>
-<blockquote>
-  <p><strong>Tier Armor → Ascending AC</strong></p>
-  <ul>
-    <li><strong>Unarmored</strong> = AC 12</li>
-    <li><strong>Tier 1</strong> (–d2) = AC 14</li>
-    <li><strong>Tier 2</strong> (–d4) = AC 16</li>
-    <li><strong>Tier 3</strong> (–d6) = AC 18</li>
-  </ul>
-
-  <p>
-    When using this system, there’s no need to roll for armor damage reduction. Armor Class simply represents how difficult it is to land a hit. The GM rolls a <code>1d20</code> against the target’s AC to determine if an attack connects.
-  </p>
-
-<h4> Player vs. Player Consequences</h4>
-<blockquote>
-  <p>
-    While <strong>Player vs. Player combat is discouraged</strong>, there may be narrative reasons it occurs. If one player <strong>kills another player character</strong>, they immediately gain a <strong>Mutation</strong> — a visible, cursed mark of their deed.
-  </p>
-  <p>
-    This mutation may be:
+    <!-- ─── SURPRISE ROLL ─── -->
+    <h2>Surprise Roll</h2>
+    <p>Before combat or a tense encounter, the <strong>GM and the scouting player each roll a <code>d6</code></strong>.</p>
     <ul>
-      <li><strong>Physical</strong> (e.g., blackened eyes, bone growths, glowing veins)</li>
-      <li><strong>Mental</strong> (e.g., nightmares, whispers, uncontrollable urges)</li>
-      <li><strong>Magical</strong> (e.g., cursed aura, bleeding shadow, wild surges)</li>
+      <li>If the <strong>player rolls higher</strong>, they are <strong>not surprised</strong> and may act normally.</li>
+      <li>If the <strong>GM rolls higher</strong>, the <strong>player is surprised</strong> — they cannot act during the first round.</li>
+      <li>On a <strong>tie</strong>, both parties act cautiously. No one is truly surprised, but initiative proceeds as normal.</li>
     </ul>
-  </p>
-  <p>
-    The GM decides the nature of the mutation or rolls on the <code>Mutation Table</code>. The world remembers murder. The gods take notice.
-  </p>
-</blockquote>
-</body>
+    <blockquote>
+      <p>
+        If no player is scouting or keeping watch, the GM rolls only, and surprise is automatic unless the players succeed on an <strong>Active PRE</strong> test roll.
+      </p>
+    </blockquote>
 
+    <hr>
+
+    <!-- ─── INITIATIVE ─── -->
+    <h2>Initiative</h2>
+    <p>
+      DethKrawl is about fast combat. The GM can decide whether to use a <code>1d6</code> roll to determine which group goes first in a PC vs. GM roll. The person who rolls highest goes first. Remember: the GM will ask for <strong>declarations</strong> before rolling for initiative.
+    </p>
+
+    <hr>
+
+    <!-- ─── QUICKER COMBAT ─── -->
+    <section class="quicker-combat">
+      <h2>Quicker Combat</h2>
+
+      <details open>
+        <summary>Step 1: Target Assignment</summary>
+        <p>
+          At the start of combat, the GM rolls <code>1dY</code> where <em>Y</em> is the number of players at the table. This determines which player each enemy targets.
+        </p>
+        <p>
+          For example, if there are 4 players and 4 enemies, the GM rolls <code>4d4</code>. The result might be: <code>3, 3, 1, 4</code> — meaning:
+        </p>
+        <ul>
+          <li>Two enemies target <strong>Player 3</strong></li>
+          <li>One enemy targets <strong>Player 1</strong></li>
+          <li>One enemy targets <strong>Player 4</strong></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Step 2: Player Rolls</summary>
+        <p>Each <strong>targeted player</strong> rolls <code>2d20</code>:</p>
+        <ul>
+          <li>One for <strong>Attack</strong></li>
+          <li>One for <strong>Defense</strong></li>
+        </ul>
+        <p>
+          Resolve both results in a single beat of action. The GM narrates what happens based on the outcome of both rolls — blending offense and defense into a cinematic moment.
+        </p>
+        <div class="rulebox">
+          <strong>Defense Difficulty:</strong> Base DR is <code>12</code>. Increase by +1 for each additional enemy targeting the same player.
+        </div>
+      </details>
+
+      <details open>
+        <summary>Step 3: Untargeted Players</summary>
+        <p>Players who are <strong>not targeted</strong> by enemies this round may act freely:</p>
+        <ul>
+          <li>Make a ranged or melee attack</li>
+          <li>Move into combat or reposition</li>
+          <li>Use an item, cast a spell, or help another player</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Step 4: Resolve Damage</summary>
+        <p>
+          If a player fails their <strong>Defense roll</strong>, they are hit. The GM rolls damage using the <strong>highest damage die</strong> among the attacking enemies, plus <code>+1</code> for each extra enemy beyond the first.
+        </p>
+        <p>The player may then roll for <strong>armor reduction</strong>, if wearing armor.</p>
+      </details>
+
+      <details open>
+        <summary>End of Round</summary>
+        <p>After all actions have resolved, the GM asks for declarations for the next round. Repeat the process.</p>
+      </details>
+
+      <aside class="reference-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Attack Roll</th>
+              <th>Defense Roll</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>✓</td>
+              <td>✓</td>
+              <td>You hit and avoid being hit</td>
+            </tr>
+            <tr>
+              <td>✓</td>
+              <td>✗</td>
+              <td>Both you and the enemy hit</td>
+            </tr>
+            <tr>
+              <td>✗</td>
+              <td>✓</td>
+              <td>You miss, but avoid being hit</td>
+            </tr>
+            <tr>
+              <td>✗</td>
+              <td>✗</td>
+              <td>You miss, and are hit</td>
+            </tr>
+          </tbody>
+        </table>
+      </aside>
+    </section>
+
+    <hr>
+
+    <!-- ─── OPTIONAL: AC MODE ─── -->
+    <h3>Optional: Alternative Armor Play (AC Mode)</h3>
+    <p>
+      If you prefer to use <strong>Ascending Armor Class (AC)</strong> instead of rolling armor for damage reduction, you may use this optional rule. This method is more streamlined for players familiar with 5e-style gameplay or traditional OSR systems. It also enables clearer mechanics in rare cases of <strong>player vs. player</strong> conflict.
+    </p>
+
+    <h4>Armor Conversion</h4>
+    <blockquote>
+      <p><strong>Tier Armor → Ascending AC</strong></p>
+      <ul>
+        <li><strong>Unarmored</strong> = AC 12</li>
+        <li><strong>Tier 1</strong> (–d2) = AC 14</li>
+        <li><strong>Tier 2</strong> (–d4) = AC 16</li>
+        <li><strong>Tier 3</strong> (–d6) = AC 18</li>
+      </ul>
+      <p>
+        When using this system, there's no need to roll for armor damage reduction. Armor Class simply represents how difficult it is to land a hit. The GM rolls a <code>1d20</code> against the target's AC to determine if an attack connects.
+      </p>
+    </blockquote>
+
+    <h4>Player vs. Player Consequences</h4>
+    <blockquote>
+      <p>
+        While <strong>Player vs. Player combat is discouraged</strong>, there may be narrative reasons it occurs. If one player <strong>kills another player character</strong>, they immediately gain a <strong>Mutation</strong> — a visible, cursed mark of their deed.
+      </p>
+      <p>This mutation may be:</p>
+      <ul>
+        <li><strong>Physical</strong> (e.g., blackened eyes, bone growths, glowing veins)</li>
+        <li><strong>Mental</strong> (e.g., nightmares, whispers, uncontrollable urges)</li>
+        <li><strong>Magical</strong> (e.g., cursed aura, bleeding shadow, wild surges)</li>
+      </ul>
+      <p>
+        The GM decides the nature of the mutation or rolls on the <code>Mutation Table</code>. The world remembers murder. The gods take notice.
+      </p>
+    </blockquote>
+
+  </main>
+
+</body>
 </html>
