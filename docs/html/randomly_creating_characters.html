@@ -1,529 +1,608 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- head, meta, links -->
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#ff0000">
+  <meta name="theme-color" content="#cc0000">
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="DethKrawl TTRPG - A Cursed Dungeon-Crawling RPG" />
+  <meta property="og:title" content="DethKrawl TTRPG — Random Character Creation" />
   <meta property="og:description" content="A cursed dungeon-crawling TTRPG inspired by Mörk Borg & Deathbringer. Free rules, downloads, and brutal fun!" />
   <meta property="og:url" content="https://dethkrawlttrpg.netlify.app/" />
   <meta property="og:image" content="https://dethkrawlttrpg.netlify.app/assets/images/DK_logo_3.png" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
   <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <title>Random Character Creation — DethKrawl TTRPG</title>
+
+  <style>
+    /* ─── CUSTOM PROPERTIES ─── */
+    :root {
+      --red:        #cc0000;
+      --red-dark:   #8b0000;
+      --red-glow:   rgba(204, 0, 0, 0.25);
+      --bg:         #0e0b0b;
+      --bg-surface: #161010;
+      --bg-sidebar: #110808;
+      --text:       #ddd5c8;
+      --text-muted: #8a7a6e;
+      --border:     rgba(204, 0, 0, 0.2);
+      --sidebar-w:  260px;
+    }
+
+    /* ─── GRAIN TEXTURE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.35;
+    }
+
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--red);
+      text-decoration: none;
+      transition: color 0.2s, text-shadow 0.2s;
+    }
+    a:hover {
+      color: #ff4444;
+      text-shadow: 0 0 8px var(--red-glow);
+    }
+
+    /* ─── TYPOGRAPHY ─── */
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--text);
+      line-height: 1.05;
+      border-bottom: 2px solid var(--red);
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.25rem;
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin: 2rem 0 0.65rem;
+    }
+
+    h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin: 1.75rem 0 0.5rem;
+    }
+
+    h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text);
+      background-color: var(--red-dark);
+      display: inline-block;
+      padding: 0.2rem 0.85rem;
+      margin: 1.5rem 0 0.65rem;
+    }
+
+    p { margin-bottom: 1.2rem; }
+
+    ul, ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+    li { margin: 0.35rem 0; }
+
+    /* nested lists */
+    ul ul, ol ul { margin-bottom: 0.5rem; margin-top: 0.25rem; }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* ─── KIN IMAGES ─── */
+    .content-img {
+      display: block;
+      max-width: 420px;
+      width: 100%;
+      height: auto;
+      margin: 1.25rem 0;
+      border: 1px solid var(--border);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      object-fit: cover;
+    }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar {
+      width: var(--sidebar-w);
+      background-color: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      padding: 1.5rem 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      z-index: 100;
+    }
+
+    .sidebar img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 0 12px var(--red-glow));
+      transition: filter 0.3s;
+    }
+    .sidebar img:hover {
+      filter: drop-shadow(0 0 20px rgba(204, 0, 0, 0.5));
+    }
+
+    .sidebar nav { flex: 1; }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      margin: 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar ul li:first-child { border-top: 1px solid var(--border); }
+
+    .sidebar ul li a {
+      display: block;
+      padding: 0.7rem 0.5rem;
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: color 0.2s, padding-left 0.2s, background 0.2s;
+    }
+    .sidebar ul li a:hover {
+      color: #ff4444;
+      padding-left: 1rem;
+      background: rgba(204, 0, 0, 0.08);
+      text-shadow: none;
+    }
+
+    /* ─── SIDEBAR FOOTER ─── */
+    .site-footer {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 2rem;
+      line-height: 1.5;
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      word-break: break-word;
+    }
+    .site-footer p { margin-bottom: 0.75rem; font-size: inherit; }
+    .site-footer a {
+      color: var(--text-muted);
+      text-decoration: underline;
+    }
+    .site-footer a:hover { color: var(--text); text-shadow: none; }
+
+    /* ─── MAIN CONTENT ─── */
+    .main-content {
+      margin-left: var(--sidebar-w);
+      padding: 3rem 3rem 5rem;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    /* ─── CODE ─── */
+    code {
+      font-family: "Courier New", monospace;
+      color: #ffcc44;
+      background-color: #1e1515;
+      padding: 0.1em 0.4em;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    /* ─── BLOCKQUOTE ─── */
+    blockquote {
+      background: rgba(139, 0, 0, 0.2);
+      border-left: 4px solid var(--red);
+      margin: 1.25rem 0;
+      padding: 0.85rem 1.15rem;
+      border-radius: 0 4px 4px 0;
+    }
+    blockquote p { color: var(--text); margin-bottom: 0; }
+    blockquote code { color: #ffcc44; background: rgba(0,0,0,0.35); }
+
+    /* ─── TABLES ─── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0 1.75rem;
+      font-family: "Courier New", monospace;
+      font-size: 0.9rem;
+      background-color: #130e0e;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    }
+
+    thead th {
+      background-color: var(--red-dark);
+      color: var(--text);
+      padding: 0.75rem 1rem;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--red);
+      text-align: center;
+    }
+
+    tbody td {
+      padding: 0.6rem 0.85rem;
+      border: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+      color: var(--text);
+    }
+
+    /* left-align descriptive columns */
+    tbody td:nth-child(2) { text-align: left; }
+    tbody td:nth-child(3) { text-align: left; }
+
+    tbody tr:nth-child(even) { background-color: rgba(255,255,255,0.03); }
+    tbody tr:hover { background-color: rgba(204, 0, 0, 0.08); }
+
+    /* ─── BACK-TO-TOP LINK ─── */
+    .back-to-top {
+      display: inline-block;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.85rem;
+      border-radius: 3px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .back-to-top:hover {
+      color: var(--text);
+      border-color: var(--red);
+      text-shadow: none;
+    }
+
+    /* ─── LIGHT MODE OVERRIDE ─── */
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg:         #f5f0ea;
+        --bg-surface: #ffffff;
+        --bg-sidebar: #1a0a0a;
+        --text:       #1a1a1a;
+        --text-muted: #666;
+        --border:     rgba(204, 0, 0, 0.25);
+      }
+
+      body::before { opacity: 0.12; }
+      h1 { color: #1a1a1a; }
+      blockquote { background: rgba(139, 0, 0, 0.07); }
+      blockquote p { color: #1a1a1a; }
+      table { background-color: #f8f3ef; }
+      tbody td { color: #1a1a1a; }
+      tbody tr:nth-child(even) { background-color: #ede7e0; }
+      code { color: #8b0000; background-color: #fce9e9; }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- sidebar | navigation -->
-  <div class="sidebar">
-    <img src="/assets/images/DK_logo_3.png" alt="DethKrawl logo">
-    <ul>
-      <li>
-        <a href="/docs/html/randomly_creating_characters.html">Random Character Creation
-        </a>
-      </li>
-      <li>
-        <a href="/docs/html/mechanics.html">Game Mechanics
-        </a>
-      </li>
-      <li>
-        <a href="/docs/html/combat.html">Combat</a>
-     </li>
-      <!-- Placeholder for future pages -->
-     <li>
-        <a href="#">Store (Coming Soon)</a>
-     </li>
-      <li>
-        <a href="/index.html">Go to Main Page
-        </a>
-      </li>
-    </ul>
-    <!--footer with credits info-->
-    <footer>
-      <a href="https://creativecommons.org">DethKrawl TTRPG
-      </a> © 2025 by
-      <a href="https://creativecommons.org">Victor Gregory Matos
-      </a>
-      <br> Licensed under
-      <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
-	<p>
-        <em>DethKrawl TTRPG</em> is an independent production by Victor Gregory and Kill the D20 and is not affiliated with <strong>Ockult Örtmästare Games</strong> or <strong>Stockholm Kartell</strong>. It is published under the <em>MÖRK BORG</em> Third Party License.  <em>MÖRK BORG</em> is copyright Ockult Örtmästare Games and Stockholm Kartell.
-        </p>
-    </footer>
-  </div>
-  <!--- main content goes here -->
-  <div class="main-content">
-    <h1>
-	Randomly Creating Character
-    </h1>
-	<h2 id="rolling-for-stats">Rolling for Stats</h2>
-    <p>Player will roll 3
-      <b>six-sided
-      </b> dice, also known as a
-      <b>d6
-      </b>. Use the total and use the table to record your modifier/bonus in your record sheet.
-    </p>
-    <!--- Table with total and modifiers --->
-    <table>
-      <thead>
-        <tr>
-          <th>
-            <code>3d6
-            </code> Roll
-          </th>
-          <th>STAT Bonus
-          </th>
-          <th>
-            <code>d6
-            </code> chances (GM rolls behind screen)
-          </th>
-          <th>Spells per Day
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>3–5
-          </td>
-          <td>-1
-          </td>
-          <td>0-in-6
-          </td>
-          <td>—
-          </td>
-        </tr>
-        <tr>
-          <td>6–10
-          </td>
-          <td>0
-          </td>
-          <td>0-in-6
-          </td>
-          <td>
-            -
-	  </td>
-        </tr>
-        <tr>
-          <td>11–14
-          </td>
-          <td>+1
-          </td>
-          <td>1-in-6
-          </td>
-          <td>+
-            <code>d2
-            </code> per day
-          </td>
-        </tr>
-        <tr>
-          <td>15–17
-          </td>
-          <td>+2
-          </td>
-          <td>2-in-6
-          </td>
-          <td>+
-            <code>d3
-            </code> per day
-          </td>
-        </tr>
-        <tr>
-          <td>18
-          </td>
-          <td>+3
-          </td>
-          <td>3-in-6
-          </td>
-          <td>+
-            <code>d4
-            </code> per day
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <!-- Stat Explanation and what they do-->
-    <h4>Assign bonuses to:
-    </h4>
-    <br />
-    <ul>
-      <ol>
-        <b>STR
-        </b>ength –
-        <i>Melee, brute force, lifting.
-        </i>
-      </ol>
-      <br>
-      <ol>
-        <b>AGI
-        </b>lity –
-        <i>Dodging, stealth, defense.
-        </i>
-      </ol>
-      <br>
-      <ol>
-        <b>PRE
-        </b>sence –
-        <i>Awareness, ranged attacks, magic.
-        </i>
-      </ol>
-      <br>
-      <ol>
-        <b>TOU
-        </b>ghness –
-        <i>Health, resist, withstand.
-        </i>
-      </ol>
-    </ul>
-    <br />
-    <hr />
-    <h2>Rolling for Kin
-    </h2>
-    <p>
-      Player will roll a
-      <code>d6
-      </code> to generate what ancestry their character is. Kin will provide a flavor for players to use for roleplaying. This will offer a
-      <code>STAT
-      </code> bonus and maybe an ability.
-    </p>
-    <!--- a d6 Kin Table --->
-    <table>
-      <thead>
-        <tr>
-          <th>Roll
-            <code>1d6
-            </code>
-          </th>
-          <th>Kin
-          </th>
-          <th>Bonus
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1-2
-          </td>
-          <td>Human
-          </td>
-          <td>+1 on any one
-            <code>STAT
-            </code>.
-          </td>
-        </tr>
-        <tr>
-          <td>3
-          </td>
-          <td>Stoneborn (Dwarf)
-          </td>
-          <td>+1 on
-            <code>TOU
-            </code>, a -1 on
-            <code>AGI
-            </code>.
-          </td>
-        </tr>
-        <tr>
-          <td>4
-          </td>
-          <td>Burrowfolk (Halfling)
-          </td>
-          <td>+1 on
-            <code>AGI
-            </code>, -1 on
-            <code>STR
-            </code>.
-          </td>
-        </tr>
-        <tr>
-          <td>5
-          </td>
-          <td>Firstborn
-          </td>
-          <td>+1 on
-            <code>PRE
-            </code> , -1 on
-            <code>TOU
-            </code>
-          </td>
-        </tr>
-        <tr>
-          <td>6
-          </td>
-          <td>Infernal
-          </td>
-          <td>+1 on
-            <code>PRE
-            </code> , -1 on
-            <code>TOU
-            </code>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-	 <h2 id="setting">Setting</h2>
-		<p>
-  			In this realm, the gods are fickle, magic is dangerous, monsters stalk the shadows, and untold treasure lies buried in crumbling ruins. The gods have died and returned so many times, they’ve forgotten who they were. Each resurrection leaves behind a trace of corruption, seeping into the land itself. The world is broken, senseless, and vain, and now we curse the gods for the ruin we call reality.
-			You’ll crawl through cursed ruins, starving villages, and butcher your way through men and monsters alike. All of them want the same thing: to live one more day. Meet your kin who inhabit this ruined realm. 
-		</p>
 
-    <h3 id="kin-description">Kin Description
-    </h3>
-    <h4>Human
-    </h4>
-    <img class="content-img" src="https://i.postimg.cc/xjMjMhKc/human-3.png" alt="Temporary_Human_Art">
+  <!-- ─── SIDEBAR ─── -->
+  <aside class="sidebar">
+    <img src="/assets/images/DK_logo_3.png" alt="DethKrawl logo">
+
+    <nav>
+      <ul>
+        <li><a href="/docs/html/randomly_creating_characters.html">Random Character Creation</a></li>
+        <li><a href="/docs/html/mechanics.html">Game Mechanics</a></li>
+        <li><a href="/docs/html/combat.html">Combat</a></li>
+        <li><a href="#">Store (Coming Soon)</a></li>
+        <li><a href="/index.html">Main Page</a></li>
+      </ul>
+    </nav>
+
+    <footer class="site-footer">
+      <p>
+        <a href="https://creativecommons.org">DethKrawl TTRPG</a> © 2025 by
+        <a href="https://creativecommons.org">Victor Gregory Matos</a><br>
+        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+      </p>
+      <p>
+        <em>DethKrawl TTRPG</em> is an independent production by Victor Gregory and Kill the D20 and is not affiliated with <strong>Ockult Örtmästare Games</strong> or <strong>Stockholm Kartell</strong>. Published under the <em>MÖRK BORG</em> Third Party License. <em>MÖRK BORG</em> is copyright Ockult Örtmästare Games and Stockholm Kartell.
+      </p>
+    </footer>
+  </aside>
+
+  <!-- ─── MAIN CONTENT ─── -->
+  <main id="top" class="main-content">
+    <h1>Randomly Creating a Character</h1>
+
+    <!-- ─── ROLLING FOR STATS ─── -->
+    <h2 id="rolling-for-stats">Rolling for Stats</h2>
     <p>
-      The youngest Kin and the most adaptable. They take what they want, and burn what they can’t use.
-      +1 to any stat. No penalty. The old scriptures are gone. No one remembers where your kind came from, only that you found these lands... and now all others call you a plague.
+      Each player rolls <strong>3 six-sided dice</strong> (<code>3d6</code>) for each stat.
+      Use the total to find your modifier in the table below, then record your bonus on your character sheet.
     </p>
-    <hr />
-    <h4>Firstborn (Elf)
-    </h4>
-    <img class="content-img" src="https://i.postimg.cc/4NRd0sJ6/Firstborn-2.png" alt="Temporary_firstborn_art">
+
+    <!-- NOTE: Passive d6 chances here (0-in-6 for low rolls) differ from mechanics.html (1-in-6 and 2-in-6).
+         Verify which version is correct and update both pages to match. -->
+    <table>
+      <thead>
+        <tr>
+          <th><code>3d6</code> Roll</th>
+          <th>STAT Bonus</th>
+          <th><code>d6</code> Passive Chance</th>
+          <th>Spells per Day</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>3–5</td><td>−1</td><td>0-in-6</td><td>—</td></tr>
+        <tr><td>6–10</td><td>0</td><td>0-in-6</td><td>—</td></tr>
+        <tr><td>11–14</td><td>+1</td><td>1-in-6</td><td>+ <code>d2</code> per day</td></tr>
+        <tr><td>15–17</td><td>+2</td><td>2-in-6</td><td>+ <code>d3</code> per day</td></tr>
+        <tr><td>18</td><td>+3</td><td>3-in-6</td><td>+ <code>d4</code> per day</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Assign bonuses to:</h4>
+    <ul>
+      <li><strong>STR</strong>ength — <em>Melee, brute force, lifting.</em></li>
+      <li><strong>AGI</strong>lity — <em>Dodging, stealth, defense.</em></li>
+      <li><strong>PRE</strong>sence — <em>Awareness, ranged attacks, magic.</em></li>
+      <li><strong>TOU</strong>ghness — <em>Health, resist, withstand.</em></li>
+    </ul>
+
+    <hr>
+
+    <!-- ─── ROLLING FOR KIN ─── -->
+    <h2>Rolling for Kin</h2>
+    <p>
+      Roll a <code>d6</code> to generate your character's ancestry. Kin provides roleplaying flavor, a <code>STAT</code> bonus, and sometimes a special ability.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Roll <code>1d6</code></th>
+          <th>Kin</th>
+          <th>Bonus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1–2</td><td>Human</td><td>+1 to any one <code>STAT</code></td></tr>
+        <tr><td>3</td><td>Stoneborn (Dwarf)</td><td>+1 <code>TOU</code>, −1 <code>AGI</code></td></tr>
+        <tr><td>4</td><td>Burrowfolk (Halfling)</td><td>+1 <code>AGI</code>, −1 <code>STR</code></td></tr>
+        <tr><td>5</td><td>Firstborn (Elf)</td><td>+1 <code>PRE</code>, −1 <code>TOU</code></td></tr>
+        <tr><td>6</td><td>Infernal</td><td>+1 <code>PRE</code>, −1 <code>TOU</code></td></tr>
+      </tbody>
+    </table>
+
+    <!-- ─── SETTING ─── -->
+    <h2 id="setting">Setting</h2>
+    <p>
+      In this realm, the gods are fickle, magic is dangerous, monsters stalk the shadows, and untold treasure lies buried in crumbling ruins. The gods have died and returned so many times, they've forgotten who they were. Each resurrection leaves behind a trace of corruption, seeping into the land itself. The world is broken, senseless, and vain — and now we curse the gods for the ruin we call reality.
+    </p>
+    <p>
+      You'll crawl through cursed ruins and starving villages, and butcher your way through men and monsters alike. All of them want the same thing: to live one more day. Meet your kin who inhabit this ruined realm.
+    </p>
+
+    <!-- ─── KIN DESCRIPTIONS ─── -->
+    <h3 id="kin-description">Kin Descriptions</h3>
+
+    <h4>Human</h4>
+    <img class="content-img" src="https://i.postimg.cc/xjMjMhKc/human-3.png" alt="Human character art">
+    <p>
+      The youngest Kin and the most adaptable. They take what they want, and burn what they can't use.
+      <strong>+1 to any stat. No penalty.</strong> The old scriptures are gone. No one remembers where your kind came from, only that you found these lands — and now all others call you a plague.
+    </p>
+
+    <hr>
+
+    <h4>Firstborn (Elf)</h4>
+    <img class="content-img" src="https://i.postimg.cc/4NRd0sJ6/Firstborn-2.png" alt="Firstborn character art">
     <p>
       Ancient and strange. Their senses are sharp, their bodies frail. They remember too much.
-      +1 PRE, -1 TOU.
-      The Firstborn see all other Kin as lesser. They are beneath you. You are the closest thing to perfection, and you know it.
+      <strong>+1 PRE, −1 TOU.</strong> The Firstborn see all other Kin as lesser. They are beneath you. You are the closest thing to perfection, and you know it.
     </p>
-    <hr />
-    <h4>Burrowfolk (Halfling)
-    </h4>
-    <img class="content-img" src="https://i.postimg.cc/zf7Kz3fY/Burrowfolk-3.png" alt="Temporary_Burrowfolk">
+
+    <hr>
+
+    <h4>Burrowfolk (Halfling)</h4>
+    <img class="content-img" src="https://i.postimg.cc/zf7Kz3fY/Burrowfolk-3.png" alt="Burrowfolk character art">
     <p>
-      Small and fast. Clever. They live in the cracks where bigger things can’t reach.
-      +1 AGI, -1 STR
-      To survive, your kind forged new alliances, trading crops and cloth in exchange for peace. But the other Kin still see you as weak. Let them. They do not know how cunning or how charming your folk truly are.
+      Small and fast. Clever. They live in the cracks where bigger things can't reach.
+      <strong>+1 AGI, −1 STR.</strong> To survive, your kind forged new alliances, trading crops and cloth in exchange for peace. But the other Kin still see you as weak. Let them. They do not know how cunning or how charming your folk truly are.
     </p>
-    <hr />
-    <h4>Stoneborn (Dwarf)
-    </h4>
-    <img class="content-img" src="https://i.postimg.cc/zBq779y8/Stoneborn-2.png" alt="Temporary_stoneborn">
+
+    <hr>
+
+    <h4>Stoneborn (Dwarf)</h4>
+    <img class="content-img" src="https://i.postimg.cc/zBq779y8/Stoneborn-2.png" alt="Stoneborn character art">
     <p>
       Forged of stone and spite. Tough beyond reason, but slow to move and slower to trust.
-      +1 TOU, -1 AGI
-      Your ancestors built this plane. You do not forget. The Firstborn used your kin as labor, driving them deep into the dark. Let them walk proudly now, they stand on the bones of your forefathers.
+      <strong>+1 TOU, −1 AGI.</strong> Your ancestors built this plane. You do not forget. The Firstborn used your kin as labor, driving them deep into the dark. Let them walk proudly now — they stand on the bones of your forefathers.
     </p>
-    <hr />
-    <h4>Infernal
-    </h4>
-    <img class="content-img" src="https://i.postimg.cc/MZF0fcmW/Infernal-2.png" alt="Temporary_infernal">
+
+    <hr>
+
+    <h4>Infernal</h4>
+    <img class="content-img" src="https://i.postimg.cc/MZF0fcmW/Infernal-2.png" alt="Infernal character art">
     <p>
       Fire-touched. Marked. Their very presence twists the air, but their bodies burn from within.
-      +1 PRE, -1 TOU. You do not know when the unholy pact was struck, only that you bear its mark. Horns. Fangs. Skin red as clay. The villagers see you as an omen of the end. Let them. They will never understand the power that coils beneath your skin.
+      <strong>+1 PRE, −1 TOU.</strong> You do not know when the unholy pact was struck, only that you bear its mark. Horns. Fangs. Skin red as clay. The villagers see you as an omen of the end. Let them. They will never understand the power that coils beneath your skin.
     </p>
-    <hr />
-    <h2 id="gear">Gear
-    </h2>
-    <p>
-      Use the following tables to generate your starting equipment:
-    </p>
+
+    <hr>
+
+    <!-- ─── GEAR ─── -->
+    <h2 id="gear">Gear</h2>
+    <p>Use the following tables to generate your starting equipment:</p>
     <ul>
-      <li>
-        Roll once for
-        <strong>Bag
-        </strong>.
+      <li>Roll once on the <strong>Bag</strong> table (<code>d4</code>).</li>
+      <li>Roll once each on the <strong>d6</strong> and <strong>d8</strong> Gear tables.</li>
+      <li>Roll <strong>twice</strong> on the <strong>Weapons</strong> table (<code>d12</code>).
+        <ul>
+          <li>If your first roll is a non-Bulky weapon and your second is Bulky, you must choose one. If you keep the non-Bulky weapon, you may roll again for a second non-Bulky weapon.</li>
+        </ul>
       </li>
-      <li>
-        Roll times <code>D4, D6, D8</code> for
-        <strong>Gear</strong>.
-      </li>
-      <li>
-        Roll twice for
-        <strong>Weapons
-        </strong>.
-      </li>
-      <ul>
-        <li>
-          If you roll a
-          <b>non-Bulky
-            weapon first</b>, then roll a
-          <b>Bulky weapon</b> second, you must choose
-          <b>one</b>. If you keep the
-          <b>non-Bulky
-          </b> Weapon, you may roll again for a second
-          <b>non-Bulky
-          </b> weapon.
-        </li>
-      </ul>
-      <li>
-        Roll once for
-        <strong>Armor
-        </strong>.
-      </li>
+      <li>Roll once on the <strong>Armor</strong> table (<code>d6</code>).</li>
     </ul>
-    <!--- Gear Table --->
-     <h3>Bag
-      <code>d4
-      </code>
-    </h3>
-    <!--- add table for bags --->
+
+    <!-- Bag Table -->
+    <h3>Bag — <code>d4</code></h3>
     <table>
-		<thead>
-			<tr>
-        <th>Roll <code>1d4</code></th>
-				<th>Bag</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>1</td>
-				<td>No bag</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>Backpack (holds 7 items)</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>Sack (holds 10 items)</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>Small wagon and pick an extra bag from the table</td>
-			</tr>
-		</tbody>
-	</table>
-<!-- Gear -->
-    <h3>Gear <code>D6</code>, <code>D8</code>, and <code>D12</code></h3>
-    <body>
-	<table>
-		<thead>
-			<tr>
-        <th>Roll <code>1d6</code></th>
-				<th>Gear</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>1</td>
-				<td>Rope (30 feet)</td>
-			</tr>
-			<tr>
-				<td>2</td>
-        <td><code>PRE</code> +4 Torches</td>
-			</tr>
-			<tr>
-				<td>3</td>
-        <td>Lantern (with oil for <code>PRE</code> +6 hours)</td>
-			</tr>
-			<tr>
-				<td>4</td>
-        <td><b>RANDOM</b> unclean scroll</td>
-			</tr>
-			<tr>
-        <td>5</td>
-				<td>Medicine Chest (<code>PRE</code> +4 uses. Stops bleeding or infections and heals <code>D6</code> HP.</td>
-			</tr>
-			<tr>
-				<td>6</td>
-        <td>a Bottle of red poison <code>d4</code> doses (<code>TOU</code> DR<b>12</b> test or d10 damage)</td>
-			</tr>
-		</tbody>
-	</table>
-	    <br>
-		<table>
-		<thead>
-			<tr>
-				<th>Roll <code>D8</code></th>
-				<th>Gear</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>1</td>
-				<td>Life Elixir <code>d4</code> doses (heals <code>d6</code> HP and removes infection)</td>
-			</tr>
-			<tr>
-				<td>2</td></td>
-				<td><b>RANDOM</b> sacred scroll</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>Small but vicious dog (d6+2 HP, bite d4, only obeys you)</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td><code>d4</code> monkeys that ignore but love you (<code>d4+2</code> HP, punch/bite <code>d4</code>)</td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td>Toolbox</td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td>grappling hook</td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td>Shield</td>
-			</tr>
-			<tr>
-				<td>8</td>
-				<td>Crowbar</td>
-			</tr>
-		</tbody>
-	</table>
-<!-- weapons-->
-	    <h3>d12 – Weapons Table (Roll twice unless one weapon is bulky)</h3>
-<table>
-  <thead>
-    <tr>
-      <th>Roll</th>
-      <th>Weapon</th>
-      <th>Damage</th>
-      <th>Tags</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>—</td><td>Unarmed</td><td>d2 dmg</td><td>Finesse</td></tr>
-    <tr><td>1</td><td>Staff</td><td>d4 dmg</td><td>Two-Handed, Reach</td></tr>
-    <tr><td>2</td><td>Shortsword</td><td>d4 dmg</td><td>Finesse</td></tr>
-    <tr><td>3</td><td>Knife</td><td>d4 dmg</td><td>Finesse, Concealable</td></tr>
-    <tr><td>4</td><td>Crossbow</td><td>d6 dmg</td><td>Bulky, Ranged, PRE +5 Bolts, Reload</td></tr>
-    <tr><td>5</td><td>Warhammer</td><td>d6 dmg</td><td>Bulky, Heavy</td></tr>
-    <tr><td>6</td><td>Sword</td><td>d6 dmg</td><td>Versatile</td></tr>
-    <tr><td>7</td><td>Bow</td><td>d6 dmg</td><td>Bulky, Ranged, PRE +10 Arrows, Silent</td></tr>
-    <tr><td>8</td><td>Flail</td><td>d8 dmg</td><td>Two-Handed, Brutal</td></tr>
-    <tr><td>9</td><td>Pistol</td><td>d6+2 dmg</td><td>Ranged, PRE +10 Bullets, Loud</td></tr>
-    <tr><td>10</td><td>Musket</td><td>d10+2 dmg</td><td>Ranged, PRE +10 Bullets, Bulky, Loud</td></tr>
-    <tr><td>11</td><td>Blunderbuss</td><td>3d6 dmg</td><td>Ranged, PRE +10 Bullets, Spread, Loud</td></tr>
-    <tr><td>12</td><td>Bombs</td><td>4d6 dmg</td><td>Thrown, +5 Bombs, Explosive, Loud</td></tr>
-  </tbody>
-</table>
-<!--- Armor-->
-<h3>d6 – Armor Table</h3>
-<table>
-  <thead>
-    <tr>
-      <th>Roll</th>
-      <th>Armor Type</th>
-      <th>Effect</th>
-      <th>Tags</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>1-2</td><td>No Armor</td><td>None</td><td>None</td></tr>
-    <tr><td>3</td><td>Light Armor</td><td>Reduces damage by d2 (Tier 1)</td><td>Quiet, flexible</td></tr>
-    <tr><td>4</td><td>Medium Armor</td><td>Reduces damage by d4 (Tier 2); DR +2 to AGI tests and DEF</td><td>Bulky, clanky</td></tr>
-    <tr><td>5</td><td>Heavy Armor</td><td>Reduces damage by d6 (Tier 3); DR +4 to AGI test, DEF roll are DR +2</td><td>Bulky, loud,</td></tr>
-    <tr><td>6</td><td>Shield</td><td>-1 dmg, You can choose to ignore all damage from one attack but shield breaks.</td><td>One handed</td></tr>
-  </tbody>
-</table>
+      <thead>
+        <tr>
+          <th>Roll <code>1d4</code></th>
+          <th>Bag</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>No bag</td></tr>
+        <tr><td>2</td><td>Backpack (holds 7 items)</td></tr>
+        <tr><td>3</td><td>Sack (holds 10 items)</td></tr>
+        <tr><td>4</td><td>Small wagon — also pick an extra bag from this table</td></tr>
+      </tbody>
+    </table>
 
-	<h4>Black Powder vs Armor</h4>
-<br />
-		<p>Black powder weapons are deadly. They ignore all armor.<br>
-Takes 1 round to reload, and cannot reload while in melee range.</p>
+    <!-- Gear d6 -->
+    <h3>Gear — <code>d6</code></h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Roll <code>1d6</code></th>
+          <th>Item</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Rope (30 feet)</td></tr>
+        <tr><td>2</td><td><code>PRE</code> +4 Torches</td></tr>
+        <tr><td>3</td><td>Lantern (oil for <code>PRE</code> +6 hours)</td></tr>
+        <tr><td>4</td><td><strong>Random</strong> unclean scroll</td></tr>
+        <tr><td>5</td><td>Medicine Chest (<code>PRE</code> +4 uses — stops bleeding or infections, heals <code>d6</code> HP)</td></tr>
+        <tr><td>6</td><td>Bottle of red poison — <code>d4</code> doses (<code>TOU</code> DR <strong>12</strong> test or <code>d10</code> damage)</td></tr>
+      </tbody>
+    </table>
 
-	    
-    <a href="#">Jump to Top</a>
-  </div>
+    <!-- Gear d8 -->
+    <h3>Gear — <code>d8</code></h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Roll <code>1d8</code></th>
+          <th>Item</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Life Elixir — <code>d4</code> doses (heals <code>d6</code> HP and removes infection)</td></tr>
+        <tr><td>2</td><td><strong>Random</strong> sacred scroll</td></tr>
+        <tr><td>3</td><td>Small but vicious dog (<code>d6</code>+2 HP, bite <code>d4</code>, only obeys you)</td></tr>
+        <tr><td>4</td><td><code>d4</code> monkeys that ignore but love you (<code>d4</code>+2 HP, punch/bite <code>d4</code>)</td></tr>
+        <tr><td>5</td><td>Toolbox</td></tr>
+        <tr><td>6</td><td>Grappling hook</td></tr>
+        <tr><td>7</td><td>Shield</td></tr>
+        <tr><td>8</td><td>Crowbar</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Weapons Table -->
+    <h3>Weapons — <code>d12</code> (Roll twice unless one result is Bulky)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Roll</th>
+          <th>Weapon</th>
+          <th>Damage</th>
+          <th>Tags</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>—</td><td>Unarmed</td><td><code>d2</code></td><td>Finesse</td></tr>
+        <tr><td>1</td><td>Staff</td><td><code>d4</code></td><td>Two-Handed, Reach</td></tr>
+        <tr><td>2</td><td>Shortsword</td><td><code>d4</code></td><td>Finesse</td></tr>
+        <tr><td>3</td><td>Knife</td><td><code>d4</code></td><td>Finesse, Concealable</td></tr>
+        <tr><td>4</td><td>Crossbow</td><td><code>d6</code></td><td>Bulky, Ranged, <code>PRE</code> +5 Bolts, Reload</td></tr>
+        <tr><td>5</td><td>Warhammer</td><td><code>d6</code></td><td>Bulky, Heavy</td></tr>
+        <tr><td>6</td><td>Sword</td><td><code>d6</code></td><td>Versatile</td></tr>
+        <tr><td>7</td><td>Bow</td><td><code>d6</code></td><td>Bulky, Ranged, <code>PRE</code> +10 Arrows, Silent</td></tr>
+        <tr><td>8</td><td>Flail</td><td><code>d8</code></td><td>Two-Handed, Brutal</td></tr>
+        <tr><td>9</td><td>Pistol</td><td><code>d6</code>+2</td><td>Ranged, <code>PRE</code> +10 Bullets, Loud</td></tr>
+        <tr><td>10</td><td>Musket</td><td><code>d10</code>+2</td><td>Ranged, <code>PRE</code> +10 Bullets, Bulky, Loud</td></tr>
+        <tr><td>11</td><td>Blunderbuss</td><td><code>3d6</code></td><td>Ranged, <code>PRE</code> +10 Bullets, Spread, Loud</td></tr>
+        <tr><td>12</td><td>Bombs</td><td><code>4d6</code></td><td>Thrown, +5 Bombs, Explosive, Loud</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Armor Table -->
+    <h3>Armor — <code>d6</code></h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Roll</th>
+          <th>Armor Type</th>
+          <th>Effect</th>
+          <th>Tags</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1–2</td><td>No Armor</td><td>None</td><td>—</td></tr>
+        <tr><td>3</td><td>Light Armor</td><td>Reduces damage by <code>d2</code> (Tier 1)</td><td>Quiet, flexible</td></tr>
+        <tr><td>4</td><td>Medium Armor</td><td>Reduces damage by <code>d4</code> (Tier 2); DR +2 to AGI tests and DEF</td><td>Bulky, clanky</td></tr>
+        <tr><td>5</td><td>Heavy Armor</td><td>Reduces damage by <code>d6</code> (Tier 3); DR +4 to AGI tests; DEF rolls are DR +2</td><td>Bulky, loud</td></tr>
+        <tr><td>6</td><td>Shield</td><td>−1 damage; you may ignore all damage from one attack — but the shield breaks</td><td>One-handed</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Black Powder vs Armor</h4>
+    <p>
+      Black powder weapons are deadly — they <strong>ignore all armor</strong>.<br>
+      Takes 1 round to reload and <strong>cannot reload while in melee range</strong>.
+    </p>
+
+    <a class="back-to-top" href="#top">↑ Back to Top</a>
+
+  </main>
+
 </body>
-
 </html>
