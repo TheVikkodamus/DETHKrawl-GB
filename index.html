@@ -1,96 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--- head, meta, links --->
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ff0000">
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="DethKrawl TTRPG - A Cursed Dungeon-Crawling RPG" />
-    <meta property="og:description" content="A cursed dungeon-crawling TTRPG inspired by Mörk Borg & Deathbringer. Free rules, downloads, and brutal fun!" />
-    <meta property="og:url" content="https://dethkrawlttrpg.netlify.app/" />
-    <meta property="og:image" content="https://dethkrawlttrpg.netlify.app/assets/images/DK_logo_3.png" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-  </head>
-  <body>
-    <!-- sidebar | navigation -->
-    <div class="sidebar">
-      <img src="/assets/images/DK_logo_3.png" alt="DethKrawl logo">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#cc0000">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DethKrawl TTRPG - A Cursed Dungeon-Crawling RPG" />
+  <meta property="og:description" content="A cursed dungeon-crawling TTRPG inspired by Mörk Borg & Deathbringer. Free rules, downloads, and brutal fun!" />
+  <meta property="og:url" content="https://dethkrawlttrpg.netlify.app/" />
+  <meta property="og:image" content="https://dethkrawlttrpg.netlify.app/assets/images/DK_logo_3.png" />
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,400;0,700;1,400&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+  <title>DethKrawl TTRPG</title>
+
+  <style>
+    /* ─── CSS CUSTOM PROPERTIES ─── */
+    :root {
+      --red:        #cc0000;
+      --red-dark:   #8b0000;
+      --red-glow:   rgba(204, 0, 0, 0.25);
+      --bg:         #0e0b0b;
+      --bg-surface: #161010;
+      --bg-sidebar: #110808;
+      --text:       #ddd5c8;
+      --text-muted: #8a7a6e;
+      --border:     rgba(204, 0, 0, 0.2);
+      --sidebar-w:  260px;
+    }
+
+    /* ─── GRAIN TEXTURE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.35;
+    }
+
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--red);
+      text-decoration: none;
+      transition: color 0.2s, text-shadow 0.2s;
+    }
+    a:hover {
+      color: #ff4444;
+      text-shadow: 0 0 8px var(--red-glow);
+    }
+
+    /* ─── TYPOGRAPHY ─── */
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text);
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin: 2rem 0 0.75rem;
+    }
+
+    h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--text);
+      background-color: var(--red-dark);
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      margin: 1.5rem 0 -0.5rem;
+    }
+
+    h5 {
+      font-family: 'Noto Sans', sans-serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+      margin-bottom: 1.5rem;
+    }
+
+    p { margin-bottom: 1.25rem; }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    ul li { margin: 0.4rem 0; }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar {
+      width: var(--sidebar-w);
+      background-color: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      padding: 1.5rem 1rem 1.5rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      z-index: 100;
+    }
+
+    .sidebar img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 0 12px var(--red-glow));
+      transition: filter 0.3s;
+    }
+    .sidebar img:hover {
+      filter: drop-shadow(0 0 20px rgba(204, 0, 0, 0.5));
+    }
+
+    .sidebar nav { flex: 1; }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      margin: 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar ul li:first-child { border-top: 1px solid var(--border); }
+
+    .sidebar ul li a {
+      display: block;
+      padding: 0.7rem 0.5rem;
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: color 0.2s, padding-left 0.2s, background 0.2s;
+    }
+
+    .sidebar ul li a:hover {
+      color: #ff4444;
+      padding-left: 1rem;
+      background: rgba(204, 0, 0, 0.08);
+      text-shadow: none;
+    }
+
+    /* ─── SIDEBAR FOOTER ─── */
+    .sidebar footer {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 2rem;
+      line-height: 1.5;
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      word-break: break-word;
+    }
+
+    .sidebar footer a {
+      color: var(--text-muted);
+      text-decoration: underline;
+    }
+    .sidebar footer a:hover { color: var(--text); text-shadow: none; }
+
+    /* ─── MAIN CONTENT ─── */
+    .main-content {
+      margin-left: var(--sidebar-w);
+      padding: 3rem 3rem 5rem;
+      max-width: 860px;
+      width: 100%;
+    }
+
+    .main-content > h1 {
+      border-bottom: 2px solid var(--red);
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    /* ─── IMAGES ─── */
+    .main-content img,
+    .content-img {
+      max-width: 460px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 1.5rem auto;
+      border: 1px solid var(--border);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      object-fit: cover;
+    }
+
+    /* ─── TABLES ─── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-family: "Courier New", monospace;
+      font-size: 0.9rem;
+      background-color: #130e0e;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    }
+
+    thead th {
+      background-color: var(--red-dark);
+      color: var(--text);
+      padding: 0.85rem 1rem;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--red);
+      text-align: center;
+    }
+
+    tbody td {
+      padding: 0.65rem 0.85rem;
+      border: 1px solid rgba(255,255,255,0.06);
+      text-align: center;
+      color: var(--text);
+    }
+
+    tbody tr:nth-child(even) { background-color: rgba(255,255,255,0.03); }
+    tbody tr:hover { background-color: rgba(204, 0, 0, 0.08); }
+
+    /* ─── CODE ─── */
+    code {
+      font-family: "Courier New", monospace;
+      color: #ffcc44;
+      background-color: #1e1515;
+      padding: 0.1em 0.4em;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    /* ─── BLOCKQUOTE ─── */
+    blockquote {
+      font-family: 'Noto Sans', sans-serif;
+      background: var(--red-dark);
+      border-left: 6px solid var(--red);
+      margin: 1.5rem 0;
+      padding: 1rem 1.25rem;
+      position: relative;
+    }
+
+    blockquote::before {
+      content: '\201C';
+      color: rgba(255,255,255,0.15);
+      font-size: 5em;
+      line-height: 0.1em;
+      position: absolute;
+      top: 0.75rem;
+      left: 0.5rem;
+    }
+
+    blockquote p {
+      display: inline;
+      color: var(--text);
+      margin: 0;
+    }
+
+    blockquote code { color: #ffcc44; background: rgba(0,0,0,0.3); }
+
+    /* ─── LIGHT MODE OVERRIDE ─── */
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg:         #f5f0ea;
+        --bg-surface: #ffffff;
+        --bg-sidebar: #1a0a0a;
+        --text:       #1a1a1a;
+        --text-muted: #666;
+        --border:     rgba(204, 0, 0, 0.25);
+      }
+
+      body::before { opacity: 0.12; }
+
+      h1 { color: #1a1a1a; }
+      h2, h3 { color: var(--red); }
+
+      tbody td { color: #1a1a1a; }
+      tbody tr:nth-child(even) { background-color: #ede7e0; }
+      table { background-color: #f8f3ef; }
+
+      code {
+        color: #8b0000;
+        background-color: #fce9e9;
+      }
+
+      blockquote p { color: #f5f0ea; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── SIDEBAR ─── -->
+  <aside class="sidebar">
+    <img src="/assets/images/DK_logo_3.png" alt="DethKrawl logo">
+
+    <nav>
       <ul>
-        <li>
-          <a href="docs/html/randomly_creating_characters.html">Random Character Creation</a>
-        </li>
-        <li>
-          <a href="/docs/html/mechanics.html">Game Mechanics</a>
-        </li>
-        <li>
-          <a href="/docs/html/combat.html">Combat</a>
-        </li>
-        <!-- Placeholder for future pages -->
-        <li>
-          <a href="#">Store (Coming Soon)</a>
-        </li>
+        <li><a href="/docs/html/randomly_creating_characters.html">Random Character Creation</a></li>
+        <li><a href="/docs/html/mechanics.html">Game Mechanics</a></li>
+        <li><a href="/docs/html/combat.html">Combat</a></li>
+        <li><a href="#">Store (Coming Soon)</a></li>
       </ul>
-      <!--footer with credits info-->
-      <footer>
-        <a href="https://creativecommons.org">DethKrawl TTRPG</a> © 2025 by <a href="https://creativecommons.org">Victor Gregory Matos</a>
-        <br> Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
-        <br />
-           <p>
-        <em>DethKrawl TTRPG</em> is an independent production by Victor Gregory and Kill the D20 and is not affiliated with <strong>Ockult Örtmästare Games</strong> or <strong>Stockholm Kartell</strong>. It is published under the <em>MÖRK BORG</em> Third Party License.  <em>MÖRK BORG</em> is copyright Ockult Örtmästare Games and Stockholm Kartell.
-          </p>
-       </footer>
-    </div>
-    <!-- main content goes here -->
-    <div class="main-content">
-      <h1>DethKrawl - Tabletop Role Playing Game</h1>
-      <h3>System Reference Document</h3>
-      <h5>
-        This game is inspired by <i>Mörk Borg</i> by Free League Publishing, <i>Deathbringer</i> by Dan Masters (Professor DM), and the rotting glory of retro TTRPGs with a modern twist.
-      </h5>
-      <p>Welcome to the <b>System Reference Document</b> for DethKrawl TTRPG! Here, you’ll find everything you need to run this game for <b>free</b>. You can also check out our <b>book</b> on <a href="#">Amazon</a>, download the <b>PDF</b> from <a href="https://thevikkodamus.itch.io" target="_blank">Itch.io</a>, visit <a href="#">Drive-Thru RPG</a>, or explore our main site <a href="#">Kill the D20</a> for more <b>grim and brutal games</b>!</p>
-<hr />
-      <h2>What Is This?</h2>
-      <p><b>DethKrawl</b> is a <i>rules-light, stat-gritty dungeon crawler</i> soaked in black powder smoke, corpse rot, and forgotten curses. There are no classes. Your <b>gear</b>, <b>stats</b>, and <b>luck</b> define your legend, or your death.</p>
-      <p><i>You are no hero, just another corpse that hasn’t hit the ground. When you fall, another fool will step over your bones to take your place.</i></p>
+    </nav>
 
-      <h2>What You Need to Play</h2>
-<ul>
-  <li>
-    1–5 <b>Players</b> + 1 <b>Game Master (GM)</b>
-  </li>
-  <li>
-    At least two 20-sided dice (d20), preferably different colors
-  </li>
-  <li>
-    Other dice: d4, d6, d8, d10, d12
-  </li>
-  <li>
-    Printed or digital character sheets (or scrap paper!)
-  </li>
-  <li>
-    Pencils, imagination, and a sense of doom
-  </li>
-</ul>
+    <footer>
+      <a href="https://creativecommons.org">DethKrawl TTRPG</a> © 2025 by
+      <a href="https://creativecommons.org">Victor Gregory Matos</a><br>
+      Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+      <br><br>
+      <em>DethKrawl TTRPG</em> is an independent production by Victor Gregory and Kill the D20 and is not affiliated with <strong>Ockult Örtmästare Games</strong> or <strong>Stockholm Kartell</strong>. Published under the <em>MÖRK BORG</em> Third Party License. <em>MÖRK BORG</em> is copyright Ockult Örtmästare Games and Stockholm Kartell.
+    </footer>
+  </aside>
 
-<hr />
-      <h2>Game Setting</h2>
-      <p>The game is set in a world much like our own, during a twisted version of the <b>15th century</b>. In this realm, the <b>gods</b> are fickle, magic is <b>dangerous</b>, monsters stalk the shadows, and untold treasures lie in the ruins, waiting to be claimed. Players will delve into dungeons, explore crumbling kingdoms, and chase fortune before the world devours them. This is a <i>rules-light, classless <b>d20 system</b></i>.</p>
-      <p>The tone is <b>dark</b>, <b>gritty</b>, and <b>lethal</b>. When a player character dies, another desperate soul will step into the fray, eager to survive, grow rich, and avoid a similar grisly fate.</p>
-<hr />
-      <h2>What Is This For?</h2>
-      <p>This game is for players who want to run a <b>classless</b> character, taking on jobs or quests that are far beyond their means. You are that desperate fool, seeking fortune while <b>death watches closely</b> for your failure. Should you fall, your gear is left behind, and your soul is claimed, ready for another unfortunate adventurer to steal your glory and plunder your remains.</p>
-<hr />
-      <h3>Reach Out to Me!</h3>
+  <!-- ─── MAIN CONTENT ─── -->
+  <main class="main-content">
+    <h1>DethKrawl</h1>
+    <h3>Tabletop Role Playing Game &mdash; System Reference Document</h3>
+    <h5>
+      Inspired by <em>Mörk Borg</em> by Free League Publishing, <em>Deathbringer</em> by Dan Masters (Professor DM),
+      and the rotting glory of retro TTRPGs with a modern twist.
+    </h5>
 
-      <p>Got questions? Would you like to contribute to or enhance the game? You can <b>reach out</b> via <a href="mailto:victor.m.gregory@gmail.com">Email me</a>, read more on my <a href="https://thevikkodamus.bearblog.dev" target="_blank">Blog</a>, <a href="https://dice.camp/@TheVikkodamus" target="_blank">Mastodon</a>, or follow me on <a href="https://bsky.app/profile/thevikkodamus.bsky.social">Blue Sky</a>.
-      </p>      
-    </div>
-  </body>
+    <p>
+      Welcome to the <strong>System Reference Document</strong> for DethKrawl TTRPG!
+      Here you'll find everything you need to run this game for <strong>free</strong>.
+      You can also check out our <strong>book</strong> on <a href="#">Amazon</a>,
+      download the <strong>PDF</strong> from <a href="https://thevikkodamus.itch.io" target="_blank">Itch.io</a>,
+      visit <a href="#">Drive-Thru RPG</a>, or explore <a href="#">Kill the D20</a> for more grim and brutal games.
+    </p>
+
+    <hr>
+
+    <h2>What Is This?</h2>
+    <p>
+      <strong>DethKrawl</strong> is a <em>rules-light, stat-gritty dungeon crawler</em> soaked in black powder smoke,
+      corpse rot, and forgotten curses. There are no classes. Your <strong>gear</strong>, <strong>stats</strong>,
+      and <strong>luck</strong> define your legend — or your death.
+    </p>
+    <p>
+      <em>You are no hero, just another corpse that hasn't hit the ground. When you fall, another fool will step over
+      your bones to take your place.</em>
+    </p>
+
+    <hr>
+
+    <h2>What You Need to Play</h2>
+    <ul>
+      <li>1–5 <strong>Players</strong> + 1 <strong>Game Master (GM)</strong></li>
+      <li>At least two 20-sided dice (d20), preferably different colors</li>
+      <li>Other dice: d4, d6, d8, d10, d12</li>
+      <li>Printed or digital character sheets (or scrap paper!)</li>
+      <li>Pencils, imagination, and a sense of doom</li>
+    </ul>
+
+    <hr>
+
+    <h2>Game Setting</h2>
+    <p>
+      The game is set in a world much like our own, during a twisted version of the <strong>15th century</strong>.
+      In this realm, the <strong>gods</strong> are fickle, magic is <strong>dangerous</strong>, monsters stalk the
+      shadows, and untold treasures lie in the ruins, waiting to be claimed. Players will delve into dungeons,
+      explore crumbling kingdoms, and chase fortune before the world devours them. This is a
+      <em>rules-light, classless <strong>d20 system</strong></em>.
+    </p>
+    <p>
+      The tone is <strong>dark</strong>, <strong>gritty</strong>, and <strong>lethal</strong>. When a player character
+      dies, another desperate soul will step into the fray, eager to survive, grow rich, and avoid a similar grisly fate.
+    </p>
+
+    <hr>
+
+    <h2>What Is This For?</h2>
+    <p>
+      This game is for players who want to run a <strong>classless</strong> character, taking on jobs or quests
+      that are far beyond their means. You are that desperate fool, seeking fortune while
+      <strong>death watches closely</strong> for your failure. Should you fall, your gear is left behind and your soul
+      is claimed — ready for another unfortunate adventurer to steal your glory and plunder your remains.
+    </p>
+
+    <hr>
+
+    <h3>Reach Out</h3>
+    <p>
+      Got questions? Want to contribute or enhance the game?
+      <a href="mailto:victor.m.gregory@gmail.com">Email me</a>,
+      read more on my <a href="https://thevikkodamus.bearblog.dev" target="_blank">Blog</a>,
+      find me on <a href="https://dice.camp/@TheVikkodamus" target="_blank">Mastodon</a>,
+      or follow me on <a href="https://bsky.app/profile/thevikkodamus.bsky.social" target="_blank">Blue Sky</a>.
+    </p>
+  </main>
+
+</body>
 </html>
